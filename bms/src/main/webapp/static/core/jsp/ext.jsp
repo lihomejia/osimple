@@ -1,0 +1,2 @@
+<link rel="stylesheet" type="text/css" href="<%=basePath %>static/core/ext4.2.1/resources/css/ext-all.css" />
+<script type="text/javascript" src="<%=basePath %>static/core/ext4.2.1/ext-all.js"></script>
