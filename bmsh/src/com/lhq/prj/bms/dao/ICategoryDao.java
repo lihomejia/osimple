@@ -7,52 +7,52 @@ import com.lhq.prj.bms.po.Category;
 import com.lhq.prj.bms.po.Subject;
 
 /**
- * IDeptDao.java Create on 2008-9-16 ÏÂÎç10:41:23
+ * IDeptDao.java Create on 2008-9-16 ä¸‹åˆ10:41:23
  * 
- * ·ÖÀà¹ÜÀí³Ö¾Ã²ã½Ó¿Ú
+ * åˆ†ç±»ç®¡ç†æŒä¹…å±‚æ¥å£
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface ICategoryDao {
 	/**
-	 * ±£´æÒ»¸ö·ÖÀàÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªåˆ†ç±»å®ä½“åˆ°æ•°æ®åº“
 	 * 
 	 * @param category
-	 *            ·ÖÀàÊµÌå
-	 * @return Ö÷¼üid
+	 *            åˆ†ç±»å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveCategory(Category category);
 
 	/**
-	 * ²éÕÒËùÓĞ·ÖÀà
+	 * æŸ¥æ‰¾æ‰€æœ‰åˆ†ç±»
 	 * 
 	 * @return
 	 */
 	public List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
+	 * åˆ†é¡µæŸ¥æ‰¾
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * ·ÖÒ³²éÕÒµÄ×Ü¼ÇÂ¼
+	 * åˆ†é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸Ä·ÖÀàĞÅÏ¢
+	 * ä¿®æ”¹åˆ†ç±»ä¿¡æ¯
 	 * 
 	 * @param category
 	 * @return
@@ -61,7 +61,7 @@ public interface ICategoryDao {
 	public Integer update(Category category) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ı·ÖÀà
+	 * æ ¹æ®idåˆ é™¤åˆ†ç±»
 	 * 
 	 * @param categoryId
 	 * @return
@@ -69,7 +69,7 @@ public interface ICategoryDao {
 	public Integer deleteById(Integer categoryId);
 
 	/**
-	 * ¸ù¾İ·Ö¿ÆÄ¿ÕÒ·ÖÀà
+	 * æ ¹æ®åˆ†ç§‘ç›®æ‰¾åˆ†ç±»
 	 *
 	 * @param subject
 	 * @return

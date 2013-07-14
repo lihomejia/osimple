@@ -9,13 +9,13 @@ import com.lhq.prj.bms.dao.ICompanyDao;
 import com.lhq.prj.bms.po.Company;
 
 /**
- * DeptDao.java Create on 2008-9-16 下午10:43:05
+ * DeptDao.java Create on 2008-9-16 涓嬪崍10:43:05
  * 
- * 分公司持久层实现
+ * 鍒嗗叕鍙告寔涔呭眰瀹炵幇
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 public class CompanyDao extends SqlMapClientDaoSupport implements ICompanyDao {

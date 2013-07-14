@@ -12,13 +12,13 @@ import com.lhq.prj.bms.po.Book;
 import com.lhq.prj.bms.service.IBookService;
 
 /**
- * BookAction.java Create on 2008-9-24 ÏÂÎç09:18:34
+ * BookAction.java Create on 2008-9-24 ä¸‹åˆ09:18:34
  * 
- * Í¼Êé¹ÜÀí
+ * å›¾ä¹¦ç®¡ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -33,19 +33,19 @@ public class BookAction extends BaseAction {
 	
 	private Integer bookId;
 
-	private File upload;// ÉÏ´«µÄÎÄ¼ş
+	private File upload;// ä¸Šä¼ çš„æ–‡ä»¶
 
-	private String uploadContentType;// ÉÏ´«ÎÊÎÄ¼şÀàĞÍ
+	private String uploadContentType;// ä¸Šä¼ é—®æ–‡ä»¶ç±»å‹
 
-	private String uploadFileName; // ÉÏ´«ÎÄ¼şÃû
+	private String uploadFileName; // ä¸Šä¼ æ–‡ä»¶å
 
-	private String allowedTypes;// ÔÊĞíÉÏ´«µÄÎÄ¼şÀàĞÍÁĞ±í
+	private String allowedTypes;// å…è®¸ä¸Šä¼ çš„æ–‡ä»¶ç±»å‹åˆ—è¡¨
 
-	private String savePath;// ÎÄ¼ş±£´æÂ·¾¶,Í¨¹ıioc×¢Èë
+	private String savePath;// æ–‡ä»¶ä¿å­˜è·¯å¾„,é€šè¿‡iocæ³¨å…¥
 
-	private float maxHeightSize;// ËõÂÔÍ¼×î´ó¸ß¶È
+	private float maxHeightSize;// ç¼©ç•¥å›¾æœ€å¤§é«˜åº¦
 	
-	private float maxWidthSize;//ËõÂÔÍ¼×î´ó¿í¶È
+	private float maxWidthSize;//ç¼©ç•¥å›¾æœ€å¤§å®½åº¦
 	
 	private String bookName;
 
@@ -86,7 +86,7 @@ public class BookAction extends BaseAction {
 	private Integer state;
 
 	/**
-	 * Ìí¼ÓÍ¼Êé
+	 * æ·»åŠ å›¾ä¹¦
 	 * 
 	 * @return
 	 */
@@ -104,7 +104,7 @@ public class BookAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒÍ¼ÊéĞÅÏ¢
+	 * æŸ¥æ‰¾å›¾ä¹¦ä¿¡æ¯
 	 * 
 	 * @return
 	 */
@@ -123,7 +123,7 @@ public class BookAction extends BaseAction {
 	}
 
 	/**
-	 * É¾³ıÍ¼Êé
+	 * åˆ é™¤å›¾ä¹¦
 	 * 
 	 * @return
 	 */
@@ -136,7 +136,7 @@ public class BookAction extends BaseAction {
 	}
 	
 	/**
-	 * ĞŞ¸ÄÍ¼ÊéĞÅÏ¢
+	 * ä¿®æ”¹å›¾ä¹¦ä¿¡æ¯
 	 *
 	 * @return
 	 * @throws Exception
@@ -163,8 +163,8 @@ public class BookAction extends BaseAction {
 		book.setPress(press);
 		book.setPaper(paper);
 		book = this.upload(book);
-		/*1.Èç¹ûÍ¼Êé±¾À´Ã»ÓĞÍ¼Æ¬Ôò²»ÓÃÉ¾³ıÔ­À´Í¼Æ¬
-		 *2.Èç¹ûÔ­À´ÓĞÍ¼Æ¬²¢ÇÒĞŞ¸ÄºóµÄÍ¼Æ¬²»Ò»ÑùÔòÉ¾³ıÔ­À´Í¼Æ¬
+		/*1.å¦‚æœå›¾ä¹¦æœ¬æ¥æ²¡æœ‰å›¾ç‰‡åˆ™ä¸ç”¨åˆ é™¤åŸæ¥å›¾ç‰‡
+		 *2.å¦‚æœåŸæ¥æœ‰å›¾ç‰‡å¹¶ä¸”ä¿®æ”¹åçš„å›¾ç‰‡ä¸ä¸€æ ·åˆ™åˆ é™¤åŸæ¥å›¾ç‰‡
 		 */
 		if(imageUrl != null && null != book.getImageUrl() && !imageUrl.equals(book.getImageUrl())){
 			MyUtils.delFile(getSession().getServletContext().getRealPath("/")+ imageUrl);
@@ -202,7 +202,7 @@ public class BookAction extends BaseAction {
 	}
 
 	/**
-	 * »¹Êé
+	 * è¿˜ä¹¦
 	 * 
 	 * @return
 	 * @throws Exception

@@ -6,38 +6,38 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.Category;
 
 /**    
- * IDeptService.java Create on 2008-9-16 ÏÂÎç10:38:57   
+ * IDeptService.java Create on 2008-9-16 ä¸‹åˆ10:38:57   
  *
- * ·ÖÀàÒµÎñ²ã½Ó¿Ú
+ * åˆ†ç±»ä¸šåŠ¡å±‚æ¥å£
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public interface ICategoryService {
 	/**
-	 * Ìí¼Ó·ÖÀà
+	 * æ·»åŠ åˆ†ç±»
 	 * @param category
 	 * @return
 	 */
 	Object saveCategory(Category category);
 
 	/**
-	 * ²éÕÒËùÓĞ·ÖÀà
+	 * æŸ¥æ‰¾æ‰€æœ‰åˆ†ç±»
 	 * @return
 	 */
 	List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸Ä·ÖÀàĞÅÏ¢
+	 * ä¿®æ”¹åˆ†ç±»ä¿¡æ¯
 	 * @param category
 	 * @return
 	 * @throws Exception 
@@ -45,7 +45,7 @@ public interface ICategoryService {
 	boolean updateCategory(Category category) throws Exception;
 
 	/**
-	 * É¾³ı·ÖÀà
+	 * åˆ é™¤åˆ†ç±»
 	 * 
 	 * @param categoryId
 	 * @return
@@ -53,7 +53,7 @@ public interface ICategoryService {
 	boolean deleteCategory(Integer categoryId);
 
 	/**
-	 * ¸ù¾İ¿ÆÄ¿²éÕÒËùÓĞ·ÖÀà
+	 * æ ¹æ®ç§‘ç›®æŸ¥æ‰¾æ‰€æœ‰åˆ†ç±»
 	 *
 	 * @param page
 	 * @return

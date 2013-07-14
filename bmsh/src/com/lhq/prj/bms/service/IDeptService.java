@@ -6,38 +6,38 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.Dept;
 
 /**    
- * IDeptService.java Create on 2008-9-16 ÏÂÎç10:38:57   
+ * IDeptService.java Create on 2008-9-16 ä¸‹åˆ10:38:57   
  *
  * 
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public interface IDeptService {
 	/**
-	 * Ìí¼Ó²¿ÃÅ
+	 * æ·»åŠ éƒ¨é—¨
 	 * @param dept
 	 * @return
 	 */
 	Object saveDept(Dept dept);
 
 	/**
-	 * ²éÕÒËùÓĞ²¿ÃÅ
+	 * æŸ¥æ‰¾æ‰€æœ‰éƒ¨é—¨
 	 * @return
 	 */
 	List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸Ä²¿ÃÅĞÅÏ¢
+	 * ä¿®æ”¹éƒ¨é—¨ä¿¡æ¯
 	 * @param dept
 	 * @return
 	 * @throws Exception 
@@ -45,7 +45,7 @@ public interface IDeptService {
 	boolean updateDept(Dept dept) throws Exception;
 
 	/**
-	 * É¾³ı²¿ÃÅ
+	 * åˆ é™¤éƒ¨é—¨
 	 * 
 	 * @param deptId
 	 * @return
@@ -53,7 +53,7 @@ public interface IDeptService {
 	boolean deleteDept(Integer deptId);
 
 	/**
-	 * ¸ù¾İ¹«Ë¾²éÕÒËùÓĞ²¿ÃÅ
+	 * æ ¹æ®å…¬å¸æŸ¥æ‰¾æ‰€æœ‰éƒ¨é—¨
 	 *
 	 * @param page
 	 * @return

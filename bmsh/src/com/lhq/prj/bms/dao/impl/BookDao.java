@@ -9,13 +9,13 @@ import com.lhq.prj.bms.dao.IBookDao;
 import com.lhq.prj.bms.po.Book;
 
 /**
- * BookDao.java Create on 2008-9-24 ÏÂÎç09:10:20
+ * BookDao.java Create on 2008-9-24 ä¸‹åˆ09:10:20
  * 
- * Í¼Êé¹ÜÀí³Ö¾Ã²ãÊµÏÖ
+ * å›¾ä¹¦ç®¡ç†æŒä¹…å±‚å®ç°
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class BookDao extends SqlMapClientDaoSupport implements IBookDao {

@@ -8,27 +8,27 @@ import com.lhq.prj.bms.po.Company;
 public interface ICompanyService {
 	
 	/**
-	 * Ìí¼Ó·Ö¹«Ë¾
+	 * æ·»åŠ åˆ†å…¬å¸
 	 * @param company
 	 * @return
 	 */
 	Object saveCompany(Company company);
 
 	/**
-	 * ²éÕÒËùÓĞ·Ö¹«Ë¾
+	 * æŸ¥æ‰¾æ‰€æœ‰åˆ†å…¬å¸
 	 * @return
 	 */
 	List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸Ä¹«Ë¾ĞÅÏ¢
+	 * ä¿®æ”¹å…¬å¸ä¿¡æ¯
 	 * @param c
 	 * @return
 	 * @throws Exception 
@@ -36,7 +36,7 @@ public interface ICompanyService {
 	boolean updateCompany(Company c) throws Exception;
 
 	/**
-	 * É¾³ı·Ö¹«Ë¾
+	 * åˆ é™¤åˆ†å…¬å¸
 	 * 
 	 * @param companyId
 	 * @return

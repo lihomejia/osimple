@@ -8,13 +8,13 @@ import com.lhq.prj.bms.dao.IDutyDao;
 import com.lhq.prj.bms.po.Duty;
 
 /**
- * DutyDao.java Create on 2008-9-18 ÏÂÎç08:20:57
+ * DutyDao.java Create on 2008-9-18 ä¸‹åˆ08:20:57
  * 
- * Ö°Îñ¹ÜÀí³Ö¾Ã²ã
+ * èŒåŠ¡ç®¡ç†æŒä¹…å±‚
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class DutyDao extends SqlMapClientDaoSupport implements IDutyDao {

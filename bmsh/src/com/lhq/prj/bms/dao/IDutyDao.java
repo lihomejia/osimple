@@ -5,19 +5,19 @@ import java.util.List;
 import com.lhq.prj.bms.po.Duty;
 
 /**
- * IDutyDao.java Create on 2008-9-18 ÏÂÎç08:16:37
+ * IDutyDao.java Create on 2008-9-18 ä¸‹åˆ08:16:37
  * 
- * Ö°Îñ³Ö¾Ã²ã½Ó¿Ú
+ * èŒåŠ¡æŒä¹…å±‚æ¥å£
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface IDutyDao {
 
 	/**
-	 * ±£´æÒ»¸öÖ°Îñµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªèŒåŠ¡åˆ°æ•°æ®åº“
 	 * 
 	 * @param duty
 	 * @return
@@ -25,14 +25,14 @@ public interface IDutyDao {
 	public Object saveDuty(Duty duty);
 
 	/**
-	 * ²éÕÒËùÓĞÖ°Îñ
+	 * æŸ¥æ‰¾æ‰€æœ‰èŒåŠ¡
 	 * 
 	 * @return
 	 */
 	public List findAll();
 
 	/**
-	 * ĞŞ¸ÄÖ°ÎñĞÅÏ¢
+	 * ä¿®æ”¹èŒåŠ¡ä¿¡æ¯
 	 * 
 	 * @param duty
 	 * @return
@@ -41,7 +41,7 @@ public interface IDutyDao {
 	public Integer update(Duty duty) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ıÖ°Îñ
+	 * æ ¹æ®idåˆ é™¤èŒåŠ¡
 	 * 
 	 * @param dutyId
 	 * @return

@@ -3,13 +3,13 @@ package com.lhq.prj.bms.po;
 import java.io.Serializable;
 
 /**
- * Duty.java Create on 2008-9-18 下午08:02:11
+ * Duty.java Create on 2008-9-18 涓嬪崍08:02:11
  * 
- * 职务
+ * 鑱屽姟
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -24,13 +24,13 @@ public class Duty implements Serializable {
 		this.remark = remark;
 	}
 
-	/** 职务id */
+	/** 鑱屽姟id */
 	private Integer dutyId;
 
-	/** 职务名称 */
+	/** 鑱屽姟鍚嶇О */
 	private String dutyName;
 
-	/** 备注 */
+	/** 澶囨敞 */
 	private String remark;
 
 	public Integer getDutyId() {

@@ -10,13 +10,13 @@ import com.lhq.prj.bms.po.Company;
 import com.lhq.prj.bms.po.Dept;
 
 /**
- * DeptDao.java Create on 2008-9-16 ÏÂÎç10:43:05
+ * DeptDao.java Create on 2008-9-16 ä¸‹åˆ10:43:05
  * 
- * ²¿ÃÅ³Ö¾Ã²ãÊµÏÖ
+ * éƒ¨é—¨æŒä¹…å±‚å®ç°
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class DeptDao extends SqlMapClientDaoSupport implements IDeptDao {

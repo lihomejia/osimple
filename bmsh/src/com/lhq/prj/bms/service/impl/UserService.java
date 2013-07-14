@@ -8,13 +8,13 @@ import com.lhq.prj.bms.po.User;
 import com.lhq.prj.bms.service.IUserService;
 
 /**
- * UserService.java Create on 2008-9-19 上午01:41:43
+ * UserService.java Create on 2008-9-19 涓婂崍01:41:43
  * 
- * 用户管理业务层实现类
+ * 鐢ㄦ埛绠＄悊涓氬姟灞傚疄鐜扮被
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 public class UserService implements IUserService {

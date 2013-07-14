@@ -8,13 +8,13 @@ import com.lhq.prj.bms.dao.ISubjectDao;
 import com.lhq.prj.bms.po.Subject;
 
 /**
- * SubjectDao.java Create on 2008-9-18 ÏÂÎç08:20:57
+ * SubjectDao.java Create on 2008-9-18 ä¸‹åˆ08:20:57
  * 
- * ¿ÆÄ¿¹ÜÀí³Ö¾Ã²ã
+ * ç§‘ç›®ç®¡ç†æŒä¹…å±‚
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class SubjectDao extends SqlMapClientDaoSupport implements ISubjectDao {

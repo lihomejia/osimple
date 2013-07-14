@@ -23,13 +23,13 @@ import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
- * MyUtils.java Create on 2008-9-17 ÏÂÎç10:45:20
+ * MyUtils.java Create on 2008-9-17 ä¸‹åˆ10:45:20
  * 
- * ¹¤¾ßÀà
+ * å·¥å…·ç±»
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class MyUtils {
@@ -41,10 +41,10 @@ public class MyUtils {
 	}
 
 	/**
-	 * É¾³ıÎÄ¼ş
+	 * åˆ é™¤æ–‡ä»¶
 	 * 
 	 * @param filePathAndName
-	 *          String ÎÄ¼şÂ·¾¶¼°Ãû³Æ Èçc:/fqf.txt
+	 *          String æ–‡ä»¶è·¯å¾„åŠåç§° å¦‚c:/fqf.txt
 	 * @param fileContent
 	 *          String
 	 * @return boolean
@@ -58,14 +58,14 @@ public class MyUtils {
 	}
 
 	/**
-	 * ÉÏ´«ÎÄ¼ş
+	 * ä¸Šä¼ æ–‡ä»¶
 	 * 
 	 * @param uploadFileName
-	 *          ±»ÉÏ´«µÄÎÄ¼şÃû³Æ
+	 *          è¢«ä¸Šä¼ çš„æ–‡ä»¶åç§°
 	 * @param savePath
-	 *          ÎÄ¼şµÄ±£´æÂ·¾¶
+	 *          æ–‡ä»¶çš„ä¿å­˜è·¯å¾„
 	 * @param uploadFile
-	 *          ±»ÉÏ´«µÄÎÄ¼ş
+	 *          è¢«ä¸Šä¼ çš„æ–‡ä»¶
 	 * @return newFileName
 	 */
 	public static String upload(String uploadFileName, String savePath, File uploadFile) {
@@ -87,7 +87,7 @@ public class MyUtils {
 	}
 
 	/**
-	 * ¸ù¾İÂ·¾¶´´½¨Ò»ÏµÁĞµÄÄ¿Â¼
+	 * æ ¹æ®è·¯å¾„åˆ›å»ºä¸€ç³»åˆ—çš„ç›®å½•
 	 * 
 	 * @param path
 	 */
@@ -106,12 +106,12 @@ public class MyUtils {
 	}
 
 	/**
-	 * ½«¶ÔÏóÊı×éµÄÃ¿Ò»¸öÔªËØ·Ö±ğÌí¼Óµ½Ö¸¶¨¼¯ºÏÖĞ,µ÷ÓÃApache commons collections ÖĞµÄ·½·¨
+	 * å°†å¯¹è±¡æ•°ç»„çš„æ¯ä¸€ä¸ªå…ƒç´ åˆ†åˆ«æ·»åŠ åˆ°æŒ‡å®šé›†åˆä¸­,è°ƒç”¨Apache commons collections ä¸­çš„æ–¹æ³•
 	 * 
 	 * @param collection
-	 *          Ä¿±ê¼¯ºÏ¶ÔÏó
+	 *          ç›®æ ‡é›†åˆå¯¹è±¡
 	 * @param arr
-	 *          ¶ÔÏóÊı×é
+	 *          å¯¹è±¡æ•°ç»„
 	 */
 	public static void addToCollection(Collection collection, Object[] arr) {
 		if (null != collection && null != arr) {
@@ -120,57 +120,57 @@ public class MyUtils {
 	}
 
 	/**
-	 * ½«×Ö·û´®ÒÑ¶à¸ö·Ö¸ô·û²ğ·ÖÎªÊı×é,µ÷ÓÃApache commons lang ÖĞµÄ·½·¨
+	 * å°†å­—ç¬¦ä¸²å·²å¤šä¸ªåˆ†éš”ç¬¦æ‹†åˆ†ä¸ºæ•°ç»„,è°ƒç”¨Apache commons lang ä¸­çš„æ–¹æ³•
 	 * 
 	 * <pre>
 	 *    Example:
 	 *     String[] arr = StringUtils.split(&quot;a b,c d,e-f&quot;, &quot; ,-&quot;);
-	 *     System.out.println(arr.length);//Êä³ö6
+	 *     System.out.println(arr.length);//è¾“å‡º6
 	 * </pre>
 	 * 
 	 * @param str
-	 *          Ä¿±ê×Ö·û´®
+	 *          ç›®æ ‡å­—ç¬¦ä¸²
 	 * @param separatorChars
-	 *          ·Ö¸ô·û×Ö·û´®
-	 * @return ×Ö·û´®Êı×é
+	 *          åˆ†éš”ç¬¦å­—ç¬¦ä¸²
+	 * @return å­—ç¬¦ä¸²æ•°ç»„
 	 */
 	public static String[] split(String str, String separatorChars) {
 		return StringUtils.split(str, separatorChars);
 	}
 
 	/**
-	 * µ÷ÓÃÖ¸¶¨×Ö¶ÎµÄsetter·½·¨
+	 * è°ƒç”¨æŒ‡å®šå­—æ®µçš„setteræ–¹æ³•
 	 * 
 	 * <pre>
 	 *    Example:
 	 *    User user = new User();
-	 *    MyUtils.invokeSetMethod(&quot;userName&quot;, user, new Object[] {&quot;ÕÅÈı&quot;});
+	 *    MyUtils.invokeSetMethod(&quot;userName&quot;, user, new Object[] {&quot;å¼ ä¸‰&quot;});
 	 * </pre>
 	 * 
 	 * @param fieldName
-	 *          ×Ö¶Î(ÊôĞÔ)Ãû³Æ
+	 *          å­—æ®µ(å±æ€§)åç§°
 	 * @param invokeObj
-	 *          ±»µ÷ÓÃ·½·¨µÄ¶ÔÏó
+	 *          è¢«è°ƒç”¨æ–¹æ³•çš„å¯¹è±¡
 	 * @param args
-	 *          ±»µ÷ÓÃ·½·¨µÄ²ÎÊıÊı×é
-	 * @return ³É¹¦Óë·ñ
+	 *          è¢«è°ƒç”¨æ–¹æ³•çš„å‚æ•°æ•°ç»„
+	 * @return æˆåŠŸä¸å¦
 	 */
 	public static boolean invokeSetMethod(String fieldName, Object invokeObj, Object[] args) {
 		boolean flag = false;
-		Field[] fields = invokeObj.getClass().getDeclaredFields(); // »ñµÃ¶ÔÏóÊµÌåÀàÖĞËùÓĞ¶¨ÒåµÄ×Ö¶Î
-		Method[] methods = invokeObj.getClass().getDeclaredMethods(); // »ñµÃ¶ÔÏóÊµÌåÀàÖĞËùÓĞ¶¨ÒåµÄ·½·¨
+		Field[] fields = invokeObj.getClass().getDeclaredFields(); // è·å¾—å¯¹è±¡å®ä½“ç±»ä¸­æ‰€æœ‰å®šä¹‰çš„å­—æ®µ
+		Method[] methods = invokeObj.getClass().getDeclaredMethods(); // è·å¾—å¯¹è±¡å®ä½“ç±»ä¸­æ‰€æœ‰å®šä¹‰çš„æ–¹æ³•
 		for (Field f : fields) {
 			String fname = f.getName();
-			if (fname.equals(fieldName)) {// ÕÒµ½Òª¸üĞÂµÄ×Ö¶ÎÃû
-				String mname = "set" + (fname.substring(0, 1).toUpperCase() + fname.substring(1));// ×é½¨setter·½·¨
+			if (fname.equals(fieldName)) {// æ‰¾åˆ°è¦æ›´æ–°çš„å­—æ®µå
+				String mname = "set" + (fname.substring(0, 1).toUpperCase() + fname.substring(1));// ç»„å»ºsetteræ–¹æ³•
 				for (Method m : methods) {
 					String name = m.getName();
 					if (mname.equals(name)) {
-						// ´¦ÀíInteger²ÎÊı
+						// å¤„ç†Integerå‚æ•°
 						if (f.getType().getSimpleName().equalsIgnoreCase("integer") && args.length > 0) {
 							args[0] = Integer.valueOf(args[0].toString());
 						}
-						// ´¦ÀíBoolean²ÎÊı
+						// å¤„ç†Booleanå‚æ•°
 						if (f.getType().getSimpleName().equalsIgnoreCase("boolean") && args.length > 0) {
 							args[0] = Boolean.valueOf(args[0].toString());
 						}
@@ -195,7 +195,7 @@ public class MyUtils {
 	}
 
 	/**
-	 * ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+	 * åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
 	 * 
 	 * @param fileName
 	 * @param dir
@@ -207,18 +207,18 @@ public class MyUtils {
 	}
 
 	/**
-	 * »ñµÃËæ»úÎÄ¼şÃû,±£Ö¤ÔÚÍ¬Ò»¸öÎÄ¼ş¼ĞÏÂ²»Í¬Ãû
+	 * è·å¾—éšæœºæ–‡ä»¶å,ä¿è¯åœ¨åŒä¸€ä¸ªæ–‡ä»¶å¤¹ä¸‹ä¸åŒå
 	 * 
 	 * @param fileName
 	 * @param dir
 	 * @return
 	 */
 	public static String getRandomName(String fileName, String dir) {
-		String[] split = fileName.split("\\.");// ½«ÎÄ¼şÃûÒÑ.µÄĞÎÊ½²ğ·Ö
-		String extendFile = "." + split[split.length - 1].toLowerCase(); // »ñÎÄ¼şµÄÓĞĞ§ºó×º
+		String[] split = fileName.split("\\.");// å°†æ–‡ä»¶åå·².çš„å½¢å¼æ‹†åˆ†
+		String extendFile = "." + split[split.length - 1].toLowerCase(); // è·æ–‡ä»¶çš„æœ‰æ•ˆåç¼€
 
 		Random random = new Random();
-		int add = random.nextInt(1000000); // ²úÉúËæ»úÊı10000ÒÔÄÚ
+		int add = random.nextInt(1000000); // äº§ç”Ÿéšæœºæ•°10000ä»¥å†…
 		String ret = add + extendFile;
 		while (isFileExist(ret, dir)) {
 			add = random.nextInt(1000000);
@@ -228,20 +228,20 @@ public class MyUtils {
 	}
 
 	/**
-	 * ´´½¨ËõÂÔÍ¼
+	 * åˆ›å»ºç¼©ç•¥å›¾
 	 * 
 	 * @param file
-	 *          ÉÏ´«µÄÎÄ¼şÁ÷
+	 *          ä¸Šä¼ çš„æ–‡ä»¶æµ
 	 * @param height
-	 *          ×îĞ¡µÄ³ß´ç
+	 *          æœ€å°çš„å°ºå¯¸
 	 * @throws IOException
 	 */
 	public static void createMiniPic(File file, float width, float height) throws IOException {
-		Image src = javax.imageio.ImageIO.read(file); // ¹¹ÔìImage¶ÔÏó
-		int old_w = src.getWidth(null); // µÃµ½Ô´Í¼¿í
+		Image src = javax.imageio.ImageIO.read(file); // æ„é€ Imageå¯¹è±¡
+		int old_w = src.getWidth(null); // å¾—åˆ°æºå›¾å®½
 		int old_h = src.getHeight(null);
 		int new_w = 0;
-		int new_h = 0; // µÃµ½Ô´Í¼³¤
+		int new_h = 0; // å¾—åˆ°æºå›¾é•¿
 		float tempdouble;
 		if (old_w >= old_h) {
 			tempdouble = old_w / width;
@@ -249,9 +249,9 @@ public class MyUtils {
 			tempdouble = old_h / height;
 		}
 
-		if (old_w >= width || old_h >= height) { // Èç¹ûÎÄ¼şĞ¡ÓÚËøÂÔÍ¼µÄ³ß´çÔò¸´ÖÆ¼´¿É
+		if (old_w >= width || old_h >= height) { // å¦‚æœæ–‡ä»¶å°äºé”ç•¥å›¾çš„å°ºå¯¸åˆ™å¤åˆ¶å³å¯
 			new_w = Math.round(old_w / tempdouble);
-			new_h = Math.round(old_h / tempdouble);// ¼ÆËãĞÂÍ¼³¤¿í
+			new_h = Math.round(old_h / tempdouble);// è®¡ç®—æ–°å›¾é•¿å®½
 			while (new_w > width && new_h > height) {
 				if (new_w > width) {
 					tempdouble = new_w / width;
@@ -265,25 +265,25 @@ public class MyUtils {
 				}
 			}
 			BufferedImage tag = new BufferedImage(new_w, new_h, BufferedImage.TYPE_INT_RGB);
-			tag.getGraphics().drawImage(src, 0, 0, new_w, new_h, null); // »æÖÆËõĞ¡ºóµÄÍ¼
-			FileOutputStream newimage = new FileOutputStream(file); // Êä³öµ½ÎÄ¼şÁ÷
+			tag.getGraphics().drawImage(src, 0, 0, new_w, new_h, null); // ç»˜åˆ¶ç¼©å°åçš„å›¾
+			FileOutputStream newimage = new FileOutputStream(file); // è¾“å‡ºåˆ°æ–‡ä»¶æµ
 			JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(newimage);
 			JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(tag);
-			param.setQuality((float) (100 / 100.0), true);// ÉèÖÃÍ¼Æ¬ÖÊÁ¿,100×î´ó,Ä¬ÈÏ70
+			param.setQuality((float) (100 / 100.0), true);// è®¾ç½®å›¾ç‰‡è´¨é‡,100æœ€å¤§,é»˜è®¤70
 			encoder.encode(tag, param);
-			encoder.encode(tag); // ½«JPEG±àÂë
+			encoder.encode(tag); // å°†JPEGç¼–ç 
 			newimage.close();
 		}
 	}
 
 	/**
-	 * ÅĞ¶ÏÎÄ¼şÀàĞÍÊÇ·ñÊÇºÏ·¨µÄ,¾ÍÊÇÅĞ¶ÏallowTypesÖĞÊÇ·ñ°üº¬contentType
+	 * åˆ¤æ–­æ–‡ä»¶ç±»å‹æ˜¯å¦æ˜¯åˆæ³•çš„,å°±æ˜¯åˆ¤æ–­allowTypesä¸­æ˜¯å¦åŒ…å«contentType
 	 * 
 	 * @param contentType
-	 *          ÎÄ¼şÀàĞÍ
+	 *          æ–‡ä»¶ç±»å‹
 	 * @param allowTypes
-	 *          ÎÄ¼şÀàĞÍÁĞ±í
-	 * @return ÊÇ·ñºÏ·¨
+	 *          æ–‡ä»¶ç±»å‹åˆ—è¡¨
+	 * @return æ˜¯å¦åˆæ³•
 	 */
 	public static boolean isValid(String contentType, String[] allowTypes) {
 		if (null == contentType || "".equals(contentType)) {

@@ -15,11 +15,11 @@ import com.lhq.prj.bms.dao.ILoanLogDao;
 import com.lhq.prj.bms.po.LoanLog;
 
 /**
- * Create on 2008-10-11 ÏÂÎç06:58:31
+ * Create on 2008-10-11 ä¸‹åˆ06:58:31
  * 
- * ½è»¹Êé³Ö¾Ã²ãÊµÏÖÀà
+ * å€Ÿè¿˜ä¹¦æŒä¹…å±‚å®ç°ç±»
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version
  */
 public class LoanLogDao extends SqlMapClientDaoSupport implements ILoanLogDao {

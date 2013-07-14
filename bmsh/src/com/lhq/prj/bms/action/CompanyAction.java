@@ -23,7 +23,7 @@ public class CompanyAction extends BaseAction {
 	private Integer companyId;
 
 	/**
-	 * Ìí¼Ó·Ö¹«Ë¾
+	 * æ·»åŠ åˆ†å…¬å¸
 	 * 
 	 * @return
 	 */
@@ -36,7 +36,7 @@ public class CompanyAction extends BaseAction {
 	}
 	
 	/**
-	 * ²éÕÒËùÓĞ¹«Ë¾
+	 * æŸ¥æ‰¾æ‰€æœ‰å…¬å¸
 	 * 
 	 * @return
 	 */
@@ -47,17 +47,17 @@ public class CompanyAction extends BaseAction {
 	}
 
 	/**
-	 * ¸ù¾İÌõ¼ş·ÖÒ³²éÕÒ¹«Ë¾
+	 * æ ¹æ®æ¡ä»¶åˆ†é¡µæŸ¥æ‰¾å…¬å¸
 	 * 
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	public String findAllCompany() {
-		String strCondition = getRequest().getParameter("conditions");	//»ñµÃ´«µİ¹ıÀ´µÄ²ÎÊı,¶à¸ö²ÎÊıÓÃ¿Õ¸ñ¸ô¿ª
+		String strCondition = getRequest().getParameter("conditions");	//è·å¾—ä¼ é€’è¿‡æ¥çš„å‚æ•°,å¤šä¸ªå‚æ•°ç”¨ç©ºæ ¼éš”å¼€
 		List conditions = new ArrayList();
 		MyUtils.addToCollection(conditions, MyUtils.split(strCondition, " ,"));
-		page = new Page(); // ÊµÀı»¯·ÖÒ³¶ÔÏó
-		page.setConditions(conditions);// ÉèÖÃ²éÑ¯Ìõ¼ş
+		page = new Page(); // å®ä¾‹åŒ–åˆ†é¡µå¯¹è±¡
+		page.setConditions(conditions);// è®¾ç½®æŸ¥è¯¢æ¡ä»¶
 		int start = Integer.valueOf(getRequest().getParameter("start"));
 		int limit = Integer.valueOf(getRequest().getParameter("limit"));
 		page.setStart(++start);
@@ -70,7 +70,7 @@ public class CompanyAction extends BaseAction {
 	}
 
 	/**
-	 * É¾³ı¹«Ë¾
+	 * åˆ é™¤å…¬å¸
 	 * 
 	 * @return
 	 */
@@ -83,7 +83,7 @@ public class CompanyAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸Ä¹«Ë¾Ö¸¶¨×Ö¶ÎµÄÖµ
+	 * ä¿®æ”¹å…¬å¸æŒ‡å®šå­—æ®µçš„å€¼
 	 * 
 	 * @return
 	 * @throws Exception

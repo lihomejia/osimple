@@ -3,22 +3,22 @@ package com.lhq.prj.bms.core;
 import java.util.List;
 
 public class Page {
-	/** ×Ü¼ÇÂ¼Êı */
+	/** æ€»è®°å½•æ•° */
 	private int totalProperty;
 
-	/** ·ÖÒ³½á¹û */
+	/** åˆ†é¡µç»“æœ */
 	private List root;
 
-	/** ¿ªÊ¼Ò³Âë */
+	/** å¼€å§‹é¡µç  */
 	private int start;
 
-	/** Ã¿Ò³¶àÉÙ */
+	/** æ¯é¡µå¤šå°‘ */
 	private int limit;
 
-	/** ³É¹¦Óë·ñ */
+	/** æˆåŠŸä¸å¦ */
 	private boolean success;
 	
-	/** ²éÑ¯Ìõ¼ş */
+	/** æŸ¥è¯¢æ¡ä»¶ */
 	private List conditions;
 	
 	private Object objCondition;

@@ -6,46 +6,46 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.User;
 
 /**    
- * IUserDao.java Create on 2008-9-19 ÉÏÎç01:42:11   
+ * IUserDao.java Create on 2008-9-19 ä¸Šåˆ01:42:11   
  *
- * ÓÃ»§¹ÜÀí³Ö¾Ã²ã½Ó¿Ú
+ * ç”¨æˆ·ç®¡ç†æŒä¹…å±‚æ¥å£
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public interface IUserDao {
 	/**
-	 * ±£´æÒ»¸öÓÃ»§ÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªç”¨æˆ·å®ä½“åˆ°æ•°æ®åº“
 	 * 
 	 * @param user
-	 *            ÓÃ»§ÊµÌå
-	 * @return Ö÷¼üid
+	 *            ç”¨æˆ·å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveUser(User user);
 
 
 	/**
-	 * ·ÖÒ³²éÕÒ
+	 * åˆ†é¡µæŸ¥æ‰¾
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * Ò³²éÕÒµÄ×Ü¼ÇÂ¼
+	 * é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸ÄÓÃ»§ĞÅÏ¢
+	 * ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯
 	 * 
 	 * @param user
 	 * @return
@@ -54,7 +54,7 @@ public interface IUserDao {
 	public Integer update(User user) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ıÓÃ»§
+	 * æ ¹æ®idåˆ é™¤ç”¨æˆ·
 	 * 
 	 * @param userId
 	 * @return
@@ -63,7 +63,7 @@ public interface IUserDao {
 
 
 	/**
-	 * ÓÃ»§µÇÂ¼·½·¨
+	 * ç”¨æˆ·ç™»å½•æ–¹æ³•
 	 * 
 	 * @param user
 	 * @return
@@ -72,7 +72,7 @@ public interface IUserDao {
 
 
 	/**
-	 * ¸ù¾İÓÃ»§Ê¾Àı²éÕÒÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·ç¤ºä¾‹æŸ¥æ‰¾ç”¨æˆ·
 	 *
 	 * @param user
 	 * @return

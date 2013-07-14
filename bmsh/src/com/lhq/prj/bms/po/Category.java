@@ -3,31 +3,31 @@ package com.lhq.prj.bms.po;
 import java.io.Serializable;
 
 /**
- * Category.java Create on 2008-9-21 ÏÂÎç04:21:51
+ * Category.java Create on 2008-9-21 ä¸‹åˆ04:21:51
  * 
- * ·ÖÀà
+ * åˆ†ç±»
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Category implements Serializable {
 
-	/** ·ÖÀàid */
+	/** åˆ†ç±»id */
 	private Integer categoryId;
 
-	/** ·ÖÀàÃû³Æ */
+	/** åˆ†ç±»åç§° */
 	private String categoryName;
 
-	/** ËùÊô¿ÆÄ¿id */
+	/** æ‰€å±ç§‘ç›®id */
 	private Integer subjectId;
 
-	/** ËùÊô¿ÆÄ¿Ãû³Æ */
+	/** æ‰€å±ç§‘ç›®åç§° */
 	private String subjectName;
 	
-	/** ±¸×¢ */
+	/** å¤‡æ³¨ */
 	private String remark;
 
 	public Integer getCategoryId() {
