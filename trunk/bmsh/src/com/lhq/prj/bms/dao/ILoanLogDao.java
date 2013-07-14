@@ -6,55 +6,55 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.LoanLog;
 
 /**
- * IDeptDao.java Create on 2008-9-16 ÏÂÎç10:41:23
+ * IDeptDao.java Create on 2008-9-16 ä¸‹åˆ10:41:23
  * 
- * ½èÊé»¹Êé¼ÇÂ¼³Ö¾Ã»¯½Ó¿Ú
+ * å€Ÿä¹¦è¿˜ä¹¦è®°å½•æŒä¹…åŒ–æ¥å£
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface ILoanLogDao {
 	/**
-	 * ±£´æÒ»¸ö½è»¹ÊéÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªå€Ÿè¿˜ä¹¦å®ä½“åˆ°æ•°æ®åº“
 	 * 
-	 * @param loanlog  ½è»¹ÊéÊµÌå
-	 * @return Ö÷¼üid
+	 * @param loanlog  å€Ÿè¿˜ä¹¦å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveLoanLog(LoanLog loanlog);
 
 
 	/**
-	 * ·ÖÒ³²éÕÒ
+	 * åˆ†é¡µæŸ¥æ‰¾
 	 * 
-	 * @param page Ìõ¼ş
+	 * @param page æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * ·ÖÒ³²éÕÒµÄ×Ü¼ÇÂ¼
+	 * åˆ†é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
 	 * 
-	 * @param page Ìõ¼ş
-	 * @return ×Ü¼ÇÂ¼
+	 * @param page æ¡ä»¶
+	 * @return æ€»è®°å½•
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸Ä½è»¹ĞÅÏ¢
+	 * ä¿®æ”¹å€Ÿè¿˜ä¿¡æ¯
 	 * 
 	 * @param loanlog
-	 * @return ĞŞ¸ÄµÄ¼ÇÂ¼Êı
+	 * @return ä¿®æ”¹çš„è®°å½•æ•°
 	 * @throws Exception
 	 */
 	public Integer update(LoanLog loanlog) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ı¼ÇÂ¼
+	 * æ ¹æ®idåˆ é™¤è®°å½•
 	 * 
 	 * @param logId
-	 * @return É¾³ıµÄ¼ÇÂ¼Êı
+	 * @return åˆ é™¤çš„è®°å½•æ•°
 	 */
 	public Integer deleteById(Integer logId);
 

@@ -10,10 +10,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * ½è³ö¼ÇÂ¼
+ * å€Ÿå‡ºè®°å½•
  * 
  * @author lhq
- * @version 1.0 ÏÂÎç03:25:39
+ * @version 1.0 ä¸‹åˆ03:25:39
  */
 @SuppressWarnings("serial")
 public class LoanLog implements Serializable {
@@ -26,37 +26,37 @@ public class LoanLog implements Serializable {
 		super();
 	}
 
-	/** ¼ÇÂ¼id */
+	/** è®°å½•id */
 	private Integer logId;
 	
-	/** Êé±¾id */
+	/** ä¹¦æœ¬id */
 	private Integer bookId;
 
-	/** ÊéÃû 50 */
+	/** ä¹¦å 50 */
 	private String bookName;
 
-	/** ½è³öÊ±¼ä */
+	/** å€Ÿå‡ºæ—¶é—´ */
 	private Date loanTime;
 
-	/** ½è³öÌìÊı */
+	/** å€Ÿå‡ºå¤©æ•° */
 	private Integer loanDays;
 
-	/** Ô¤¼Æ»¹ÊéÊ±¼ä */
+	/** é¢„è®¡è¿˜ä¹¦æ—¶é—´ */
 	private Date preReturnTime;
 
-	/** Êµ¼Ê»¹ÊéÊ±¼ä */
+	/** å®é™…è¿˜ä¹¦æ—¶é—´ */
 	private Date returnTime;
 
-	/** ½èÔÄÈËid */
+	/** å€Ÿé˜…äººid */
 	private Integer readerId;
 
-	/** ½èÔÄÈË 50 */
+	/** å€Ÿé˜…äºº 50 */
 	private String reader;
 
-	/** ¹ÜÀíÔ±id */
+	/** ç®¡ç†å‘˜id */
 	private Integer loannerId;
 
-	/** ¹ÜÀíÔ±Ãû³Æ 50 */
+	/** ç®¡ç†å‘˜åç§° 50 */
 	private String loanner;
 
 	public String getBookName() {

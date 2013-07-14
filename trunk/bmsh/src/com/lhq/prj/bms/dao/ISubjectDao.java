@@ -5,19 +5,19 @@ import java.util.List;
 import com.lhq.prj.bms.po.Subject;
 
 /**
- * ISubjectDao.java Create on 2008-9-18 ÏÂÎç08:16:37
+ * ISubjectDao.java Create on 2008-9-18 ä¸‹åˆ08:16:37
  * 
- * ¿ÆÄ¿³Ö¾Ã²ã½Ó¿Ú
+ * ç§‘ç›®æŒä¹…å±‚æ¥å£
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface ISubjectDao {
 
 	/**
-	 * ±£´æÒ»¸ö¿ÆÄ¿µ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªç§‘ç›®åˆ°æ•°æ®åº“
 	 * 
 	 * @param subject
 	 * @return
@@ -25,14 +25,14 @@ public interface ISubjectDao {
 	public Object saveSubject(Subject subject);
 
 	/**
-	 * ²éÕÒËùÓĞ¿ÆÄ¿
+	 * æŸ¥æ‰¾æ‰€æœ‰ç§‘ç›®
 	 * 
 	 * @return
 	 */
 	public List findAll();
 
 	/**
-	 * ĞŞ¸Ä¿ÆÄ¿ĞÅÏ¢
+	 * ä¿®æ”¹ç§‘ç›®ä¿¡æ¯
 	 * 
 	 * @param subject
 	 * @return
@@ -41,7 +41,7 @@ public interface ISubjectDao {
 	public Integer update(Subject subject) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ı¿ÆÄ¿
+	 * æ ¹æ®idåˆ é™¤ç§‘ç›®
 	 * 
 	 * @param subjectId
 	 * @return

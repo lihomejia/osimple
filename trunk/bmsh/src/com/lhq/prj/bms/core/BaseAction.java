@@ -45,7 +45,7 @@ public class BaseAction extends ActionSupport {
 	}
 
 	/**
-	 * »ñµÃrequest
+	 * è·å¾—request
 	 * 
 	 * @return
 	 */
@@ -54,7 +54,7 @@ public class BaseAction extends ActionSupport {
 	}
 
 	/**
-	 * »ñµÃresponse
+	 * è·å¾—response
 	 * 
 	 * @return
 	 */
@@ -63,7 +63,7 @@ public class BaseAction extends ActionSupport {
 	}
 
 	/**
-	 * »ñµÃsession
+	 * è·å¾—session
 	 * 
 	 * @return
 	 */
@@ -72,7 +72,7 @@ public class BaseAction extends ActionSupport {
 	}
 
 	/**
-	 * »ñµÃservletÉÏÏÂÎÄ
+	 * è·å¾—servletä¸Šä¸‹æ–‡
 	 * 
 	 * @return
 	 */

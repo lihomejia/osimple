@@ -7,13 +7,13 @@ import com.lhq.prj.bms.po.Duty;
 import com.lhq.prj.bms.service.IDutyService;
 
 /**
- * DutyService.java Create on 2008-9-18 下午08:15:34
+ * DutyService.java Create on 2008-9-18 涓嬪崍08:15:34
  * 
- * 职务业务层实现类
+ * 鑱屽姟涓氬姟灞傚疄鐜扮被
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 public class DutyService implements IDutyService {

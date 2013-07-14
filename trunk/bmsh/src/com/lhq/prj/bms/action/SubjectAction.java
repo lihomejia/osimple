@@ -7,13 +7,13 @@ import com.lhq.prj.bms.po.Subject;
 import com.lhq.prj.bms.service.ISubjectService;
 
 /**
- * SubjectAction.java Create on 2008-9-21 ÏÂÎç03:55:20
+ * SubjectAction.java Create on 2008-9-21 ä¸‹åˆ03:55:20
  * 
- * ¿ÆÄ¿¹ÜÀí
+ * ç§‘ç›®ç®¡ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -30,7 +30,7 @@ public class SubjectAction extends BaseAction {
 	private Page page;
 
 	/**
-	 * ±£´æÖ°Îñµ½Êı¾İ¿â
+	 * ä¿å­˜èŒåŠ¡åˆ°æ•°æ®åº“
 	 * 
 	 * @return
 	 */
@@ -43,7 +43,7 @@ public class SubjectAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒËùÓĞ¿ÆÄ¿
+	 * æŸ¥æ‰¾æ‰€æœ‰ç§‘ç›®
 	 * 
 	 * @return
 	 */
@@ -56,7 +56,7 @@ public class SubjectAction extends BaseAction {
 	
 	
 	/**
-	 * É¾³ı¿ÆÄ¿
+	 * åˆ é™¤ç§‘ç›®
 	 * 
 	 * @return
 	 */
@@ -69,7 +69,7 @@ public class SubjectAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸Ä¿ÆÄ¿Ö¸¶¨×Ö¶ÎµÄÖµ
+	 * ä¿®æ”¹ç§‘ç›®æŒ‡å®šå­—æ®µçš„å€¼
 	 * 
 	 * @return
 	 * @throws Exception

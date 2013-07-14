@@ -11,13 +11,13 @@ import com.lhq.prj.bms.po.Subject;
 import com.lhq.prj.bms.service.ICategoryService;
 
 /**
- * DeptAction.java Create on 2008-9-16 ÏÂÎç10:35:18
+ * DeptAction.java Create on 2008-9-16 ä¸‹åˆ10:35:18
  * 
- * ·ÖÀà´¦Àí
+ * åˆ†ç±»å¤„ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -33,7 +33,7 @@ public class CategoryAction extends BaseAction {
 	private Integer categoryId;
 
 	/**
-	 * Ìí¼Ó·ÖÀà
+	 * æ·»åŠ åˆ†ç±»
 	 * 
 	 * @return
 	 */
@@ -46,7 +46,7 @@ public class CategoryAction extends BaseAction {
 	}
 
 	/**
-	 * ¸ù¾İ·Ö¿ÆÄ¿²éÕÒ·ÖÀà
+	 * æ ¹æ®åˆ†ç§‘ç›®æŸ¥æ‰¾åˆ†ç±»
 	 * 
 	 * @return
 	 */
@@ -66,7 +66,7 @@ public class CategoryAction extends BaseAction {
 	}
 	
 	/**
-	 * ²éÕÒËùÓĞ·ÖÀà
+	 * æŸ¥æ‰¾æ‰€æœ‰åˆ†ç±»
 	 * 
 	 * @return
 	 */
@@ -77,7 +77,7 @@ public class CategoryAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒ·ÖÀàĞÅÏ¢
+	 * æŸ¥æ‰¾åˆ†ç±»ä¿¡æ¯
 	 * 
 	 * @return
 	 */
@@ -96,7 +96,7 @@ public class CategoryAction extends BaseAction {
 	}
 
 	/**
-	 * É¾³ı·ÖÀà
+	 * åˆ é™¤åˆ†ç±»
 	 * 
 	 * @return
 	 */
@@ -109,7 +109,7 @@ public class CategoryAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸Ä·ÖÀàĞÅÏ¢
+	 * ä¿®æ”¹åˆ†ç±»ä¿¡æ¯
 	 * 
 	 * @return
 	 * @throws Exception

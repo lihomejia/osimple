@@ -7,13 +7,13 @@ import com.lhq.prj.bms.po.Duty;
 import com.lhq.prj.bms.service.IDutyService;
 
 /**
- * DutyAction.java Create on 2008-9-18 ÏÂÎç08:10:48
+ * DutyAction.java Create on 2008-9-18 ä¸‹åˆ08:10:48
  * 
- * Ö°Îñ¹ÜÀí
+ * èŒåŠ¡ç®¡ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -31,7 +31,7 @@ public class DutyAction extends BaseAction {
 	
 	
 	/**
-	 * ±£´æÖ°Îñµ½Êı¾İ¿â
+	 * ä¿å­˜èŒåŠ¡åˆ°æ•°æ®åº“
 	 *
 	 * @return
 	 */
@@ -45,7 +45,7 @@ public class DutyAction extends BaseAction {
 	
 	
 	/**
-	 * ²éÕÒËùÓĞÖ°Îñ
+	 * æŸ¥æ‰¾æ‰€æœ‰èŒåŠ¡
 	 * 
 	 * @return
 	 */
@@ -57,7 +57,7 @@ public class DutyAction extends BaseAction {
 
 
 	/**
-	 * É¾³ıÖ°Îñ
+	 * åˆ é™¤èŒåŠ¡
 	 * 
 	 * @return
 	 */
@@ -70,7 +70,7 @@ public class DutyAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸ÄÖ°ÎñÖ¸¶¨×Ö¶ÎµÄÖµ
+	 * ä¿®æ”¹èŒåŠ¡æŒ‡å®šå­—æ®µçš„å€¼
 	 * 
 	 * @return
 	 * @throws Exception

@@ -4,32 +4,32 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.Book;
 
 /**    
- * IDeptService.java Create on 2008-9-16 ÏÂÎç10:38:57   
+ * IDeptService.java Create on 2008-9-16 ä¸‹åˆ10:38:57   
  *
- * Í¼ÊéÒµÎñ²ã½Ó¿Ú
+ * å›¾ä¹¦ä¸šåŠ¡å±‚æ¥å£
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public interface IBookService {
 	/**
-	 * Ìí¼ÓÍ¼Êé
+	 * æ·»åŠ å›¾ä¹¦
 	 * @param book
 	 * @return
 	 */
 	Object saveBook(Book book);
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸ÄÍ¼ÊéĞÅÏ¢
+	 * ä¿®æ”¹å›¾ä¹¦ä¿¡æ¯
 	 * @param book
 	 * @return
 	 * @throws Exception 
@@ -37,16 +37,16 @@ public interface IBookService {
 	boolean updateBook(Book book) throws Exception;
 
 	/**
-	 * É¾³ıÍ¼Êé
+	 * åˆ é™¤å›¾ä¹¦
 	 * 
-	 * @param rootPath ÉÏÏÂÎÄÂ·¾¶
+	 * @param rootPath ä¸Šä¸‹æ–‡è·¯å¾„
 	 * @param bookId
 	 * @return
 	 */
 	boolean deleteBook(String rootPath,Integer bookId);
 
 	/**
-	 * »¹Êé
+	 * è¿˜ä¹¦
 	 *
 	 * @param book
 	 * @return

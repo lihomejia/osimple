@@ -4,13 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Book.java Create on 2008-9-22 ÏÂÎç08:48:34
+ * Book.java Create on 2008-9-22 ä¸‹åˆ08:48:34
  * 
- * Í¼Êé
+ * å›¾ä¹¦
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -18,73 +18,73 @@ public class Book implements Serializable {
 
 	private Integer bookId;
 
-	/** ÊéÃû */
+	/** ä¹¦å */
 	private String bookName;
 
-	/** ×÷Õß */
+	/** ä½œè€… */
 	private String author;
 
-	/** ³ö°æÉç */
+	/** å‡ºç‰ˆç¤¾ */
 	private String press;
 
-	/** ³ö°æÊ±¼ä */
+	/** å‡ºç‰ˆæ—¶é—´ */
 	private Date publicationDate;
 
-	/** ¶¨¼Û */
+	/** å®šä»· */
 	private String price;
 
-	/** °æ´Î */
+	/** ç‰ˆæ¬¡ */
 	private String editionNo;
 
 	/** ISBN */
 	private String isbn;
 
-	/** ËùÊô·ÖÀà */
+	/** æ‰€å±åˆ†ç±» */
 	private Integer categoryId;
 
-	/** ËùÊô·ÖÀàÃû³Æ */
+	/** æ‰€å±åˆ†ç±»åç§° */
 	private String categoryName;
 
-	/** ×ÖÊı */
+	/** å­—æ•° */
 	private String wordCount;
 
-	/** Ò³Êı */
+	/** é¡µæ•° */
 	private String pageCount;
 
-	/** ¿ª±¾ */
+	/** å¼€æœ¬ */
 	private String bookSize;
 
-	/** Ö½ÕÅ */
+	/** çº¸å¼  */
 	private String paper;
 
-	/** °ü×° */
+	/** åŒ…è£… */
 	private String pack;
 
-	/** ·âÃæ */
+	/** å°é¢ */
 	private String imageUrl;
 
-	/** ²ØÊéµØÖ· */
+	/** è—ä¹¦åœ°å€ */
 	private String address;
 
-	/** ±à¼­ÍÆ¼ö */
+	/** ç¼–è¾‘æ¨è */
 	private String editorRecommend;
 
-	/** ÄÚÈİ¼ò½é */
+	/** å†…å®¹ç®€ä»‹ */
 	private String description;
 
-	/** ×÷Õß¼ò½é */
+	/** ä½œè€…ç®€ä»‹ */
 	private String authorDesc;
 
-	/** µ±Ç°×´Ì¬ */
+	/** å½“å‰çŠ¶æ€ */
 	private Integer state;
 	
-	/** µ±Ç°½èÔÄÈËid */
+	/** å½“å‰å€Ÿé˜…äººid */
 	private Integer currentReaderId;
 	
-	/** µ±Ç°½èÔÄÈËĞÕÃû */
+	/** å½“å‰å€Ÿé˜…äººå§“å */
 	private String currentReader;
 	
-	/** µ±Ç°¹ØÁªµÄ½èÔÄ¼ÇÂ¼id */
+	/** å½“å‰å…³è”çš„å€Ÿé˜…è®°å½•id */
 	private Integer logId;
 
 	public Book() {

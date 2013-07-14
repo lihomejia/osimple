@@ -9,13 +9,13 @@ import com.lhq.prj.bms.dao.IUserDao;
 import com.lhq.prj.bms.po.User;
 
 /**
- * UserDao.java Create on 2008-9-19 ÉÏÎç01:44:58
+ * UserDao.java Create on 2008-9-19 ä¸Šåˆ01:44:58
  * 
- * ÓÃ»§¹ÜÀí³Ö¾Ã²ãÊµÏÖ
+ * ç”¨æˆ·ç®¡ç†æŒä¹…å±‚å®ç°
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class UserDao extends SqlMapClientDaoSupport implements IUserDao {

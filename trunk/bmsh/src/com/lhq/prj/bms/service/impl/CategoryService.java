@@ -9,13 +9,13 @@ import com.lhq.prj.bms.po.Subject;
 import com.lhq.prj.bms.service.ICategoryService;
 
 /**
- * DeptService.java Create on 2008-9-16 下午10:40:48
+ * DeptService.java Create on 2008-9-16 涓嬪崍10:40:48
  * 
- * 分类业务实现
+ * 鍒嗙被涓氬姟瀹炵幇
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 public class CategoryService implements ICategoryService {

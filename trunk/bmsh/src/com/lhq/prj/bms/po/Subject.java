@@ -3,25 +3,25 @@ package com.lhq.prj.bms.po;
 import java.io.Serializable;
 
 /**
- * Subject.java Create on 2008-9-21 ÏÂÎç03:42:14
+ * Subject.java Create on 2008-9-21 ä¸‹åˆ03:42:14
  * 
- * ¿ÆÄ¿Àà
+ * ç§‘ç›®ç±»
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
 public class Subject implements Serializable {
 
-	/** ¿ÆÄ¿id */
+	/** ç§‘ç›®id */
 	private Integer subjectId;
 
-	/** ¿ÆÄ¿Ãû³Æ */
+	/** ç§‘ç›®åç§° */
 	private String subjectName;
 
-	/** ±¸×¢ */
+	/** å¤‡æ³¨ */
 	private String remark;
 
 	public String getRemark() {

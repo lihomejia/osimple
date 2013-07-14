@@ -10,13 +10,13 @@ import com.lhq.prj.bms.po.Category;
 import com.lhq.prj.bms.po.Subject;
 
 /**    
- * CategoryDao.java Create on 2008-9-21 ÏÂÎç04:26:45   
+ * CategoryDao.java Create on 2008-9-21 ä¸‹åˆ04:26:45   
  *
- * ·ÖÀà¹ÜÀí³Ö¾Ã²ãÊµÏÖ
+ * åˆ†ç±»ç®¡ç†æŒä¹…å±‚å®ç°
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public class CategoryDao extends SqlMapClientDaoSupport implements ICategoryDao {

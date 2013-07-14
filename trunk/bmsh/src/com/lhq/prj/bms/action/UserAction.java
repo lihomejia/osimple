@@ -10,13 +10,13 @@ import com.lhq.prj.bms.po.User;
 import com.lhq.prj.bms.service.IUserService;
 
 /**
- * UserAction.java Create on 2008-9-19 ÉÏÎç01:38:39
+ * UserAction.java Create on 2008-9-19 ä¸Šåˆ01:38:39
  * 
- * ÓÃ»§´¦Àí
+ * ç”¨æˆ·å¤„ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -57,20 +57,20 @@ public class UserAction extends BaseAction {
 
 		if (_user != null) {
 			if (user.isManager() == true && _user.isManager() == true) {
-				this.setTip("manager");// ¹ÜÀíÔ±
+				this.setTip("manager");// ç®¡ç†å‘˜
 			} else {
-				this.setTip("simple");// ÆÕÍ¨ÓÃ»§
+				this.setTip("simple");// æ™®é€šç”¨æˆ·
 			}
 			getSession().setAttribute("user", _user);
 			return SUCCESS;
 		} else {
-			this.setTip("ÓÃ»§Ãû»òÕßÃÜÂë´íÎó!");
+			this.setTip("ç”¨æˆ·åæˆ–è€…å¯†ç é”™è¯¯!");
 			return INPUT;
 		}
 	}
 
 	/**
-	 * Ìí¼ÓÓÃ»§
+	 * æ·»åŠ ç”¨æˆ·
 	 * 
 	 * @return
 	 */
@@ -83,7 +83,7 @@ public class UserAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒÓÃ»§ĞÅÏ¢
+	 * æŸ¥æ‰¾ç”¨æˆ·ä¿¡æ¯
 	 * 
 	 * @return
 	 */
@@ -108,7 +108,7 @@ public class UserAction extends BaseAction {
 	}
 
 	/**
-	 * É¾³ıÓÃ»§
+	 * åˆ é™¤ç”¨æˆ·
 	 * 
 	 * @return
 	 */
@@ -121,7 +121,7 @@ public class UserAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸ÄÓÃ»§ĞÅÏ¢
+	 * ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯
 	 * 
 	 * @return
 	 * @throws Exception

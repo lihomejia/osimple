@@ -17,11 +17,11 @@ import com.lhq.prj.bms.po.User;
 import com.lhq.prj.bms.service.ILoanLogService;
 
 /**
- * Create on 2008-10-11 ÏÂÎç07:16:21
+ * Create on 2008-10-11 ä¸‹åˆ07:16:21
  * 
- * Í¼Êé½è»¹¹ÜÀí
+ * å›¾ä¹¦å€Ÿè¿˜ç®¡ç†
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version
  */
 @SuppressWarnings("serial")
@@ -37,39 +37,39 @@ public class LoanLogAction extends BaseAction {
 	
 	private LoanLog loanLog;
 	
-	/** Êé±¾id */
+	/** ä¹¦æœ¬id */
 	private Integer bookId;
 
-	/** ÊéÃû 50 */
+	/** ä¹¦å 50 */
 	private String bookName;
 
-	/** ½è³öÊ±¼ä */
+	/** å€Ÿå‡ºæ—¶é—´ */
 	private Date loanTime;
 
-	/** ½è³öÌìÊı */
+	/** å€Ÿå‡ºå¤©æ•° */
 	private Integer loanDays;
 
-	/** Ô¤¼Æ»¹ÊéÊ±¼ä */
+	/** é¢„è®¡è¿˜ä¹¦æ—¶é—´ */
 	private Date preReturnTime;
 
-	/** Êµ¼Ê»¹ÊéÊ±¼ä */
+	/** å®é™…è¿˜ä¹¦æ—¶é—´ */
 	private Date returnTime;
 
-	/** ½èÔÄÈËid */
+	/** å€Ÿé˜…äººid */
 	private Integer readerId;
 
-	/** ½èÔÄÈË 50 */
+	/** å€Ÿé˜…äºº 50 */
 	private String reader;
 
-	/** ¹ÜÀíÔ±id */
+	/** ç®¡ç†å‘˜id */
 	private Integer loannerId;
 
-	/** ¹ÜÀíÔ±Ãû³Æ 50 */
+	/** ç®¡ç†å‘˜åç§° 50 */
 	private String loanner;
 
 
 	/**
-	 * ±£´æÒ»¸ö½è»¹¼ÇÂ¼
+	 * ä¿å­˜ä¸€ä¸ªå€Ÿè¿˜è®°å½•
 	 * 
 	 * @return
 	 * @throws Exception 
@@ -87,7 +87,7 @@ public class LoanLogAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒÍ¼Êé½è»¹¼ÇÂ¼
+	 * æŸ¥æ‰¾å›¾ä¹¦å€Ÿè¿˜è®°å½•
 	 * 
 	 * @return
 	 */
@@ -109,7 +109,7 @@ public class LoanLogAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸Ä½è»¹¼ÇÂ¼ĞÅÏ¢
+	 * ä¿®æ”¹å€Ÿè¿˜è®°å½•ä¿¡æ¯
 	 * 
 	 * @return
 	 * @throws Exception

@@ -9,10 +9,10 @@ package com.lhq.prj.bms.po;
 import java.io.Serializable;
 
 /**
- * ²¿ÃÅÀà
+ * éƒ¨é—¨ç±»
  * 
  * @author lhq
- * @version 1.0 ÏÂÎç04:49:30
+ * @version 1.0 ä¸‹åˆ04:49:30
  */
 @SuppressWarnings("serial")
 public class Dept implements Serializable {
@@ -20,31 +20,31 @@ public class Dept implements Serializable {
 		super();
 	}
 
-	/** ²¿ÃÅID£¨×Ô¶¯ÔöÖµ£© */
+	/** éƒ¨é—¨IDï¼ˆè‡ªåŠ¨å¢å€¼ï¼‰ */
 	private Integer deptId;
 
-	/** ²¿ÃÅÃû³Æ not null 50 */
+	/** éƒ¨é—¨åç§° not null 50 */
 	private String deptName;
 
-	/** ËùÊô·Ö¹«Ë¾id not null */
+	/** æ‰€å±åˆ†å…¬å¸id not null */
 	private Integer companyId;
 
-	/** ËùÊô·Ö¹«Ë¾Ãû³Æ£¨ÈßÓà×Ö¶Î£©not null 50 */
+	/** æ‰€å±åˆ†å…¬å¸åç§°ï¼ˆå†—ä½™å­—æ®µï¼‰not null 50 */
 	private String companyName;
 
-	/** (²¿ÃÅ)µØÖ· 200 */
+	/** (éƒ¨é—¨)åœ°å€ 200 */
 	private String address;
 
-	/** (²¿ÃÅ)µç»° 20 */
+	/** (éƒ¨é—¨)ç”µè¯ 20 */
 	private String tellPhone;
 
-	/** (²¿ÃÅ)¸ºÔğÈËĞÕÃû 20 */
+	/** (éƒ¨é—¨)è´Ÿè´£äººå§“å 20 */
 	private String leader;
 
-	/** (²¿ÃÅ)¸ºÔğÈËµç»° 20 */
+	/** (éƒ¨é—¨)è´Ÿè´£äººç”µè¯ 20 */
 	private String mobilePhone;
 
-	/** ±¸×¢ 200 */
+	/** å¤‡æ³¨ 200 */
 	private String remark;
 
 	public String getAddress() {

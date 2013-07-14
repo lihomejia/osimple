@@ -10,16 +10,16 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.LoanLog;
 
 /**    
- * Create on 2008-10-11 ÏÂÎç07:08:18
+ * Create on 2008-10-11 ä¸‹åˆ07:08:18
  *
- * Í¼Êé½è³ö»¹Êé¼ÇÂ¼ÒµÎñ²ã½Ó¿Ú
+ * å›¾ä¹¦å€Ÿå‡ºè¿˜ä¹¦è®°å½•ä¸šåŠ¡å±‚æ¥å£
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version  
  */
 public interface ILoanLogService {
 	/**
-	 * Ìí¼Ó¼ÇÂ¼
+	 * æ·»åŠ è®°å½•
 	 * 
 	 * @param loanlog
 	 * @return
@@ -28,14 +28,14 @@ public interface ILoanLogService {
 	Object saveLoanLog(LoanLog loanlog) throws Exception;
 	
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸Ä¼ÇÂ¼ĞÅÏ¢
+	 * ä¿®æ”¹è®°å½•ä¿¡æ¯
 	 * 
 	 * @param loanlog
 	 * @return
@@ -44,7 +44,7 @@ public interface ILoanLogService {
 	boolean updateLoanLog(LoanLog loanlog) throws Exception;
 
 	/**
-	 * É¾³ı¼ÇÂ¼
+	 * åˆ é™¤è®°å½•
 	 * 
 	 * @param logId
 	 * @return

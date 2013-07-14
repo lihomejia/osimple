@@ -11,13 +11,13 @@ import com.lhq.prj.bms.po.Dept;
 import com.lhq.prj.bms.service.IDeptService;
 
 /**
- * DeptAction.java Create on 2008-9-16 ÏÂÎç10:35:18
+ * DeptAction.java Create on 2008-9-16 ä¸‹åˆ10:35:18
  * 
- * ²¿ÃÅ´¦Àí
+ * éƒ¨é—¨å¤„ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -33,7 +33,7 @@ public class DeptAction extends BaseAction {
 	private Integer deptId;
 
 	/**
-	 * Ìí¼Ó²¿ÃÅ
+	 * æ·»åŠ éƒ¨é—¨
 	 * 
 	 * @return
 	 */
@@ -46,7 +46,7 @@ public class DeptAction extends BaseAction {
 	}
 
 	/**
-	 * ¸ù¾İ·Ö¹«Ë¾²éÕÒ²¿ÃÅ
+	 * æ ¹æ®åˆ†å…¬å¸æŸ¥æ‰¾éƒ¨é—¨
 	 * 
 	 * @return
 	 */
@@ -66,7 +66,7 @@ public class DeptAction extends BaseAction {
 	}
 
 	/**
-	 * ²éÕÒ²¿ÃÅĞÅÏ¢
+	 * æŸ¥æ‰¾éƒ¨é—¨ä¿¡æ¯
 	 * 
 	 * @return
 	 */
@@ -85,7 +85,7 @@ public class DeptAction extends BaseAction {
 	}
 
 	/**
-	 * É¾³ı²¿ÃÅ
+	 * åˆ é™¤éƒ¨é—¨
 	 * 
 	 * @return
 	 */
@@ -98,19 +98,19 @@ public class DeptAction extends BaseAction {
 	}
 
 	/**
-	 * ĞŞ¸Ä²¿ÃÅĞÅÏ¢
+	 * ä¿®æ”¹éƒ¨é—¨ä¿¡æ¯
 	 * 
 	 * @return
 	 * @throws Exception
 	 */
 	public String updateDept() throws Exception {
 		String fieldName = getRequest().getParameter("fieldName");
-		String strCompanyId = getRequest().getParameter("companyId");// »ñµÃ·Ö¹«Ë¾id,µ±ĞŞ¸ÄËùÊô·Ö¹«Ë¾Ê±²ÅÓĞÖµ´«¹ıÀ´
+		String strCompanyId = getRequest().getParameter("companyId");// è·å¾—åˆ†å…¬å¸id,å½“ä¿®æ”¹æ‰€å±åˆ†å…¬å¸æ—¶æ‰æœ‰å€¼ä¼ è¿‡æ¥
 		String fieldValue = getRequest().getParameter("fieldValue");
 		String strDeptId = getRequest().getParameter("deptId");
 		if (strDeptId != null && !"".equals(strDeptId)) {
 			Dept dept = new Dept();
-			if ("companyName".equals(fieldName) && !"".equals(strCompanyId)) {// µ±ĞŞ¸ÄËùÊô·Ö¹«Ë¾µÄÊ±ºò×öÌØÊâ´¦Àí
+			if ("companyName".equals(fieldName) && !"".equals(strCompanyId)) {// å½“ä¿®æ”¹æ‰€å±åˆ†å…¬å¸çš„æ—¶å€™åšç‰¹æ®Šå¤„ç†
 				dept.setCompanyId(Integer.valueOf(strCompanyId));
 			}
 			dept.setDeptId(Integer.valueOf(strDeptId));

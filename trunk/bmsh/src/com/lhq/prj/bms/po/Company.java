@@ -4,25 +4,25 @@ import java.io.Serializable;
 
 @SuppressWarnings("serial")
 public class Company implements Serializable {
-	/** ¹«Ë¾id */
+	/** å…¬å¸id */
 	private Integer companyId;
 
-	/** ¹«Ë¾Ãû³Æ */
+	/** å…¬å¸åç§° */
 	private String companyName;
 
-	/** ¹«Ë¾µØÖ· */
+	/** å…¬å¸åœ°å€ */
 	private String address;
 
-	/** ¹«Ë¾µç»° */
+	/** å…¬å¸ç”µè¯ */
 	private String tellPhone;
 
-	/** ¹«Ë¾¸ºÔğÈË */
+	/** å…¬å¸è´Ÿè´£äºº */
 	private String leader;
 
-	/** ¹«Ë¾¸ºÔğÈËµç»° */
+	/** å…¬å¸è´Ÿè´£äººç”µè¯ */
 	private String mobilePhone;
 
-	/** ±¸×¢ */
+	/** å¤‡æ³¨ */
 	private String remark;
 
 	public String getAddress() {

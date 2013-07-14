@@ -8,36 +8,36 @@ import com.lhq.prj.bms.po.Company;
 public interface ICompanyDao {
 
 	/**
-	 * ±£´æÒ»¸ö¹«Ë¾ÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªå…¬å¸å®ä½“åˆ°æ•°æ®åº“
 	 * 
 	 * @param company
-	 *            ¹«Ë¾ÊµÌå
-	 * @return Ö÷¼üid
+	 *            å…¬å¸å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveCompany(Company company);
 
 	/**
-	 * ²éÕÒËùÓĞ·Ö¹«Ë¾
+	 * æŸ¥æ‰¾æ‰€æœ‰åˆ†å…¬å¸
 	 * @return
 	 */
 	public List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page Ìõ¼ş
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * ·ÖÒ³²éÕÒµÄ×Ü¼ÇÂ¼
-	 * @param page Ìõ¼ş
+	 * åˆ†é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
+	 * @param page æ¡ä»¶
 	 * @return
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸Ä¹«Ë¾ĞÅÏ¢
+	 * ä¿®æ”¹å…¬å¸ä¿¡æ¯
 	 * @param c
 	 * @return
 	 * @throws Exception 
@@ -45,7 +45,7 @@ public interface ICompanyDao {
 	public Integer update(Company c) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ı·Ö¹«Ë¾
+	 * æ ¹æ®idåˆ é™¤åˆ†å…¬å¸
 	 * 
 	 * @param companyId
 	 * @return

@@ -7,13 +7,13 @@ import com.lhq.prj.bms.po.Subject;
 import com.lhq.prj.bms.service.ISubjectService;
 
 /**
- * SubjectService.java Create on 2008-9-21 下午03:59:22
+ * SubjectService.java Create on 2008-9-21 涓嬪崍03:59:22
  * 
- * 科目管理业务实现
+ * 绉戠洰绠＄悊涓氬姟瀹炵幇
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version 1.0
  */
 public class SubjectService implements ISubjectService {

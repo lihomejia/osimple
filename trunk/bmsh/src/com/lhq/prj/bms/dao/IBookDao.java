@@ -6,46 +6,46 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.Book;
 
 /**
- * IBookDao.java Create on 2008-9-24 ÏÂÎç09:07:34
+ * IBookDao.java Create on 2008-9-24 ä¸‹åˆ09:07:34
  * 
- * Í¼Êé´¦Àí
+ * å›¾ä¹¦å¤„ç†
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface IBookDao {
 	/**
-	 * ±£´æÒ»¸öÍ¼ÊéÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªå›¾ä¹¦å®ä½“åˆ°æ•°æ®åº“
 	 * 
 	 * @param book
-	 *          Í¼ÊéÊµÌå
-	 * @return Ö÷¼üid
+	 *          å›¾ä¹¦å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveBook(Book book);
 
 
 	/**
-	 * ·ÖÒ³²éÕÒ
+	 * åˆ†é¡µæŸ¥æ‰¾
 	 * 
 	 * @param page
-	 *          Ìõ¼ş
+	 *          æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * ·ÖÒ³²éÕÒµÄ×Ü¼ÇÂ¼
+	 * åˆ†é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
 	 * 
 	 * @param page
-	 *          Ìõ¼ş
+	 *          æ¡ä»¶
 	 * @return
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸ÄÍ¼ÊéĞÅÏ¢
+	 * ä¿®æ”¹å›¾ä¹¦ä¿¡æ¯
 	 * 
 	 * @param book
 	 * @return
@@ -54,7 +54,7 @@ public interface IBookDao {
 	public Integer update(Book book) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ıÍ¼Êé
+	 * æ ¹æ®idåˆ é™¤å›¾ä¹¦
 	 * 
 	 * @param bookId
 	 * @return
@@ -63,7 +63,7 @@ public interface IBookDao {
 
 
 	/***
-	 * ¸ù¾İid»ñµÃ¼ÇÂ¼
+	 * æ ¹æ®idè·å¾—è®°å½•
 	 *
 	 * @param bookId
 	 * @return

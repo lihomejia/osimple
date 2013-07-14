@@ -5,18 +5,18 @@ import java.util.List;
 import com.lhq.prj.bms.po.Subject;
 
 /**
- * ISubjectService.java Create on 2008-9-21 ÏÂÎç03:57:53
+ * ISubjectService.java Create on 2008-9-21 ä¸‹åˆ03:57:53
  * 
- * ¿ÆÄ¿¹ÜÀíÒµÎñ²ã
+ * ç§‘ç›®ç®¡ç†ä¸šåŠ¡å±‚
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface ISubjectService {
 	/**
-	 * Ìí¼Ó¿ÆÄ¿
+	 * æ·»åŠ ç§‘ç›®
 	 * 
 	 * @param subject
 	 * @return
@@ -24,14 +24,14 @@ public interface ISubjectService {
 	Object saveSubject(Subject subject);
 
 	/**
-	 * ²éÕÒËùÓĞ¿ÆÄ¿
+	 * æŸ¥æ‰¾æ‰€æœ‰ç§‘ç›®
 	 * 
 	 * @return
 	 */
 	List findAll();
 
 	/**
-	 * ĞŞ¸Ä¿ÆÄ¿ĞÅÏ¢
+	 * ä¿®æ”¹ç§‘ç›®ä¿¡æ¯
 	 * 
 	 * @param subject
 	 * @return
@@ -40,7 +40,7 @@ public interface ISubjectService {
 	boolean updateSubject(Subject subject) throws Exception;
 
 	/**
-	 * É¾³ı¿ÆÄ¿
+	 * åˆ é™¤ç§‘ç›®
 	 * 
 	 * @param subjectId
 	 * @return

@@ -3,13 +3,13 @@ package com.lhq.prj.bms.po;
 import java.io.Serializable;
 
 /**
- * User.java Create on 2008-9-18 ÏÂÎç09:32:48
+ * User.java Create on 2008-9-18 ä¸‹åˆ09:32:48
  * 
- * ÓÃ»§Àà
+ * ç”¨æˆ·ç±»
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 @SuppressWarnings("serial")
@@ -18,52 +18,52 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	/** ÓÃ»§id */
+	/** ç”¨æˆ·id */
 	private Integer userId;
 
-	/** Ô±¹¤ĞÕÃû */
+	/** å‘˜å·¥å§“å */
 	private String emplName;
 
-	/** Ô±¹¤±àÂë */
+	/** å‘˜å·¥ç¼–ç  */
 	private String emplNo;
 
-	/** ÒÆ¶¯µç»° */
+	/** ç§»åŠ¨ç”µè¯ */
 	private String mobilePhone;
 
-	/** ĞÔ±ğ */
+	/** æ€§åˆ« */
 	private String sex;
 
-	/** ÄêÁä */
+	/** å¹´é¾„ */
 	private Integer age;
 
-	/** ÓÃ»§Ãû */
+	/** ç”¨æˆ·å */
 	private String userName;
 
-	/** ÃÜÂë */
+	/** å¯†ç  */
 	private String password;
 
-	/** ËùÊô·Ö¹«Ë¾µÄid */
+	/** æ‰€å±åˆ†å…¬å¸çš„id */
 	private Integer companyId;
 
-	/** ËùÊô·Ö¹«Ë¾ */
+	/** æ‰€å±åˆ†å…¬å¸ */
 	private String companyName;
 
-	/** ËùÊô²¿ÃÅµÄid */
+	/** æ‰€å±éƒ¨é—¨çš„id */
 	private Integer deptId;
 
-	/** ËùÊô²¿ÃÅ */
+	/** æ‰€å±éƒ¨é—¨ */
 	private String deptName;
 
-	/** Ö°Îñid */
+	/** èŒåŠ¡id */
 	private Integer dutyId;
 
-	/** Ö°ÎñÃû³Æ */
+	/** èŒåŠ¡åç§° */
 	private String dutyName;
 
-	/** ÊÇ·ñ¹ÜÀíÔ± */
+	/** æ˜¯å¦ç®¡ç†å‘˜ */
 	private boolean manager;
 
-	/** ±¸×¢ */
+	/** å¤‡æ³¨ */
 	private String remark;
 
 	public Integer getAge() {

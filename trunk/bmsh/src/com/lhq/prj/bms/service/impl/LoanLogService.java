@@ -14,11 +14,11 @@ import com.lhq.prj.bms.po.LoanLog;
 import com.lhq.prj.bms.service.ILoanLogService;
 
 /**    
- * Create on 2008-10-11 下午07:11:35
+ * Create on 2008-10-11 涓嬪崍07:11:35
  *
- * 图书借还记录业务层实现类
+ * 鍥句功鍊熻繕璁板綍涓氬姟灞傚疄鐜扮被
  *
- * @author 廖瀚卿
+ * @author 寤栫�氬嵖
  * @version  1.0
  */
 public class LoanLogService implements ILoanLogService {

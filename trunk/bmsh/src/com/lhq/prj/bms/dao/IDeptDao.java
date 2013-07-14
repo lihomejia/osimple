@@ -7,52 +7,52 @@ import com.lhq.prj.bms.po.Company;
 import com.lhq.prj.bms.po.Dept;
 
 /**
- * IDeptDao.java Create on 2008-9-16 ÏÂÎç10:41:23
+ * IDeptDao.java Create on 2008-9-16 ä¸‹åˆ10:41:23
  * 
- * ²¿ÃÅ¹ÜÀí³Ö¾Ã²ã½Ó¿Ú
+ * éƒ¨é—¨ç®¡ç†æŒä¹…å±‚æ¥å£
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public interface IDeptDao {
 	/**
-	 * ±£´æÒ»¸ö²¿ÃÅÊµÌåµ½Êı¾İ¿â
+	 * ä¿å­˜ä¸€ä¸ªéƒ¨é—¨å®ä½“åˆ°æ•°æ®åº“
 	 * 
 	 * @param dept
-	 *            ²¿ÃÅÊµÌå
-	 * @return Ö÷¼üid
+	 *            éƒ¨é—¨å®ä½“
+	 * @return ä¸»é”®id
 	 */
 	public Object saveDept(Dept dept);
 
 	/**
-	 * ²éÕÒËùÓĞ²¿ÃÅ
+	 * æŸ¥æ‰¾æ‰€æœ‰éƒ¨é—¨
 	 * 
 	 * @return
 	 */
 	public List findAll();
 
 	/**
-	 * ·ÖÒ³²éÕÒ
+	 * åˆ†é¡µæŸ¥æ‰¾
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public List findByPage(Page page);
 
 	/**
-	 * ·ÖÒ³²éÕÒµÄ×Ü¼ÇÂ¼
+	 * åˆ†é¡µæŸ¥æ‰¾çš„æ€»è®°å½•
 	 * 
 	 * @param page
-	 *            Ìõ¼ş
+	 *            æ¡ä»¶
 	 * @return
 	 */
 	public int findByCount(Page page);
 
 	/**
-	 * ĞŞ¸Ä²¿ÃÅĞÅÏ¢
+	 * ä¿®æ”¹éƒ¨é—¨ä¿¡æ¯
 	 * 
 	 * @param dept
 	 * @return
@@ -61,7 +61,7 @@ public interface IDeptDao {
 	public Integer update(Dept dept) throws Exception;
 
 	/**
-	 * ¸ù¾İidÉ¾³ı²¿ÃÅ
+	 * æ ¹æ®idåˆ é™¤éƒ¨é—¨
 	 * 
 	 * @param deptId
 	 * @return
@@ -69,7 +69,7 @@ public interface IDeptDao {
 	public Integer deleteById(Integer deptId);
 
 	/**
-	 * ¸ù¾İ·Ö¹«Ë¾ÕÒ²¿ÃÅ
+	 * æ ¹æ®åˆ†å…¬å¸æ‰¾éƒ¨é—¨
 	 *
 	 * @param company
 	 * @return

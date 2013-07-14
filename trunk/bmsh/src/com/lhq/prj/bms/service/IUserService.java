@@ -6,18 +6,18 @@ import com.lhq.prj.bms.core.Page;
 import com.lhq.prj.bms.po.User;
 
 /**    
- * IUserService.java Create on 2008-9-19 ÉÏÎç01:39:40   
+ * IUserService.java Create on 2008-9-19 ä¸Šåˆ01:39:40   
  *
- * ÓÃ»§¹ÜÀíÒµÎñ²ã½Ó¿Ú
+ * ç”¨æˆ·ç®¡ç†ä¸šåŠ¡å±‚æ¥å£
  *
  * Copyright (c) 2008 by MTA.
  *
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0  
  */
 public interface IUserService {
 	/**
-	 * Ìí¼ÓÓÃ»§
+	 * æ·»åŠ ç”¨æˆ·
 	 * @param user
 	 * @return
 	 */
@@ -25,14 +25,14 @@ public interface IUserService {
 
 
 	/**
-	 * ·ÖÒ³²éÕÒ
-	 * @param page ·ÖÒ³¶ÔÏó
+	 * åˆ†é¡µæŸ¥æ‰¾
+	 * @param page åˆ†é¡µå¯¹è±¡
 	 * @return
 	 */
 	Page findByPage(Page page);
 
 	/**
-	 * ĞŞ¸ÄÓÃ»§ĞÅÏ¢
+	 * ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯
 	 * @param user
 	 * @return
 	 * @throws Exception 
@@ -40,7 +40,7 @@ public interface IUserService {
 	boolean updateUser(User user) throws Exception;
 
 	/**
-	 * É¾³ıÓÃ»§
+	 * åˆ é™¤ç”¨æˆ·
 	 * 
 	 * @param deptId
 	 * @return
@@ -49,7 +49,7 @@ public interface IUserService {
 
 
 	/**
-	 * µÇÂ½ÏµÍ³
+	 * ç™»é™†ç³»ç»Ÿ
 	 * 
 	 * @param user
 	 * @return user
@@ -58,7 +58,7 @@ public interface IUserService {
 
 
 	/**
-	 * ¸ù¾İÓÃ»§ÊµÀı²éÕÒÓÃ»§
+	 * æ ¹æ®ç”¨æˆ·å®ä¾‹æŸ¥æ‰¾ç”¨æˆ·
 	 *
 	 * @param user
 	 * @return

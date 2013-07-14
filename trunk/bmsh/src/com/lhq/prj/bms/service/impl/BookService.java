@@ -11,13 +11,13 @@ import com.lhq.prj.bms.po.LoanLog;
 import com.lhq.prj.bms.service.IBookService;
 
 /**
- * BookService.java Create on 2008-9-24 ÏÂÎç09:14:31
+ * BookService.java Create on 2008-9-24 ä¸‹åˆ09:14:31
  * 
- * Í¼Êé¹ÜÀíÒµÎñ²ã
+ * å›¾ä¹¦ç®¡ç†ä¸šåŠ¡å±‚
  * 
  * Copyright (c) 2008 by MTA.
  * 
- * @author ÁÎå«Çä
+ * @author å»–ç€šå¿
  * @version 1.0
  */
 public class BookService implements IBookService {
@@ -64,7 +64,7 @@ public class BookService implements IBookService {
 	public boolean returnBook(Book book) throws Exception {
 		book = bookDao.findById(book.getBookId());
 		book.setState(1);
-		book.setCurrentReader("");// Çå¿Õµ±Ç°½èÊéÈËĞÅÏ¢
+		book.setCurrentReader("");// æ¸…ç©ºå½“å‰å€Ÿä¹¦äººä¿¡æ¯
 		book.setCurrentReaderId(0);
 		Integer flag = bookDao.update(book);
 		LoanLog loanLog = new LoanLog();
