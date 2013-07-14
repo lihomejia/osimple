@@ -22,6 +22,10 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>default</servlet-name>
+    <url-pattern>*.json</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
@@ -66,7 +70,7 @@
     </init-param>
     <init-param>
       <param-name>excludingPattern</param-name>
-      <param-value>/framework/login; /anonymous/; \.jpg$; \.gif$; \.png$; \.ico$; \.js$; \.css$; \.html$; </param-value>
+      <param-value>/framework/login; /anonymous/; \.jpg$; \.gif$; \.png$; \.ico$; \.js$; \.json$; \.css$; \.html$; </param-value>
     </init-param>
   </filter>
   <filter-mapping>
