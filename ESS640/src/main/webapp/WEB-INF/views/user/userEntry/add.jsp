@@ -1,7 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@include  file="/static/taglibs.jsp"%>
 
-<!DOCTYPE HTML5>
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -9,7 +8,7 @@
   </head>
   
   <body>
-  	<form id="form1" name="form1" action="user/userEntry/add" method="post">
+  	<form id="form1" name="form1" action="<%=basePath%>user/userEntry/add" method="post">
 	    <table>
 	    	<tr>
 	    		<td>用户ID：<input type="text" name="ssuserUserid"/></td>

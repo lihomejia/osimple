@@ -1,10 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE HTML5>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@include  file="/static/taglibs.jsp"%>
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -25,9 +20,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     This is my Homepage page. <br>
     
-    <a href="user/userList/findList">User Demo</a><br/>
+    <a href="<%=basePath%>user/userList/findList">User Demo</a><br/>
+    <a href="<%=basePath%>test/upload">File UpLoad Demo</a><br/>
 	<br/>
-	<a href="framework/logout">Logout</a><br/>
+	<a href="<%=basePath%>framework/logout">Logout</a><br/>
 	
 	
 	
