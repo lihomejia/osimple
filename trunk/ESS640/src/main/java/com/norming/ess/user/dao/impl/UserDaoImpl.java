@@ -9,28 +9,27 @@ import com.norming.ess.user.domain.Ssuser;
 public class UserDaoImpl extends CommonDaoImpl implements IUserDao {
 	
 	public List<Ssuser> selectAll() {
-		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER";
-		return this.query(querySql, Ssuser.class);
+		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER where 1=2";
+		return super.query(querySql, Ssuser.class);
 	}
 	
 	public Ssuser selectById(String id) {
 		String querySql = "select SSUSER_USERID,SSUSER_USERNAME,SSUSER_PWD from SSUSER where SSUSER_USERID = ?";
-		return this.queryForObject(querySql, new Object[] {id}, Ssuser.class);
+		return super.queryForObject(querySql, new Object[] {id}, Ssuser.class);
 	}
 	
 	public int insert(Ssuser user) {
-		String insertSql = "INSERT INTO SSUSER (SSUSER_USERID,SSUSER_PWD) VALUES(?,?);";
-		return this.insert(insertSql, user.getSsuserUserid(), user.getSsuserPwd());
+		String insertSql = "INSERT INTO SSUSER (SSUSER_USERID,SSUSER_PWD) VALUES(?,?)";
+		return super.getJdbcTemplate().update(insertSql, user.getSsuserUserid(), user.getSsuserPwd());
 	}
 	
 	public int update(Ssuser user) {
 		String updateSql = "update SSUSER set SSUSER_PWD=? where SSUSER_USERID=?";
-		return this.update(updateSql, user.getSsuserPwd(), user.getSsuserUserid());
+		return super.getJdbcTemplate().update(updateSql, user.getSsuserPwd(), user.getSsuserUserid());
 	}
 
-	@Override
 	public int deleteUser(String id) {
 		String deleteSql = "delete from SSUSER where SSUSER_USERID=?";
-		return this.delete(deleteSql, id);
+		return super.getJdbcTemplate().update(deleteSql, id);
 	}
 }

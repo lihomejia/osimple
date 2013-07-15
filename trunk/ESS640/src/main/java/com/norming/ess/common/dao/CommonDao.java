@@ -14,13 +14,10 @@
 package com.norming.ess.common.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.BatchPreparedStatementSetter;
-import org.springframework.jdbc.core.JdbcOperations;
-import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  * Norming持久层API公用服务接口类.  2.0
@@ -32,10 +29,12 @@ import org.springframework.jdbc.support.KeyHolder;
  * 
  * 任何持久层操作以及获取数据源的操作必须继承此类。不允许越过数据库连接池自行获取dataSource
  */
-public interface CommonDao extends JdbcOperations {
+public interface CommonDao {
 	
 	String BEAN_NAME    = "commonDao";
 	String BEAN_DYNAMIC = "commonDaoDynamic";
+	
+	JdbcTemplate getJdbcTemplate();
 	
 	<T> List<T> query(String sql, Class<T> clazz) throws DataAccessException;
 	
@@ -45,25 +44,7 @@ public interface CommonDao extends JdbcOperations {
 	
 	<T> T queryForObject(String sql, Object[] args, Class<T> clazz) throws DataAccessException;
 	
-	int[] batchInsert(final String[] sql) throws DataAccessException;
+	Map<String, Object> queryForMap(String sql) throws DataAccessException;
 	
-	int[] batchInsert(String sql, final BatchPreparedStatementSetter pss) throws DataAccessException;
-	
-	int[] batchInsert(String sql, List<Object[]> batchArgs);
-	
-	int insert(String sql) throws DataAccessException;
-	
-	int insert(String sql, Object... args) throws DataAccessException;
-	
-	int insert(String sql, Object[] args, int[] argTypes) throws DataAccessException;
-	
-	int insert(PreparedStatementCreator psc) throws DataAccessException;
-	
-	int insert(final PreparedStatementCreator psc, final KeyHolder generatedKeyHolder) throws DataAccessException;
-	
-	int insert(String sql, PreparedStatementSetter pss) throws DataAccessException;
-	
-	int delete(String sql) throws DataAccessException;
-	
-	int delete(String sql, Object... args) throws DataAccessException;
+	Map<String, Object> queryForMap(String sql, Object... args) throws DataAccessException;
 }

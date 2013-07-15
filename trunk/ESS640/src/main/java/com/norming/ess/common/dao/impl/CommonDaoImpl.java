@@ -17,100 +17,71 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
 import com.norming.ess.common.dao.CommonDao;
 
-public class CommonDaoImpl extends JdbcTemplate implements CommonDao {
-	
+
+public class CommonDaoImpl extends JdbcDaoSupport implements CommonDao {
+
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.common.dao.CommonDao#query(java.lang.String, java.lang.Class)
+	 */
 	public <T> List<T> query(String sql, Class<T> clazz) throws DataAccessException {
-		return query(sql, new BeanPropertyRowMapper<T>(clazz));
+		return super.getJdbcTemplate().query(sql, new BeanPropertyRowMapper<T>(clazz));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.common.dao.CommonDao#query(java.lang.String, java.lang.Object[], java.lang.Class)
+	 */
 	public <T> List<T> query(String sql, Object[] args, Class<T> clazz) throws DataAccessException {
-		return query(sql, args, new BeanPropertyRowMapper<T>(clazz));
+		return super.getJdbcTemplate().query(sql, args, new BeanPropertyRowMapper<T>(clazz));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.common.dao.CommonDao#queryForObject(java.lang.String, java.lang.Class)
+	 */
 	public <T> T queryForObject(String sql, Class<T> clazz) throws DataAccessException {
-		List<T> list = query(sql, clazz);
+		List<T> list = this.query(sql, clazz);
 		if (list.size() == 0) {
 			return null;
 		}
 		return list.get(0);
 	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.common.dao.CommonDao#queryForObject(java.lang.String, java.lang.Object[], java.lang.Class)
+	 */
 	public <T> T queryForObject(String sql, Object[] args, Class<T> clazz) throws DataAccessException {
-		List<T> list = query(sql, args, clazz);
+		List<T> list = this.query(sql, args, clazz);
 		if (list.size() == 0) {
 			return null;
 		}
 		return list.get(0);
 	}
 	
-	@Override
 	public Map<String, Object> queryForMap(String sql) throws DataAccessException {
-		List<Map<String, Object>> list = queryForList(sql);
+		List<Map<String, Object>> list = super.getJdbcTemplate().queryForList(sql);
 		if (list.size() == 0) {
 			return null;
 		}
 		return list.get(0);
 	}
 
-	@Override
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.common.dao.CommonDao#queryForMap(java.lang.String, java.lang.Object[])
+	 */
 	public Map<String, Object> queryForMap(String sql, Object... args) throws DataAccessException {
-		List<Map<String, Object>> list = queryForList(sql, args);
+		List<Map<String, Object>> list = super.getJdbcTemplate().queryForList(sql, args);
 		if (list.size() == 0) {
 			return null;
 		}
 		return list.get(0);
-	}
-
-	public int[] batchInsert(final String[] sql) throws DataAccessException {
-		return batchUpdate(sql);
-	}
-	
-	public int[] batchInsert(String sql, final BatchPreparedStatementSetter pss) throws DataAccessException {
-		return batchUpdate(sql, pss);
-	}
-	
-	public int[] batchInsert(String sql, List<Object[]> batchArgs) {
-		return batchUpdate(sql, batchArgs);
-	}
-
-	public int insert(String sql) throws DataAccessException {
-		return update(sql);
-	}
-	
-	public int insert(String sql, Object... args) throws DataAccessException {
-		return update(sql, args);
-	}
-
-	public int insert(String sql, Object[] args, int[] argTypes) throws DataAccessException {
-		return update(sql, args, argTypes);
-	}
-	
-	public int insert(PreparedStatementCreator psc) throws DataAccessException {
-		return update(psc);
-	}
-
-	public int insert(final PreparedStatementCreator psc, final KeyHolder generatedKeyHolder)
-			throws DataAccessException {
-		return update(psc, generatedKeyHolder);
-	}
-
-	public int insert(String sql, PreparedStatementSetter pss) throws DataAccessException {
-		return update(sql, pss);
-	}
-
-	public int delete(String sql) throws DataAccessException {
-		return update(sql);
-	}
-	
-	public int delete(String sql, Object... args) throws DataAccessException {
-		return update(sql, args);
 	}
 }
