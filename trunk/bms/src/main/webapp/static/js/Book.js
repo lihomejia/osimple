@@ -6,12 +6,17 @@ Ext.define('Bms.Book', {
 		xtype : 'grid',
 		store : Ext.create('Ext.data.Store', {
 		    storeId:'simpsonsStore',
-		    fields:['name', 'email', 'phone'],
+		    fields:['name', 'author', 'price', 'category', 'reader', 'status'],
 		    data:{'items':[
-		        { 'name': 'Lisa',  "email":"lisa@simpsons.com",  "phone":"555-111-1224"  },
-		        { 'name': 'Bart',  "email":"bart@simpsons.com",  "phone":"555-222-1234" },
-		        { 'name': 'Homer', "email":"home@simpsons.com",  "phone":"555-222-1244"  },
-		        { 'name': 'Marge', "email":"marge@simpsons.com", "phone":"555-222-1254"  }
+		        { 
+		        	name : 'aaa',
+		        	author : '(美)埃克尔 著,陈昊鹏 译　译者：陈昊鹏 译', 
+		        	price : "108",  
+		        	category : "计算机科学丛书", 
+		        	reader : '', 
+		        	status :'空闲'  
+		        }
+		       
 		    ]},
 		    proxy: {
 		        type: 'memory',
@@ -22,9 +27,12 @@ Ext.define('Bms.Book', {
 		    }
 		}),
 		columns: [
-		   { text: '书名',  dataIndex: 'name' },
-           { text: 'Email', dataIndex: 'email', flex: 1 },
-           { text: 'Phone', dataIndex: 'phone' }
+		   { text: '图书名称',  dataIndex: 'name' },
+           { text: '作者', dataIndex: 'author', flex: 1 },
+           { text: '定价', dataIndex: 'price' },
+           { text: '所属分类', dataIndex: 'category' },
+           { text: '当前读者', dataIndex: 'reader' },
+           { text: '当前状态', dataIndex: 'status' }
         ],
         bbar : [{
         	text : 'Add'
