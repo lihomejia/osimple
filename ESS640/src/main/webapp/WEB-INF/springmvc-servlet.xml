@@ -40,4 +40,15 @@
 		<!-- 设置上传文件大小的参数，单位为bytes  -->
 		<property name="maxUploadSize" value="10485760"/>
 	</bean>
+	
+	<bean id="handlerExceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="defaultErrorView" value="/error/error" />
+		<property name="exceptionMappings">
+			<props>
+				<prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">/error/maxUploadSizeExceededException</prop>
+				<prop key="java.lang.Exception">/error/exception</prop>
+				<prop key="java.lang.RuntimeException">/error/runtimeException</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
