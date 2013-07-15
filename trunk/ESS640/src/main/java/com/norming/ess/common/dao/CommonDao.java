@@ -41,6 +41,10 @@ public interface CommonDao extends JdbcOperations {
 	
 	<T> List<T> query(String sql, Object[] args, Class<T> clazz) throws DataAccessException;
 	
+	<T> T queryForObject(String sql, Class<T> clazz) throws DataAccessException;
+	
+	<T> T queryForObject(String sql, Object[] args, Class<T> clazz) throws DataAccessException;
+	
 	int[] batchInsert(final String[] sql) throws DataAccessException;
 	
 	int[] batchInsert(String sql, final BatchPreparedStatementSetter pss) throws DataAccessException;
