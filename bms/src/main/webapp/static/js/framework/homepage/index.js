@@ -26,12 +26,18 @@ Ext.onReady(function() {
 		items : [{
 			region : 'north',
 			height : 36,
-			title : '图书管理系统 V1.0',
-			collapsible:false,
-            layout : 'fit'
+			collapsible:true,
+			collapseMode: 'mini',
+			hideCollapseTool: true,
+            items : {
+            	xtype : 'toolbar',
+            	items : [{
+                	text : '退出'
+                }]
+            } 
 		}, {
-			title : 'Menus',
-			id : 'accordion-panel',
+			title : '导航菜单',
+			id : 'menus-panel',
 			layout : 'border',
 			region : 'west',
 			margins : '2 0 5 5',
@@ -43,22 +49,18 @@ Ext.onReady(function() {
 				border : false
 			},
 			items : [{
-				layout : 'accordion',
 				region : 'center',
 				items : [{
-					title : '导航菜单',
-					iconCls : 'icon-nav',
+					xtype : 'treepanel',
 					border : false,
-					items : [{
-						xtype : 'treepanel',
-						border : false,
-						rootVisible : true,
-						autoScroll : true,
-						loader : {
-							url : window.basePath + 'static/js/framework/homepage/menu.json',
-					        autoLoad: true
+					rootVisible : false,
+					autoScroll : true,
+					store : Ext.create('Ext.data.TreeStore', {
+						proxy : {
+							type : 'ajax',
+							url : window.basePath + 'static/js/framework/homepage/menu.json'
 						}
-					}]
+					})
 				}]
 			}]
 		}, {
