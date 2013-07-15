@@ -6,33 +6,33 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import com.norming.ess.common.dao.impl.CommonDaoImpl;
 import com.norming.ess.user.dao.IUserDao;
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 
 public class UserDaoImpl extends CommonDaoImpl implements IUserDao {
 	
-	public List<User> selectAll() {
-		String querySql = "select ASUSER_USERID, ASUSER_USERNAME, ASUSER_EMAIL, ASUSER_PWD from ASUSER";
-		return this.query(querySql, User.class);
+	public List<Ssuser> selectAll() {
+		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER";
+		return this.query(querySql, Ssuser.class);
 	}
 	
-	public User selectById(String id) {
-		String querySql = "select ASUSER_USERID,ASUSER_USERNAME,ASUSER_EMAIL, ASUSER_PWD from ASUSER where ASUSER_USERID = ?";
-		return this.queryForObject(querySql, new BeanPropertyRowMapper<User>(User.class),id);
+	public Ssuser selectById(String id) {
+		String querySql = "select SSUSER_USERID,SSUSER_USERNAME,SSUSER_PWD from SSUSER where SSUSER_USERID = ?";
+		return this.queryForObject(querySql, new BeanPropertyRowMapper<Ssuser>(Ssuser.class),id);
 	}
 	
-	public int insert(User user) {
-		String insertSql = "INSERT INTO ASUSER (ASUSER_USERID,ASUSER_USERNAME,ASUSER_EMAIL) VALUES(?,?,?);";
-		return this.insert(insertSql, user.getAsuserUserid(), user.getAsuserUsername(), user.getAsuserEmail());
+	public int insert(Ssuser user) {
+		String insertSql = "INSERT INTO SSUSER (SSUSER_USERID,SSUSER_PWD) VALUES(?,?);";
+		return this.insert(insertSql, user.getSsuserUserid(), user.getSsuserPwd());
 	}
 	
-	public int update(User user) {
-		String updateSql = "update ASUSER set ASUSER_USERNAME=?,ASUSER_EMAIL=? where ASUSER_USERID=?";
-		return this.update(updateSql, user.getAsuserUsername(), user.getAsuserEmail(), user.getAsuserUserid());
+	public int update(Ssuser user) {
+		String updateSql = "update SSUSER set SSUSER_PWD=? where SSUSER_USERID=?";
+		return this.update(updateSql, user.getSsuserPwd(), user.getSsuserUserid());
 	}
 
 	@Override
 	public int deleteUser(String id) {
-		String deleteSql = "delete from ASUSER where ASUSER_USERID=?";
+		String deleteSql = "delete from SSUSER where SSUSER_USERID=?";
 		return this.delete(deleteSql, id);
 	}
 }

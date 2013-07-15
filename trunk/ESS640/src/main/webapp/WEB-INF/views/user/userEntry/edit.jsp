@@ -10,13 +10,13 @@
   
   <body>
   	<form id="form1" name="form1" action="user/userEntry/edit" method="post">
-  		<input type="hidden" name="asuserUserid" value="${user.asuserUserid}"/>
+  		<input type="hidden" name="asuserUserid" value="${user.ssuserUserid}"/>
 	    <table>
 	    	<tr>
-	    		<td>用户名：<input type="text" name="asuserUsername" value="${user.asuserUsername }"/></td>
+	    		<td>用户名：<input type="text" name="ssuserUsername" value="${user.ssuserUsername }"/></td>
 	    	</tr>
 	    	<tr>
-	    		<td>邮&nbsp;箱：<input type="text" name="asuserEmail" value="${user.asuserEmail }"/></td>
+	    		<td>密&nbsp;码：<input type="text" name="ssuserPwd" value="${user.ssuserPwd }"/></td>
 	    	</tr>
 	    	<tr>
 	    		<td><input type="submit" value="提交"/></td>

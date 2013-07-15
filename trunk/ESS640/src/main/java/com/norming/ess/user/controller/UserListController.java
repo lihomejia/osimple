@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 import com.norming.ess.user.service.IUserService;
 
 @Controller
@@ -20,7 +20,7 @@ public class UserListController {
 
 	@RequestMapping(value="/findList")
 	public String findList(HttpServletRequest request) {
-		List<User> users = userService.findAll();
+		List<Ssuser> users = userService.findAll();
 		request.setAttribute("users", users);
 		return "user/userList/list";
 	}

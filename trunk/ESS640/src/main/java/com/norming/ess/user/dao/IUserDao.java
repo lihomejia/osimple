@@ -2,16 +2,16 @@ package com.norming.ess.user.dao;
 
 import java.util.List;
 
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 
 public interface IUserDao {
-	List<User> selectAll();
+	List<Ssuser> selectAll();
 	
-	User selectById(String id);
+	Ssuser selectById(String id);
 	
-	int insert(User user);
+	int insert(Ssuser user);
 	
-	int update(User user);
+	int update(Ssuser user);
 	
 	int deleteUser(String id);
 }

@@ -21,18 +21,16 @@
 						<tr>
 							<th style="width:25%">用户ID</th>
 							<th style="width:25%">用户名</th>
-							<th style="width:25%">邮&nbsp;箱</th>
 							<th style="width:25%">操&nbsp;作</tdth
 						</tr>
 						<c:forEach items="${users}" var="user">
 							<tr>
-								<td>${user.asuserUserid }</td>
-								<td>${user.asuserUsername}</td>
-								<td>${user.asuserEmail}</td>
+								<td>${user.ssuserUserid }</td>
+								<td>${user.ssuserUsername}</td>
 								<td>
-									<a class=linkStyle href="<%=basePath%>user/userEntry/toEdit?id=${user.asuserUserid}">编辑</a>
+									<a class=linkStyle href="<%=basePath%>user/userEntry/toEdit?id=${user.ssuserUserid}">编辑</a>
 								    &nbsp;|&nbsp;
-								    <a class=linkStyle href="<%=basePath%>user/userEntry/delete?id=${user.asuserUserid}" onclick="return confirm('确定删除吗?')">删除</a>
+								    <a class=linkStyle href="<%=basePath%>user/userEntry/delete?id=${user.ssuserUserid}" onclick="return confirm('确定删除吗?')">删除</a>
 								</td>
 							</tr>
 						</c:forEach>
