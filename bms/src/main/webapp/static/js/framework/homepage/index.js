@@ -1,9 +1,12 @@
-Ext.QuickTips.init();
-
-var mainTabs;
+//Ext.Loader.setConfig({
+//      enabled: true,
+//      paths : {
+//    	  'Bms': window.basePath + 'static/js'
+//      }
+//});
 
 Ext.onReady(function() {
-	mainTabs = Ext.create('Ext.tab.Panel', {
+	var mainTabs = Ext.create('Ext.tab.Panel', {
 	    region:'center', 
 	    activeTab:0,
 	    id:'mainTabs',
@@ -14,9 +17,6 @@ Ext.onReady(function() {
 	    items:[{
 	          title:'欢迎使用',
 	          contentEl : 'welcome'
-	     }, {
-	    	 title : 'DO',
-	    	 closable : true
 	     }]
 	 });
 	
@@ -41,10 +41,23 @@ Ext.onReady(function() {
             	style : {
             		background: '#157FCC'
             	},
-            	items : ['->', {
+            	items : [{
+            		xtype : 'image',
+            		src : window.basePath + 'static/images/logo.png'
+            	}, '->', {
                     text : '帮助',
                     scale: 'large',
-                    iconCls : 'icon_help'
+                    iconCls : 'icon_help',
+                    handler : function() {
+                    	Ext.Msg.show({
+                		    title: '关于本系统',
+                		    icon: Ext.window.MessageBox.INFO,
+                		    msg: '本系统采用目前较为流行的技术实现,<br>前台使用了ExtJs技术,所以实现了跨浏览器<br>'
+                		    	+ '主要技术: Spring MVC 3.2.3 + ExtJs4.2.1<br>'
+								+ '数&nbsp;&nbsp;据&nbsp;&nbsp;库: MySQL5',
+                		    width: 300
+                    	});
+                    }
                 }, {
                     text : '退出',
                     scale: 'large',
@@ -75,7 +88,28 @@ Ext.onReady(function() {
 						type : 'ajax',
 						url : window.basePath + 'static/js/framework/homepage/menu.json'
 					}
-				})
+				}),
+				listeners : {
+					'itemclick' : function(_this, record, item, index, e, eOpts) {
+						var id = record.get('id');
+						if (Ext.isEmpty(id)) return;
+						
+						var tab = mainTabs.queryById(id);
+						Ext.require(record.get('cls'));
+						if (!tab) {
+							tab = mainTabs.add({
+								id : id,
+								title : record.get('text'),
+						    	closable : true,
+						    	layout : 'fit',
+						    	items : [{
+						    		xtype : id
+						    	}]
+							});
+						}
+						mainTabs.setActiveTab(tab);
+					}
+				}
 			}]
 		}, {
 			id : 'content-panel',

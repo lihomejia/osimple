@@ -3,7 +3,8 @@
     expanded: true,
     children:[{
         text:'图书信息管理',
-        id:'book-manage',
+        id:'book_manage',
+        cls : 'Bms.Book',
         leaf:true
     }]
 },{
@@ -11,15 +12,18 @@
     expanded: true,
     children:[{
         text:'用户管理',
-        id:'user-manage',
+        id:'user_manage',
+        cls : 'Bms.User',
         leaf:true
     },{
         text:'分类管理',
-        id:'category-manage',
+        id:'category_manage',
+        cls : 'Bms.Category',
         leaf:true
     },{
         text:'部门管理',
-        id:'dept-manage',
+        id:'dept_manage',
+        cls : 'Bms.Dept',
         leaf:true
     }]
 }]
