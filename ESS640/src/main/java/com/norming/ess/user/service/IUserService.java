@@ -2,19 +2,19 @@ package com.norming.ess.user.service;
 
 import java.util.List;
 
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 
 public interface IUserService {
 	
 	String BEAN_NAME= "userService";
 	
-	List<User> findAll();
+	List<Ssuser> findAll();
 	
-	User findUserById(String id);
+	Ssuser findUserById(String id);
 	
-	int editUser(User user);
+	int editUser(Ssuser user);
 	
-	int addUser(User user);
+	int addUser(Ssuser user);
 	
 	int deleteUser(String id);
 }

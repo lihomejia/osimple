@@ -4,18 +4,18 @@ import org.springframework.stereotype.Service;
 
 import com.norming.ess.base.util.LocalHelper;
 import com.norming.ess.framework.service.UserSuportable;
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 
 @Service
 public class ServiceContext implements UserSuportable {
 	
-	private static final ThreadLocal<User> user = LocalHelper.registStatic(new ThreadLocal<User>());
+	private static final ThreadLocal<Ssuser> user = LocalHelper.registStatic(new ThreadLocal<Ssuser>());
 	
-	public static void setUser(User user) {
+	public static void setUser(Ssuser user) {
 		ServiceContext.user.set(user);
 	}
 	
-	public User getUser() {
+	public Ssuser getUser() {
 		return user.get();
 	}
 

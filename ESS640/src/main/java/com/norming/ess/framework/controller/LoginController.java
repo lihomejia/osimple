@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.norming.ess.base.Constants;
 import com.norming.ess.framework.service.impl.ServiceContext;
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 import com.norming.ess.user.service.IUserService;
 
 
@@ -31,8 +31,8 @@ public class LoginController {
 			@RequestParam("asuserPwd") String asuserPwd) {
 
 		
-		User user = userService.findUserById(asuserUserid);
-		if (user == null || !asuserPwd.equals(user.getAsuserPwd())) {
+		Ssuser user = userService.findUserById(asuserUserid);
+		if (user == null || !asuserPwd.equals(user.getSsuserPwd())) {
 			return index();
 		}
 		

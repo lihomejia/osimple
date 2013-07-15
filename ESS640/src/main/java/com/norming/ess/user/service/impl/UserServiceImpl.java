@@ -3,7 +3,7 @@ package com.norming.ess.user.service.impl;
 import java.util.List;
 
 import com.norming.ess.user.dao.IUserDao;
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 import com.norming.ess.user.service.IUserService;
 
 public class UserServiceImpl implements IUserService {
@@ -14,19 +14,19 @@ public class UserServiceImpl implements IUserService {
 		this.userDao = userDao;
 	}
 
-	public int addUser(User user) {
+	public int addUser(Ssuser user) {
 		return userDao.insert(user);
 	}
 
-	public int editUser(User user) {
+	public int editUser(Ssuser user) {
 		return userDao.update(user);
 	}
 
-	public List<User> findAll() {
+	public List<Ssuser> findAll() {
 		return userDao.selectAll();
 	}
 
-	public User findUserById(String id) {
+	public Ssuser findUserById(String id) {
 		return userDao.selectById(id);
 	}
 

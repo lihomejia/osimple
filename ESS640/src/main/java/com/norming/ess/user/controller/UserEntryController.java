@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.norming.ess.user.domain.User;
+import com.norming.ess.user.domain.Ssuser;
 import com.norming.ess.user.service.IUserService;
 
 @Controller
@@ -22,7 +22,7 @@ public class UserEntryController {
 	}
 
 	@RequestMapping(value="/add")
-	public String add(User user) {
+	public String add(Ssuser user) {
 		userService.addUser(user);
 		return "redirect:/user/userList/findList";
 	}
@@ -30,13 +30,13 @@ public class UserEntryController {
 	@RequestMapping(value="/toEdit")
 	public String toEdit(HttpServletRequest request) {
 		String id = request.getParameter("id");
-		User user = userService.findUserById(id);
+		Ssuser user = userService.findUserById(id);
 		request.setAttribute("user", user);
 		return "user/userEntry/edit";
 	}
 
 	@RequestMapping(value="/edit")
-	public String edit(User user) {
+	public String edit(Ssuser user) {
 		userService.editUser(user);
 		return "redirect:/user/userList/findList";
 	}
