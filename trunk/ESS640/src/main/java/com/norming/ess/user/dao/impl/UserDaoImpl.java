@@ -2,8 +2,6 @@ package com.norming.ess.user.dao.impl;
 
 import java.util.List;
 
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-
 import com.norming.ess.common.dao.impl.CommonDaoImpl;
 import com.norming.ess.user.dao.IUserDao;
 import com.norming.ess.user.domain.Ssuser;
@@ -17,7 +15,7 @@ public class UserDaoImpl extends CommonDaoImpl implements IUserDao {
 	
 	public Ssuser selectById(String id) {
 		String querySql = "select SSUSER_USERID,SSUSER_USERNAME,SSUSER_PWD from SSUSER where SSUSER_USERID = ?";
-		return this.queryForObject(querySql, new BeanPropertyRowMapper<Ssuser>(Ssuser.class),id);
+		return this.queryForObject(querySql, new Object[] {id}, Ssuser.class);
 	}
 	
 	public int insert(Ssuser user) {
