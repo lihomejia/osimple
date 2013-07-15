@@ -12,11 +12,15 @@ Ext.onReady(function() {
 	    border:false,
 	    frame:true,
 	    items:[{
-	          title:'欢迎使用'
+	          title:'欢迎使用',
+	          contentEl : 'welcome'
+	     }, {
+	    	 title : 'DO',
+	    	 closable : true
 	     }]
 	 });
 	
-	
+	Ext.getDom('welcome').style.visibility = 'visible';
 	Ext.create('Ext.container.Viewport', {
 		layout : 'border',
 		defaults : {
@@ -24,21 +28,34 @@ Ext.onReady(function() {
 			split : true
 		},
 		items : [{
+			xtype : 'panel',
+			layout : 'fit',
 			region : 'north',
-			height : 36,
-			collapsible:true,
+			height : 51,
+			collapsible:false,
 			collapseMode: 'mini',
 			hideCollapseTool: true,
-            items : {
+            tbar : {
+            	height : 51,
             	xtype : 'toolbar',
-            	items : [{
-                	text : '退出'
+            	style : {
+            		background: '#157FCC'
+            	},
+            	items : ['->', {
+                    text : '帮助',
+                    scale: 'large',
+                    iconCls : 'icon_help'
+                }, {
+                    text : '退出',
+                    scale: 'large',
+                    iconCls : 'icon_logoff'
                 }]
-            } 
+            }
+            
 		}, {
 			title : '导航菜单',
 			id : 'menus-panel',
-			layout : 'border',
+			layout : 'fit',
 			region : 'west',
 			margins : '2 0 5 5',
 			width : 200,
@@ -49,19 +66,16 @@ Ext.onReady(function() {
 				border : false
 			},
 			items : [{
-				region : 'center',
-				items : [{
-					xtype : 'treepanel',
-					border : false,
-					rootVisible : false,
-					autoScroll : true,
-					store : Ext.create('Ext.data.TreeStore', {
-						proxy : {
-							type : 'ajax',
-							url : window.basePath + 'static/js/framework/homepage/menu.json'
-						}
-					})
-				}]
+				xtype : 'treepanel',
+				border : false,
+				rootVisible : false,
+				autoScroll : true,
+				store : Ext.create('Ext.data.TreeStore', {
+					proxy : {
+						type : 'ajax',
+						url : window.basePath + 'static/js/framework/homepage/menu.json'
+					}
+				})
 			}]
 		}, {
 			id : 'content-panel',
