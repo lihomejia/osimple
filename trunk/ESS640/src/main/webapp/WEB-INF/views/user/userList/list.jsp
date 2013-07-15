@@ -1,7 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@include file="/static/taglibs.jsp"%>
-
-<!DOCTYPE HTML5>
 <html>
 <head>
 	<base href="<%=basePath%>">

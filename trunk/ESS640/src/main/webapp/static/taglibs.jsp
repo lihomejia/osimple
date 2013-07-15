@@ -2,5 +2,9 @@
 
 <%
 String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String basePath = path+"/";
 %>
+<!DOCTYPE HTML>
+<script type="text/javascript">
+	window.basePath = '<%=basePath%>';
+</script>

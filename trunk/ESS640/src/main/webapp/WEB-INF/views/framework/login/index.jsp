@@ -1,10 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE HTML5>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@include  file="/static/taglibs.jsp"%>
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -23,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form action="framework/login/doLogin" method="post">
+    <form action="<%=basePath%>framework/login/doLogin" method="post">
     User ID : <input type="input" name="asuserUserid" value="ADMIN1"/><br/>
     Password: <input type="password" name="asuserPwd" value="admin"/><br/>
    
