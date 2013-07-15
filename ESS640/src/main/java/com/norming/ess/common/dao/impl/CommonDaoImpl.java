@@ -14,6 +14,7 @@
 package com.norming.ess.common.dao.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
@@ -38,7 +39,6 @@ public class CommonDaoImpl extends JdbcTemplate implements CommonDao {
 	public <T> T queryForObject(String sql, Class<T> clazz) throws DataAccessException {
 		List<T> list = query(sql, clazz);
 		if (list.size() == 0) {
-			//return BeanUtils.instantiate(clazz);
 			return null;
 		}
 		return list.get(0);
@@ -46,13 +46,29 @@ public class CommonDaoImpl extends JdbcTemplate implements CommonDao {
 	public <T> T queryForObject(String sql, Object[] args, Class<T> clazz) throws DataAccessException {
 		List<T> list = query(sql, args, clazz);
 		if (list.size() == 0) {
-			//return BeanUtils.instantiate(clazz);
+			return null;
+		}
+		return list.get(0);
+	}
+	
+	@Override
+	public Map<String, Object> queryForMap(String sql) throws DataAccessException {
+		List<Map<String, Object>> list = queryForList(sql);
+		if (list.size() == 0) {
 			return null;
 		}
 		return list.get(0);
 	}
 
-	
+	@Override
+	public Map<String, Object> queryForMap(String sql, Object... args) throws DataAccessException {
+		List<Map<String, Object>> list = queryForList(sql, args);
+		if (list.size() == 0) {
+			return null;
+		}
+		return list.get(0);
+	}
+
 	public int[] batchInsert(final String[] sql) throws DataAccessException {
 		return batchUpdate(sql);
 	}
