@@ -9,7 +9,7 @@ import com.norming.ess.user.domain.Ssuser;
 public class UserDaoImpl extends CommonDaoImpl implements IUserDao {
 	
 	public List<Ssuser> selectAll() {
-		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER where 1=2";
+		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER";
 		return super.query(querySql, Ssuser.class);
 	}
 	
