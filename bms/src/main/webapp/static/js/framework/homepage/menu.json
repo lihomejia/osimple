@@ -20,10 +20,5 @@
         id:'category_manage',
         cls : 'Bms.Category',
         leaf:true
-    },{
-        text:'部门管理',
-        id:'dept_manage',
-        cls : 'Bms.Dept',
-        leaf:true
     }]
 }]
