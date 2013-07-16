@@ -3,7 +3,9 @@ package com.bms.resource.enumeration;
 
 public enum DictType {
 	
-	CATEGORY("分类");
+	CATEGORY("分类"),
+	
+	PRESS("出版社");
 	
 	private String name;
 	
