@@ -5,37 +5,18 @@ Ext.define('Bms.Book', {
 	items : [{
 		xtype : 'grid',
 		store : Ext.create('Ext.data.Store', {
+			autoLoad : true,
 		    storeId:'simpsonsStore',
-		    fields:['name', 'author', 'price', 'category', 'reader', 'status'],
-		    data:{'items':[
-		        { 
-		        	name : 'aaa',
-		        	author : '(美)埃克尔 著,陈昊鹏 译　译者：陈昊鹏 译', 
-		        	price : "108",  
-		        	category : "计算机科学丛书", 
-		        	reader : '', 
-		        	status :'空闲'  
-		        }
-		       
-		    ]},
+		    fields:['id', 'bookName', 'author', 'press', 'publicationDate', 'categoryId'],
 		    proxy: {
-		        type: 'memory',
-		        reader: {
-		            type: 'json',
-		            root: 'items'
-		        }
+		    	type: 'ajax',
+		        url: window.basePath + 'book/bookList/findList',
 		    }
 		}),
 		columns: [
-		   { text: '图书名称',  dataIndex: 'name' },
+		   { text: '图书名称',  dataIndex: 'bookName' },
            { text: '作者', dataIndex: 'author', flex: 1 },
-           { text: '定价', dataIndex: 'price' },
-           { text: '所属分类', dataIndex: 'category' },
-           { text: '当前读者', dataIndex: 'reader' },
-           { text: '当前状态', dataIndex: 'status' }
-        ],
-        bbar : [{
-        	text : 'Add'
-        }]
+           { text: '所属分类', dataIndex: 'categoryId' }
+        ]
 	}]
 });

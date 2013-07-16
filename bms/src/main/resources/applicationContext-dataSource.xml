@@ -10,7 +10,6 @@
 
 
 	<!-- 数据源定义,使用Apache DBCP 连接池 -->
-	<!-- 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" lazy-init="false">
 		<property name="driverClassName" value="${jdbc.driver}" />	
 		<property name="url" value="${jdbc.url}" />
@@ -26,11 +25,4 @@
 		<property name="maxOpenPreparedStatements" value="${maxopen.preparedstatements}" />
 		<property name="validationQuery" value="${validation.query}"/>
 	</bean>
-	-->
-	
-	<jdbc:embedded-database id="dataSource">
-        <jdbc:script location="classpath*:database/database-schema.sql"/>
-        <jdbc:script location="classpath*:database/database-test-data.sql"/>
-    </jdbc:embedded-database>
-    
 </beans>
