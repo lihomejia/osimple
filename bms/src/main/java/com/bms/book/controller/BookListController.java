@@ -21,7 +21,6 @@ public class BookListController {
 	@ResponseBody
 	public List<Book> findList() {
 		List<Book> list = bookService.findList();
-		System.out.println(list);
 		return list;
 	}
 }
