@@ -17,9 +17,9 @@ public class BookListController {
 	@Autowired
 	private IBookService bookService;
 	
-	@RequestMapping(value="findList")
+	@RequestMapping(value="list")
 	@ResponseBody
-	public List<Book> findList() {
+	public List<Book> list() {
 		List<Book> list = bookService.findList();
 		return list;
 	}
