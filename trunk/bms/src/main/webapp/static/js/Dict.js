@@ -1,6 +1,6 @@
-Ext.define('Bms.Category', {
+Ext.define('Bms.Dict', {
 	extend : 'Ext.panel.Panel',
-	alias: ['widget.category_manage'],
+	alias: ['widget.dict_manage'],
 	layout : 'fit',
 	items : [{
 		xtype : 'grid',

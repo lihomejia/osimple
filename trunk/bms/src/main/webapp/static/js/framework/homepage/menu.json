@@ -16,9 +16,9 @@
         cls : 'Bms.User',
         leaf:true
     },{
-        text:'分类管理',
-        id:'category_manage',
-        cls : 'Bms.Category',
+        text:'字典管理',
+        id:'dict_manage',
+        cls : 'Bms.Dict',
         leaf:true
     }]
 }]
