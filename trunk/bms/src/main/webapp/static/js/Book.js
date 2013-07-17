@@ -10,7 +10,7 @@ Ext.define('Bms.Book', {
 		    fields:['id', 'bookName', 'author', 'press', 'publicationDate', 'categoryId'],
 		    proxy: {
 		    	type: 'ajax',
-		        url: window.basePath + 'book/bookList/findList',
+		        url: Base.calUrl('book/bookList/findList'),
 		    }
 		}),
 		columns: [
