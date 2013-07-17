@@ -1,4 +1,4 @@
-Ext.define('Bms.Book', {
+Ext.define('Bms.book.list.BookListManage', {
 	extend : 'Ext.container.Container',
 	
 	initComponent : function() {

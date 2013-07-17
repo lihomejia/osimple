@@ -4,7 +4,7 @@
     children:[{
         text:'图书信息管理',
         id:'book_manage',
-        cls : 'Bms.Book',
+        cls : 'Bms.book.list.BookListManage',
         leaf:true
     }]
 },{

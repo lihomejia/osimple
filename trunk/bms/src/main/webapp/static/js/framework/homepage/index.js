@@ -1,4 +1,6 @@
-Ext.Loader.setPath('Bms' ,Base.calUrl('static/js'));
+Ext.Loader.setPath('Bms', Base.calUrl('static/js'));
+
+var Homepage = {};
 
 Ext.onReady(function() {
 	var mainTabs = Ext.create('Ext.tab.Panel', {
@@ -14,6 +16,27 @@ Ext.onReady(function() {
 	          contentEl : 'welcome'
 	     }]
 	 });
+	 
+	Homepage.addTab = function(cfg) {
+		cfg = cfg || {};
+		var id = cfg.id || Ext.id();
+		var cls = cfg.cls;
+		var tab = mainTabs.queryById(id);
+		if (!tab) {
+			var items = [];
+			if (cls) {
+				Ext.require(cls);
+				items = Ext.create(cls);
+			}
+			tab = mainTabs.add(Ext.applyIf(cfg, {
+				id : id,
+		    	closable : true,
+		    	layout : 'fit',
+		    	items : items
+			}));
+		}
+		mainTabs.setActiveTab(tab);
+	}
 	
 	Ext.getDom('welcome').style.visibility = 'visible';
 	Ext.create('Ext.container.Viewport', {
@@ -90,18 +113,11 @@ Ext.onReady(function() {
 						var cls = record.get('cls');
 						if (Ext.isEmpty(id)) return;
 						
-						var tab = mainTabs.queryById(id);
-						if (!tab) {
-							Ext.require(cls);
-							tab = mainTabs.add({
-								id : id,
-								title : record.get('text'),
-						    	closable : true,
-						    	layout : 'fit',
-						    	items : Ext.create(cls)
-							});
-						}
-						mainTabs.setActiveTab(tab);
+						Homepage.addTab({
+							id : id,
+							title : record.get('text'),
+							cls : cls
+						});
 					}
 				}
 			}]
