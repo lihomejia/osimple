@@ -1,9 +1,4 @@
-//Ext.Loader.setConfig({
-//      enabled: true,
-//      paths : {
-//    	  'Bms': Base.calUrl('static/js')
-//      }
-//});
+Ext.Loader.setPath('Bms' ,Base.calUrl('static/js'));
 
 Ext.onReady(function() {
 	var mainTabs = Ext.create('Ext.tab.Panel', {
@@ -43,7 +38,7 @@ Ext.onReady(function() {
             	},
             	items : [{
             		xtype : 'image',
-            		src : Base.calUrl('static/images/logo.png')
+            		src : Base.calUrl('static/images/logo1.png')
             	}, '->', {
                     text : '帮助',
                     scale: 'large',
@@ -92,19 +87,18 @@ Ext.onReady(function() {
 				listeners : {
 					'itemclick' : function(_this, record, item, index, e, eOpts) {
 						var id = record.get('id');
+						var cls = record.get('cls');
 						if (Ext.isEmpty(id)) return;
 						
 						var tab = mainTabs.queryById(id);
-						Ext.require(record.get('cls'));
 						if (!tab) {
+							Ext.require(cls);
 							tab = mainTabs.add({
 								id : id,
 								title : record.get('text'),
 						    	closable : true,
 						    	layout : 'fit',
-						    	items : [{
-						    		xtype : id
-						    	}]
+						    	items : Ext.create(cls)
 							});
 						}
 						mainTabs.setActiveTab(tab);
