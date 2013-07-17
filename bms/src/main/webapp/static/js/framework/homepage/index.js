@@ -4,13 +4,9 @@ var Homepage = {};
 
 Ext.onReady(function() {
 	var mainTabs = Ext.create('Ext.tab.Panel', {
-	    region:'center', 
 	    activeTab:0,
 	    id:'mainTabs',
 	    enableTabScroll:true,
-	    height:550,
-	    border:false,
-	    frame:true,
 	    items:[{
 	          title:'欢迎使用',
 	          contentEl : 'welcome'
@@ -124,13 +120,11 @@ Ext.onReady(function() {
 		}, {
 			id : 'content-panel',
 			collapsible : false,
-			header : false,
 			region : 'center',
-			layout : 'card',
+			layout : 'fit',
 			margins : '2 5 5 0',
-			activeItem : 0,
 			border : false,
-			items : [mainTabs]
+			items : mainTabs
 		}]
 	});
 });
