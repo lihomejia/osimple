@@ -1,7 +1,7 @@
 //Ext.Loader.setConfig({
 //      enabled: true,
 //      paths : {
-//    	  'Bms': window.basePath + 'static/js'
+//    	  'Bms': Base.calUrl('static/js')
 //      }
 //});
 
@@ -43,7 +43,7 @@ Ext.onReady(function() {
             	},
             	items : [{
             		xtype : 'image',
-            		src : window.basePath + 'static/images/logo.png'
+            		src : Base.calUrl('static/images/logo.png')
             	}, '->', {
                     text : '帮助',
                     scale: 'large',
@@ -86,7 +86,7 @@ Ext.onReady(function() {
 				store : Ext.create('Ext.data.TreeStore', {
 					proxy : {
 						type : 'ajax',
-						url : window.basePath + 'static/js/framework/homepage/menu.json'
+						url : Base.calUrl('static/js/framework/homepage/menu.json')
 					}
 				}),
 				listeners : {
