@@ -9,10 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="<%=basePath %>static/css/bms.css" />
 	<script type="text/javascript" src="<%=basePath%>static/core/js/base.js"></script>
 	<script type="text/javascript" src="<%=basePath%>static/js/framework/homepage/index.js"></script>
-	<script type="text/javascript" src="<%=basePath%>static/js/Book.js"></script>
-	<script type="text/javascript" src="<%=basePath%>static/js/User.js"></script>
-	<script type="text/javascript" src="<%=basePath%>static/js/Category.js"></script>
-	<script type="text/javascript" src="<%=basePath%>static/js/Dept.js"></script>
   </head>
   <body>
   	<div id="welcome" style="visibility: hidden;">
