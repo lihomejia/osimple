@@ -9,7 +9,7 @@ Ext.define('Bms.book.list.BookListManage', {
 		    fields:['id', 'bookName', 'author', 'press', 'publicationDate', 'categoryId'],
 		    proxy: {
 		    	type: 'ajax',
-		        url: Base.calUrl('book/bookList/findList')
+		        url: Base.calUrl('book/bookList/list')
 		    }
 		});
 		
