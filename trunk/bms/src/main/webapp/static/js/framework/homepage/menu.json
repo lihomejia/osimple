@@ -18,7 +18,7 @@
     },{
         text:'字典管理',
         id:'dict_manage',
-        cls : 'Bms.Dict',
+        cls : 'Bms.resource.DictType',
         leaf:true
     }]
 }]

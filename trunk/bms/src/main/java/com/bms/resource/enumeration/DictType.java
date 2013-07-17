@@ -7,13 +7,13 @@ public enum DictType {
 	
 	PRESS("出版社");
 	
-	private String name;
+	private String desc;
 	
-	DictType(String name) {
-		this.name = name;
+	DictType(String desc) {
+		this.desc = desc;
 	}
 	
-	public String getName() {
-		return name;
+	public String getDesc() {
+		return desc;
 	}
 }
