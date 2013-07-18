@@ -1,9 +1,12 @@
 package com.norming.ess.user.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,7 +21,7 @@ public class UserEntryController {
 	private IUserService userService;
 
 	@RequestMapping(value="/toAdd")
-	public String toAdd(HttpServletRequest request) {
+	public String toAdd() {
 		return "user/userEntry/add";
 	}
 
@@ -29,9 +32,9 @@ public class UserEntryController {
 	}
 
 	@RequestMapping(value="/toEdit")
-	public String toEdit(HttpServletRequest request, @RequestParam("id") String id) {
+	public String toEdit(@RequestParam("id") String id, ModelMap model) {
 		Ssuser user = userService.findUserById(id);
-		request.setAttribute("user", user);
+		model.addAttribute("user", user);
 		return "user/userEntry/edit";
 	}
 
@@ -42,8 +45,7 @@ public class UserEntryController {
 	}
 	
 	@RequestMapping(value="/delete")
-	public String delete(HttpServletRequest request) {
-		String id = request.getParameter("id");
+	public String delete(@RequestParam("id") String id) {
 		userService.deleteUser(id);
 		return "redirect:/user/userList/findList";
 	}
