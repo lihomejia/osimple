@@ -2,10 +2,9 @@ package com.norming.ess.user.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.norming.ess.user.domain.Ssuser;
@@ -19,9 +18,9 @@ public class UserListController {
 	private IUserService userService;
 
 	@RequestMapping(value="/findList")
-	public String findList(HttpServletRequest request) {
+	public String findList(ModelMap model) {
 		List<Ssuser> users = userService.findAll();
-		request.setAttribute("users", users);
+		model.addAttribute("users", users);
 		return "user/userList/list";
 	}
 }
