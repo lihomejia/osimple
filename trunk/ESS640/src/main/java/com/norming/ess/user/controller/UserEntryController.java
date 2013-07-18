@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.norming.ess.user.domain.Ssuser;
 import com.norming.ess.user.service.IUserService;
@@ -28,8 +29,7 @@ public class UserEntryController {
 	}
 
 	@RequestMapping(value="/toEdit")
-	public String toEdit(HttpServletRequest request) {
-		String id = request.getParameter("id");
+	public String toEdit(HttpServletRequest request, @RequestParam("id") String id) {
 		Ssuser user = userService.findUserById(id);
 		request.setAttribute("user", user);
 		return "user/userEntry/edit";
