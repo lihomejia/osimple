@@ -21,6 +21,7 @@
     This is my Homepage page. <br>
     
     <a href="<%=basePath%>user/userList/findList">User Demo</a><br/>
+    <a href="<%=basePath%>user/userList/findList2">Ajax Request Demo</a><br/>
     <a href="<%=basePath%>test/upload">File UpLoad Demo</a><br/>
 	<br/>
 	<a href="<%=basePath%>framework/logout">Logout</a><br/>
