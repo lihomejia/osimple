@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ESS640</groupId>
-	<artifactId>ESS640</artifactId>
+	<artifactId>ess</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>ESS640</name>
@@ -66,9 +66,9 @@
 			<version>1.2.2</version>
 		</dependency>
 		<dependency>
-		    <groupId>commons-fileupload</groupId>
-		    <artifactId>commons-fileupload</artifactId>
-		    <version>1.3</version>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3</version>
 		</dependency>
 
 		<!-- dom4j -->
@@ -130,6 +130,15 @@
 			<version>1.0</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/classes12.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache</groupId>
+			<artifactId>tomcat</artifactId>
+			<version>7.0.41</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/apache-tomcat-7.0.41-src.jar</systemPath>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	<build>
