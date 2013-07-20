@@ -1,0 +1,40 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ext-3.3.1/resources/css/ext-all.css" />
+	<script type="text/javascript" src="ext-3.3.1/adapter/ext/ext-base.js"></script>
+	<script type="text/javascript" src="ext-3.3.1/ext-all.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function() {
+			var store = new Ext.data.JsonStore({
+				autoLoad : true,
+				fields:['strA', 'intA'],
+				proxy : new Ext.data.ScriptTagProxy({
+					url: 'http://localhost:8080/bms/testJson'
+				})
+				root : 'items123'
+			});
+			
+			var grid = new Ext.grid.GridPanel({
+				store: store,
+				colModel: new Ext.grid.ColumnModel({
+					defaults: {
+						width: 120,
+						sortable: true
+					},
+					columns: [
+						{header: 'strA', dataIndex: 'strA'},
+						{header: 'intA', dataIndex: 'intA'}
+					],
+				}),
+
+				sm: new Ext.grid.RowSelectionModel({singleSelect:true}),
+				width: 400,
+				height: 200,
+				renderTo : Ext.getBody()
+			});
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
