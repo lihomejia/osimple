@@ -21,7 +21,7 @@ Ext.onReady(function() {
 		if (!tab) {
 			var items = [];
 			if (cls) {
-				Ext.require(cls);
+				//Ext.require(cls);
 				items = Ext.create(cls);
 			}
 			tab = mainTabs.add(Ext.applyIf(cfg, {
@@ -57,7 +57,7 @@ Ext.onReady(function() {
             	},
             	items : [{
             		xtype : 'image',
-            		src : Base.calUrl('static/images/logo1.png')
+            		src : Base.calUrl('static/images/logo.png')
             	}, '->', {
                     text : '帮助',
                     scale: 'large',
