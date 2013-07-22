@@ -5,6 +5,12 @@ import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
+/**
+ * Spring上下文环境的持有者.
+ * @author lh.jia
+ * @date 2013.07.22
+ *
+ */
 public class SpringContextHolder implements ApplicationContextAware {
 
 	private static ApplicationContext applicationContext;
