@@ -11,7 +11,12 @@ import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 
-
+/**
+ * HashMap对象的一个扩展.
+ * @author lh.jia
+ * @date 2013.07.22
+ *
+ */
 public class BaseDto extends HashMap<String, Object> implements Dto {
 
 	private static final long serialVersionUID = 1L;
@@ -32,11 +37,19 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
 		super(m);
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getString(java.lang.String)
+	 */
 	@Override
 	public String getString(String key) {
 		return ObjectUtils.toString(this.get(key));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getList(java.lang.String)
+	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T> List<T> getList(String key) {
@@ -47,6 +60,10 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
 		return new ArrayList<>();
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getInt(java.lang.String)
+	 */
 	@Override
 	public int getInt(String key) {
 		Object value = this.get(key);
@@ -54,6 +71,10 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
 		return NumberUtils.toInt(ObjectUtils.toString(value));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getDouble(java.lang.String)
+	 */
 	@Override
 	public double getDouble(String key) {
 		Object value = this.get(key);
@@ -61,6 +82,10 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
 		return NumberUtils.toDouble(ObjectUtils.toString(value));
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getDecimal(java.lang.String)
+	 */
 	@Override
 	public BigDecimal getDecimal(String key) {
 		String str = this.getString(key);
@@ -70,6 +95,10 @@ public class BaseDto extends HashMap<String, Object> implements Dto {
 		return NumberUtils.createBigDecimal(str);
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.norming.ess.base.util.Dto#getDate(java.lang.String)
+	 */
 	@Override
 	public Date getDate(String key) {
 		Object value = this.get(key);
