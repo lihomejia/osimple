@@ -10,7 +10,7 @@ import org.apache.commons.lang3.ObjectUtils;
 public class DateUtil {
 	
 	/**
-	 * 系统默认的DateFormay格式 
+	 * 系统默认的DateFormat格式 
 	 */
 	public static final String DEF_PATTERN = "yyyy-MM-dd";
 	
