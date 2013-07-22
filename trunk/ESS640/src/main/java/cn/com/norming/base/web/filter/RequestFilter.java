@@ -22,8 +22,14 @@ import cn.com.norming.base.util.LocalHelper;
 import cn.com.norming.framework.service.impl.ServiceContext;
 import cn.com.norming.user.domain.Ssuser;
 
+/**
+ * 请求过滤器.
+ * @author lh.jia
+ * @date 2013.07.22
+ *
+ */
 public class RequestFilter implements Filter {
-	
+	/** 无需过滤的URI */
 	private String 		excludingPattern;
 	private Pattern[] 	eps;
 	
