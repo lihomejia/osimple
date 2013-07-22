@@ -23,7 +23,7 @@
 	
 	<!-- 以AspectJ方式 定义 AOP事物 -->
 	<aop:config proxy-target-class="true">
-		<aop:advisor pointcut="execution(* com.norming.ess.**.service.*Service.*(..))" advice-ref="txAdvice" />
+		<aop:advisor pointcut="execution(* cn.com.norming.**.service.*Service.*(..))" advice-ref="txAdvice" />
 	</aop:config>
 	
 	<!-- Transaction manager for a single JDBC DataSource -->
@@ -47,7 +47,7 @@
 	
 	
 	<!-- 用于持有ApplicationContext,可以使用SpringContextHolder.getBean('xxxx')的静态方法得到spring bean -->
-	<bean class="com.norming.ess.base.SpringContextHolder" lazy-init="false" />
-	<bean id="dynamicLoadBean" class="com.norming.ess.common.dao.utils.DynamicLoadBean"/>
+	<bean class="cn.com.norming.base.SpringContextHolder" lazy-init="false" />
+	<bean id="dynamicLoadBean" class="cn.com.norming.common.dao.utils.DynamicLoadBean"/>
 	
 </beans>
