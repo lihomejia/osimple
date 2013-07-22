@@ -9,6 +9,11 @@ import org.springframework.web.context.request.WebRequest;
 
 import cn.com.norming.base.util.DateUtil;
 
+/**
+ * 配置前后台类型转换策略.
+ * @author lh.jia
+ * @date 2013.07.22
+ */
 public class SimpleWebBinding implements WebBindingInitializer {
 	public void initBinder(WebDataBinder binder, WebRequest request) {
 		// 1. 使用spring自带的CustomDateEditor
