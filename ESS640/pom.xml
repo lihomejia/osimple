@@ -138,7 +138,6 @@
 			<version>7.0.41</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/apache-tomcat-7.0.41-src.jar</systemPath>
-			<optional>true</optional>
 		</dependency>
 	</dependencies>
 	<build>
