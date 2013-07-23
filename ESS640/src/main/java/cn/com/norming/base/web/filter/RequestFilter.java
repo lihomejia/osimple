@@ -18,8 +18,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 
 import cn.com.norming.base.Constants;
+import cn.com.norming.base.LocalContext;
 import cn.com.norming.base.util.LocalHelper;
-import cn.com.norming.framework.service.impl.LocalContext;
 import cn.com.norming.user.domain.Ssuser;
 
 /**
