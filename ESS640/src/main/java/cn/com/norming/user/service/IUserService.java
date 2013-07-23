@@ -2,19 +2,19 @@ package cn.com.norming.user.service;
 
 import java.util.List;
 
-import cn.com.norming.user.domain.Ssuser;
+import cn.com.norming.user.domain.User;
 
 public interface IUserService {
 	
 	String BEAN_NAME= "userService";
 	
-	List<Ssuser> findAll();
+	List<User> findAll();
 	
-	Ssuser findUserById(String id);
+	User findUserById(String id);
 	
-	int editUser(Ssuser user);
+	int editUser(User user);
 	
-	int addUser(Ssuser user);
+	int addUser(User user);
 	
 	int deleteUser(String id);
 }
