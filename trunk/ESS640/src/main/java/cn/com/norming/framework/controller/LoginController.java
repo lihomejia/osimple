@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import cn.com.norming.base.Constants;
-import cn.com.norming.framework.service.impl.LocalContext;
+import cn.com.norming.base.LocalContext;
 import cn.com.norming.user.domain.Ssuser;
 import cn.com.norming.user.service.IUserService;
 
