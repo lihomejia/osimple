@@ -1,4 +1,4 @@
-package cn.com.norming.common.utils;
+package cn.com.norming.base.util;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

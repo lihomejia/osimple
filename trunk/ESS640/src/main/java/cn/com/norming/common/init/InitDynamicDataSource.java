@@ -11,9 +11,9 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 
+import cn.com.norming.base.util.FileHelper;
 import cn.com.norming.common.dao.impl.CommonDaoImpl;
 import cn.com.norming.common.dao.utils.DynamicLoadBean;
-import cn.com.norming.common.utils.FileHelper;
 
 /**
  * 初始化动态数据源.
