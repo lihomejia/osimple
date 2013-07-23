@@ -19,7 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import cn.com.norming.base.Constants;
 import cn.com.norming.base.util.LocalHelper;
-import cn.com.norming.framework.service.impl.ServiceContext;
+import cn.com.norming.framework.service.impl.LocalContext;
 import cn.com.norming.user.domain.Ssuser;
 
 /**
@@ -71,7 +71,7 @@ public class RequestFilter implements Filter {
 		
 		Ssuser user = (Ssuser) session.getAttribute(Constants.USER_BEAN);
 		if (user != null) {
-			ServiceContext.setUser(user);
+			LocalContext.setUser(user);
 		}
 		else {
 			response.sendRedirect(request.getContextPath() + "/framework/login");
