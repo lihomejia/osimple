@@ -7,12 +7,12 @@ import cn.com.norming.framework.service.UserSuportable;
 import cn.com.norming.user.domain.Ssuser;
 
 @Service
-public class ServiceContext implements UserSuportable {
+public class LocalContext implements UserSuportable {
 	
 	private static final ThreadLocal<Ssuser> user = LocalHelper.registStatic(new ThreadLocal<Ssuser>());
 	
 	public static void setUser(Ssuser user) {
-		ServiceContext.user.set(user);
+		LocalContext.user.set(user);
 	}
 	
 	public Ssuser getUser() {
