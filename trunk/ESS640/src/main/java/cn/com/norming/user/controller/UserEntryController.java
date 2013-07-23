@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import cn.com.norming.user.domain.Ssuser;
+import cn.com.norming.user.domain.User;
 import cn.com.norming.user.service.IUserService;
 
 @Controller
@@ -24,20 +24,20 @@ public class UserEntryController {
 	}
 
 	@RequestMapping(value="/add")
-	public String add(Ssuser user) {
+	public String add(User user) {
 		userService.addUser(user);
 		return "redirect:/user/userList/findList";
 	}
 
 	@RequestMapping(value="/toEdit")
 	public String toEdit(@RequestParam("id") String id, Model model) {
-		Ssuser user = userService.findUserById(id);
+		User user = userService.findUserById(id);
 		model.addAttribute("user", user);
 		return "user/userEntry/edit";
 	}
 
 	@RequestMapping(value="/edit")
-	public String edit(HttpServletRequest request, Ssuser user) {
+	public String edit(HttpServletRequest request, User user) {
 		userService.editUser(user);
 		return "redirect:/user/userList/findList";
 	}
