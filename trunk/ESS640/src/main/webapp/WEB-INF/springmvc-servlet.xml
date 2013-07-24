@@ -16,18 +16,20 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+	<bean id="customObjectMapper" class="cn.com.norming.base.web.custom.CustomObjectMapper"></bean>
+	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="objectMapper" ref="customObjectMapper"/>
+	</bean>
 	
 	<!-- 默认的注解映射的支持 -->
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/> -->
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
 	
-	
 	<!-- 默认的注解适配器的支持 -->
 	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/> -->
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="webBindingInitializer">
-			<bean class="cn.com.norming.base.web.bind.SimpleWebBinding" />  
+			<bean class="cn.com.norming.base.web.custom.CustomWebBinding" />
 		</property>
 		<property name="messageConverters">
 			<list>
@@ -35,6 +37,7 @@
 			</list>
 		</property>
 	</bean>
+	
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<!-- 设置上传文件大小的参数，单位为bytes  -->
