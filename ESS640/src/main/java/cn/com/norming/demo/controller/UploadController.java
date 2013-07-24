@@ -1,4 +1,4 @@
-package cn.com.norming.test.controller;
+package cn.com.norming.demo.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-@RequestMapping(value="/test/upload")
+@RequestMapping(value="/demo/upload")
 public class UploadController {
 	
 	@RequestMapping
