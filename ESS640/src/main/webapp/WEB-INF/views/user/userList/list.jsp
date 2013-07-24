@@ -1,10 +1,10 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@include file="/static/taglibs.jsp"%>
+<%@include file="/core/taglibs.jsp"%>
 <html>
 <head>
 	<base href="<%=basePath%>">
 	<title>用户列表</title>
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>static/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<%=basePath%>core/css/style.css" />
 </head>
 
 <body >
