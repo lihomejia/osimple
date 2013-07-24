@@ -1,5 +1,6 @@
 package cn.com.norming.base.util;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,6 +9,12 @@ import org.apache.commons.lang3.ObjectUtils;
 
 
 public class DateUtil {
+	
+	public static String TRANS_PATTERN_DATE = "yyyy-MM-dd";
+	public static String TRANS_PATTERN_STAMP = "yyyy-MM-dd HH:mm:ss";
+	
+	public static DateFormat TRANS_FORMAT_DATE = new SimpleDateFormat(TRANS_PATTERN_DATE);
+	public static DateFormat TRANS_FORMAT_STAMP = new SimpleDateFormat(TRANS_PATTERN_STAMP);
 	
 	/**
 	 * 系统默认的DateFormat格式 

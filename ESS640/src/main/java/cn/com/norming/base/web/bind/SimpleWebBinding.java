@@ -1,5 +1,6 @@
 package cn.com.norming.base.web.bind;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -12,16 +13,17 @@ import cn.com.norming.base.util.DateUtil;
 /**
  * 配置前后台类型转换策略.
  * @author lh.jia
- * @date 2013.07.22
+ * @date ..
  */
 public class SimpleWebBinding implements WebBindingInitializer {
 	public void initBinder(WebDataBinder binder, WebRequest request) {
 		// 1. 使用spring自带的CustomDateEditor
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(DateUtil.DEF_SDF, true));
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(DateUtil.TRANS_FORMAT_DATE, true));
 
+		// 1. 使用spring自带的CustomDateEditor
+		binder.registerCustomEditor(Timestamp.class, new CustomDateEditor(DateUtil.TRANS_FORMAT_STAMP, true));
+		
 		// 2. 自定义的PropertyEditorSupport
-		// binder.registerCustomEditor(Date.class, new DateConvertEditor());
-
+		//binder.registerCustomEditor(Timestamp.class, new CustomTimestampEditor(DateUtil.TRANS_FORMAT_STAMP, true));
 	}
-
 }
