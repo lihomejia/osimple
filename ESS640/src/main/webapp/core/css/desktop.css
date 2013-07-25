@@ -1,0 +1,394 @@
+.ux-wallpaper {
+    background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+    background-repeat: repeat;
+}
+
+.ux-desktop-shortcut {
+	float : left;
+	z-index: 99;
+    text-align: center;
+	cursor: pointer;
+    width: 128px;
+    height: 116px;
+    /*border:1px solid green;*/
+}
+
+.ux-desktop-shortcut-icon {
+    width: 128px;
+    height: 85px;
+    margin : 5px 0px 0px 0px;
+    /*border:1px solid red;*/
+}
+
+.ux-desktop-shortcut-cursor {
+	cursor: pointer;
+}
+
+.ux-desktop-shortcut-cursor-disabled {
+	cursor: default;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+    text-decoration: none;
+}
+
+.ux-desktop-shortcut-text {
+    font: normal 12px verdana;
+    text-decoration: none;
+    color: white;
+    /*border:1px solid black;*/
+}
+
+.ux-desktop-tools {
+	vertical-align:middle;
+	z-index: 99;
+	float : left;
+    cursor: pointer;
+    height: 32px;
+    /*border:1px solid green;*/
+}
+
+.ux-desktop-tools-icon {
+	float : left;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    /*border:1px solid red;*/
+}
+
+.ux-desktop-tools-text {
+    font: normal 15px tahoma,arial,verdana,sans-serif;
+    float: left;
+    text-decoration: none;
+    vertical-align:middle;
+    color: black;
+    line-height:50px;
+    /*border:1px solid black;*/
+}
+
+/** Shortcut Begin */
+.shortcut-calendar {
+	background-image: url(../images/framework/shortcut/calblank.jpg);
+}
+.shortcut-reminder {
+	background-image: url(../images/framework/shortcut/reminder.jpg);
+}
+.shortcut-contact {
+	background-image: url(../images/framework/shortcut/contact.jpg);
+}
+.shortcut-request {
+	background-image: url(../images/framework/shortcut/requisition.jpg);
+}
+.shortcut-todolist {
+	background-image: url(../images/framework/shortcut/todolist.jpg);
+}
+
+.shortcut-bulletin {
+	background-image: url(../images/framework/shortcut/bulletin.jpg);
+}
+.shortcut-im {
+	background-image: url(../images/framework/shortcut/im.jpg);
+}
+.shortcut-seminar {
+	background-image: url(../images/framework/shortcut/seminars.jpg);
+}
+.shortcut-document {
+	background-image: url(../images/framework/shortcut/document.jpg);
+}
+.shortcut-payroll {
+	background-image: url(../images/framework/shortcut/payroll.jpg);
+}
+
+.shortcut-expense {
+	background-image: url(../images/framework/shortcut/expenses.jpg);
+}
+.shortcut-cash {
+	background-image: url(../images/framework/shortcut/advances.jpg);
+}
+.shortcut-leave {
+	background-image: url(../images/framework/shortcut/leave.jpg);
+}
+.shortcut-overtime {
+	background-image: url(../images/framework/shortcut/overtime.jpg);
+}
+.shortcut-timesheet {
+	background-image: url(../images/framework/shortcut/timesheet.jpg);
+}
+
+.shortcut-project {
+	background-image: url(../images/framework/shortcut/projects.jpg);
+}
+.shortcut-schedule {
+	background-image: url(../images/framework/shortcut/schedule.jpg);
+}
+.shortcut-issues {
+	background-image: url(../images/framework/shortcut/issues.jpg);
+}
+.shortcut-resource {
+	background-image: url(../images/framework/shortcut/resources.jpg);
+}
+
+.shortcut-blue {
+	background-image: url(../images/framework/shortcut/blue.jpg);
+}
+.shortcut-green {
+	background-image: url(../images/framework/shortcut/green.jpg);
+}
+.shortcut-yellow {
+	background-image: url(../images/framework/shortcut/yellow.jpg);
+}
+/** Shortcut disabled */
+.shortcut-blue-disabled {
+	background-image: url(../images/framework/shortcut/blue.jpg);
+}
+.shortcut-green-disabled {
+	background-image: url(../images/framework/shortcut/green.jpg);
+}
+.shortcut-yellow-disabled {
+	background-image: url(../images/framework/shortcut/yellow.jpg);
+}
+.shortcut-calendar-disabled {
+	background-image: url(../images/framework/shortcut/calblank1.jpg);
+}
+.shortcut-reminder-disabled {
+	background-image: url(../images/framework/shortcut/reminder1.jpg);
+}
+.shortcut-contact-disabled {
+	background-image: url(../images/framework/shortcut/contact1.jpg);
+}
+.shortcut-request-disabled {
+	background-image: url(../images/framework/shortcut/requisition1.jpg);
+}
+.shortcut-todolist-disabled {
+	background-image: url(../images/framework/shortcut/todolist1.jpg);
+}
+.shortcut-expense-disabled {
+	background-image: url(../images/framework/shortcut/expenses1.jpg);
+}
+.shortcut-cash-disabled {
+	background-image: url(../images/framework/shortcut/advances1.jpg);
+}
+.shortcut-leave-disabled {
+	background-image: url(../images/framework/shortcut/leave1.jpg);
+}
+.shortcut-overtime-disabled {
+	background-image: url(../images/framework/shortcut/overtime1.jpg);
+}
+.shortcut-timesheet-disabled {
+	background-image: url(../images/framework/shortcut/timesheet1.jpg);
+}
+.shortcut-schedule-disabled {
+	background-image: url(../images/framework/shortcut/schedule1.jpg);
+}
+.shortcut-resource-disabled {
+	background-image: url(../images/framework/shortcut/resources1.jpg);
+}
+
+/** Shortcut End */
+
+.icon-loginuser {
+    background-image: url(../images/framework/icons/user.png) !important;
+}
+
+.icon-subuser {
+    background-image: url(../images/framework/icons/subUser.png) !important;
+}
+
+.icon-dateformat {
+    background-image: url(../images/framework/icons/dateFormat.png) !important;
+}
+
+.icon-language {
+    background-image: url(../images/framework/icons/language.png) !important;
+}
+
+.icon-menulogout {
+    background-image: url(../images/framework/icons/logout.png) !important;
+}
+
+.icon-password {
+    background-image: url(../images/framework/icons/password.png) !important;
+}
+
+.icon-personal {
+    background-image: url(../images/framework/icons/personal.png) !important;
+}
+
+.icon-photo {
+    background-image: url(../images/framework/icons/photo.png) !important;
+}
+
+.menu-title{
+    background: #D6E3F2;
+    border-style: solid;
+    border-color:#DAE6F4 #99bbe8 #99bbe8 #DAE6F4;
+    border-width: 1px;
+    margin:-2px -2px 0;
+    color:#15428b;
+    font:bold 15px tahoma,arial,verdana,sans-serif;
+    display:block;
+    padding:3px;
+}
+
+#poweredby {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 98;
+
+    /* IE 5-7 */
+    filter: alpha(opacity=70);
+    /* Netscape */
+    -moz-opacity: 0.7;
+    /* Safari 1.x */
+    -khtml-opacity: 0.7;
+    /* Good browsers */
+    opacity: 0.7;
+}
+
+#poweredby div {
+    position: relative;
+    margin-left: 20px;
+    margin-top : 30px;
+    width: 235px;
+    height: 31px;
+    background-image: url(../images/login/norming.png);
+    background-color: #7EC3EB\9;
+    background-repeat: no-repeat;
+}
+
+#desktop-rightcloud {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 98;
+
+    /* IE 5-7 */
+    filter: alpha(opacity=85);
+    /* Netscape */
+    -moz-opacity: 0.85;
+    /* Safari 1.x */
+    -khtml-opacity: 0.85;
+    /* Good browsers */
+    opacity: 0.85;
+}
+
+#desktop-rightcloud div{
+	position: relative;
+	margin-right: 0px;
+    margin-top : 0px;
+    width: 306px;
+    height: 93px;
+	background-image: url(../images/framework/wallpapers/rightcloud.png);
+	background-color: #7EC3EB\9;
+	background-repeat: no-repeat;
+}
+
+#desktop-leftcloud {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 98;
+
+    /* IE 5-7 */
+    filter: alpha(opacity=85);
+    /* Netscape */
+    -moz-opacity: 0.85;
+    /* Safari 1.x */
+    -khtml-opacity: 0.85;
+    /* Good browsers */
+    opacity: 0.85;
+}
+
+#desktop-leftcloud div{
+	position: relative;
+	margin-left: 30px;
+    margin-bottom : 30px;
+    width: 169px;
+    height: 96px;
+	background-image: url(../images/framework/wallpapers/leftcloud.png);
+	background-color: #7EC3EB\9;
+	background-repeat: no-repeat;
+}
+
+#app-todolist {
+	float: right;
+    margin-top : -18px;
+    margin-right: -14px;
+    background-image: url(../images/framework/icons/alert.jpg) !important;
+    width: 30px;
+    height: 30px;
+}
+
+#app-reminder {
+    float: right;
+    margin-top : -18px;
+    margin-right: -13px;
+    background-image: url(../images/framework/icons/alert.jpg) !important;
+    width: 30px;
+    height: 30px;
+}
+
+#app-reminder-body{
+	margin: 0;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    padding: 5px 0 2px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+}
+#app-todolist-body{
+	margin: 0;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    padding: 5px 0 2px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+}
+
+
+#app-shortcut-calendar {
+    float: left;
+    margin-top : 21px;
+    margin-left: 40px;
+    width: 51px;
+    height: 51px;
+}
+#shortcut-calendar-body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    padding: 0;
+    line-height: 50px;
+}
+
+.shortcut-calendar-body-text-single {
+	color: #FE701E;
+	font-size: 50px;
+}
+
+.shortcut-calendar-body-text-double {
+	color: #FE701E;
+	font-size: 30px;
+}
+
+.shortcut-calendar-body-text-single-disabled {
+	color: #919191;
+	font-size: 50px;
+}
+
+.shortcut-calendar-body-text-double-disabled {
+	color: #919191;
+	font-size: 30px;
+}

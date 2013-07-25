@@ -27,12 +27,12 @@ public class LoginController {
 
 	@RequestMapping(value="/doLogin")
 	public String doLogin(HttpServletRequest request, 
-			@RequestParam("asuserUserid") String asuserUserid,
-			@RequestParam("asuserPwd") String asuserPwd) {
+			@RequestParam("userid") String userid,
+			@RequestParam("userpwd") String userpwd) {
 
 		
-		User user = userService.findUserById(asuserUserid);
-		if (user == null || !asuserPwd.equals(user.getSsuserPwd())) {
+		User user = userService.findUserById(userid.toUpperCase());
+		if (user == null || !userpwd.equals(user.getSsuserPwd())) {
 			return index();
 		}
 		

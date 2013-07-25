@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+@id 菜单项唯一标识 
+@text 菜单项名称  
+@deskicon 桌面显示的图标样式
+@cls 功能块入口类 
+-->
+<essmenu>
+	<item id="calendar"  deskicon="shortcut-calendar"  text="Calendar"     cls="ddd"/>
+	<item id="reminder"  deskicon="shortcut-reminder"  text="Reminder"     cls=""/>
+	<item id="contacts"  deskicon="shortcut-contact"   text="Constacts"    cls=""/>
+	<item id="todolist"  deskicon="shortcut-todolist"  text="Todolist"     cls=""/>
+	<item id="requests"  deskicon="shortcut-blue"/>
+	<item id="line106"   deskicon="shortcut-green"/>
+	
+	<item id="expense"   deskicon="shortcut-expense"   text="Expense"      cls=""/>
+	<item id="cash"      deskicon="shortcut-cash"      text="Cashadvance"  cls=""/>
+	<item id="leave"     deskicon="shortcut-leave"     text="Leave"        cls=""/>
+	<item id="overtime"  deskicon="shortcut-overtime"  text="Overtime"     cls=""/>
+	<item id="timesheet" deskicon="shortcut-timesheet" text="Timesheet"    cls=""/>
+	<item id="line206"   deskicon="shortcut-blue"/>
+	
+	<item id="resource"  deskicon="shortcut-resource"  text="Resplan"      cls=""/>
+	<item id="schedule"  deskicon="shortcut-schedule"  text="Pmsche"       cls=""/>
+	<item id="line303"   deskicon="shortcut-yellow"/>
+	<item id="line304"   deskicon="shortcut-blue"/>
+	
+	<item id="line403"   deskicon="shortcut-green"/>
+	<item id="line402"   deskicon="shortcut-yellow"/>
+	<item id="line401"   deskicon="shortcut-blue"/>
+	
+</essmenu>
