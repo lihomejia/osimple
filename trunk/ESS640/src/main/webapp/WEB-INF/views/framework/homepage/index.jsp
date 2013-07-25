@@ -1,33 +1,31 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@include  file="/core/taglibs.jsp"%>
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>主页</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
-  </head>
+	<head>
+		<base href="<%=basePath%>">
+		<title>ESS640</title>
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>core/css/desktop.css" />
+	
+		<link rel="stylesheet" type="text/css" href="<%=basePath%>core/ext4.2.1/resources/css/ext-all.css" />
+		<script type="text/javascript" src="<%=basePath%>core/ext4.2.1/ext-all.js"></script>
+	     
+	    <script type="text/javascript" src="<%=basePath%>core/js/base.js"></script>
+	     
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/desktop/Desktop.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/desktop/App.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/desktop/ShortcutModel.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/desktop/Wallpaper.js"></script>
+	    
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/Settings.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/WallpaperModel.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/AdminApp.js"></script>
+	    
+	    <script type="text/javascript" src="<%=basePath%>scripts/framework/homepage.js"></script>
+	</head>
   
-  <body>
-    This is my Homepage page. <br>
-    
-    <a href="<%=basePath%>user/userList/findList">User Demo</a><br/>
-    <a href="<%=basePath%>user/userList/findList2">Ajax Request Demo</a><br/>
-    <a href="<%=basePath%>test/upload">File UpLoad Demo</a><br/>
-	<br/>
-	<a href="<%=basePath%>framework/logout">Logout</a><br/>
-	
-	
-	
-	
-  </body>
+	<body>
+  		<a href="http://www.norming.com" target="_blank" alt="Powered by Norming" id="poweredby"><div></div></a>
+		<div id="desktop-rightcloud"><div></div></div>
+		<div id="desktop-leftcloud"><div></div></div>
+	</body>
 </html>

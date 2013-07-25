@@ -15,6 +15,12 @@ public class HomepageControllerTests extends AbstractContextControllerTests {
 	@Test
 	public void index() throws Exception {
 		this.mockMvc.perform(get("/framework/homepage"));
+	}
+	
+	
+	@Test
+	public void queryShortcuts() throws Exception {
+		this.mockMvc.perform(get("/framework/homepage/queryShortcuts"));
 	}	
 
 }
