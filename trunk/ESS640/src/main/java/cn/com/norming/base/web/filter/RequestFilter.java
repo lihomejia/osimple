@@ -68,9 +68,13 @@ public class RequestFilter implements Filter {
 		Thread.currentThread().setName(nextThreadId());
 		
 		HttpSession session = request.getSession(true);
-		
+		System.out.println("uri : " + uri );
 		User user = (User) session.getAttribute(Constants.USER_BEAN);
 		if (user != null) {
+			if (uri.equals(request.getContextPath() + "/")) {
+				response.sendRedirect(request.getContextPath() + "/framework/homepage");
+				return;
+			}
 			LocalContext.setUser(user);
 		}
 		else {
