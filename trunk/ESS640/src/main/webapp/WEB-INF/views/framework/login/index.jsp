@@ -45,7 +45,7 @@
 		         		</div>
 		         		<div class="left_bottom">
 		         			<a href="javascript:showForgetPwdWindow();" style="color:#646161;text-decoration: none;">
-		         				I forgot my password, please send it to me.&nbsp;<img src="core/images/login/icon.png" width="16" height="18" border="0" align="absmiddle" />
+		         				I forgot my password, please send it to me.&nbsp;<img src="<%=basePath%>core/images/login/icon.png" width="16" height="18" border="0" align="absmiddle" />
 		         			</a>
 		         		</div>
 		         	<div class="left_img"></div>
