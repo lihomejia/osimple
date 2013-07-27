@@ -44,8 +44,6 @@ public class DynamicDataSource implements DataSource {
 	/**
 	 * @param entityId
 	 * @return DataSource 
-	 * @author ys.wang
-	 * @date May 30, 2013 
 	 */
 	public DataSource getDataSourceByEntity(String entityId) {
 		if (StringUtils.isNotEmpty(entityId)){

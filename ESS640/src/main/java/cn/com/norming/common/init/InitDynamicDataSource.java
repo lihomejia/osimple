@@ -1,7 +1,6 @@
 package cn.com.norming.common.init;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -28,9 +27,14 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 	@Override
 	public void postProcessBeanFactory(
 			ConfigurableListableBeanFactory beanFactory) throws BeansException {
-		List<?> entityList = new ArrayList<>(); //TODO
+		String comSql = new StringBuffer()
+			.append("select NMCOMS_COMID")
+			.append(", NMCOMS_DBTYPE, NMCOMS_DBSERVER, NMCOMS_DBNAME, NMCOMS_DBPORT, NMCOMS_DBUSER, NMCOMS_DBPWD")
+			.append(" from NMCOMS")
+		.toString();
+		List<Map<String, Object>> comList = getJdbcTemplate().queryForList(comSql);
 		
-		if (entityList == null || entityList.size() == 0) return;
+		if (comList == null || comList.size() == 0) return;
 		
 		
 		/** 得到配置文件的路径. */
@@ -41,20 +45,22 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 		String ds_tpl = "";
 		
 		StringBuffer dsList = new StringBuffer();
-		for (Object oEntity : entityList) {
-			Map<?, ?> mEntity = (Map<?, ?>) oEntity;
+		for (Map<String, Object> mCom : comList) {
 			
-			String ENTID 	= ObjectUtils.toString(mEntity.get("ENTID"));
-			String DBTYPE 	= ObjectUtils.toString(mEntity.get("DBTYPE"));
-			String DBSERVER = ObjectUtils.toString(mEntity.get("DBSERVER"));
-			String DBNAME 	= ObjectUtils.toString(mEntity.get("DBNAME"));
-			String DBPORT 	= ObjectUtils.toString(mEntity.get("DBPORT"));
-			String DBUSER 	= ObjectUtils.toString(mEntity.get("DBUSER"));
-			String DBPWD 	= ObjectUtils.toString(mEntity.get("DBPWD"));
+			String ENTID 	= ObjectUtils.toString(mCom.get("NMCOMS_COMID"));
+			String DBTYPE 	= ObjectUtils.toString(mCom.get("NMCOMS_DBTYPE"));
+			String DBSERVER = ObjectUtils.toString(mCom.get("NMCOMS_DBSERVER"));
+			String DBNAME 	= ObjectUtils.toString(mCom.get("NMCOMS_DBNAME"));
+			String DBPORT 	= ObjectUtils.toString(mCom.get("NMCOMS_DBPORT"));
+			String DBUSER 	= ObjectUtils.toString(mCom.get("NMCOMS_DBUSER"));
+			String DBPWD 	= ObjectUtils.toString(mCom.get("NMCOMS_DBPWD"));
 			
 			if (StringUtils.isEmpty(ds_tpl)) {
 				String tplPath = path;
-				if ("1".equals(DBTYPE)) {
+				if ("0".equals(DBTYPE)) {
+					tplPath += "dynamic-dataSource-tpl(mysql).xml";
+				}
+				else if ("1".equals(DBTYPE)) {
 					tplPath += "dynamic-dataSource-tpl(mssql).xml";
 				}
 				else {

@@ -10,15 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import cn.com.norming.base.Constants;
 import cn.com.norming.base.LocalContext;
+import cn.com.norming.framework.LoginException;
+import cn.com.norming.framework.service.ILoginService;
 import cn.com.norming.user.domain.User;
-import cn.com.norming.user.service.IUserService;
 
 
 @Controller
 @RequestMapping(value="/framework/login")
 public class LoginController {
+	
 	@Autowired
-	private IUserService userService;
+	private ILoginService loginService;
 	
 	@RequestMapping
 	public String index() {
@@ -29,17 +31,17 @@ public class LoginController {
 	public String doLogin(HttpServletRequest request, 
 			@RequestParam("userid") String userid,
 			@RequestParam("userpwd") String userpwd) {
-
 		
-		User user = userService.findUserById(userid.toUpperCase());
-		if (user == null || !userpwd.equals(user.getSsuserPwd())) {
+		User user = null;
+		try {
+			user = loginService.doLogin(userid, userpwd);
+		} catch (LoginException ex) {
+			request.setAttribute("message", ex.getMessage());
 			return index();
 		}
 		
 		HttpSession session = request.getSession(true);
-		
 		LocalContext.setUser(user);
-		
 		session.setAttribute(Constants.USER_BEAN, user);
 		
 		return "redirect:/framework/homepage";
