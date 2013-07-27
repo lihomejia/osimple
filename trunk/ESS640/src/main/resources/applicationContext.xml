@@ -47,7 +47,7 @@
 	
 	
 	<!-- 用于持有ApplicationContext,可以使用SpringContextHolder.getBean('xxxx')的静态方法得到spring bean -->
-	<bean class="cn.com.norming.base.SpringContextHolder" lazy-init="false" />
+	<bean class="cn.com.norming.base.SpringContextHolder"/>
 	<bean id="dynamicLoadBean" class="cn.com.norming.common.dao.utils.DynamicLoadBean"/>
 	
 </beans>

@@ -30,8 +30,8 @@
 	-->
 	
 	<jdbc:embedded-database id="dataSource">
-        <jdbc:script location="classpath*:database/database-schema.sql"/>
-        <jdbc:script location="classpath*:database/database-test-data.sql"/>
+        <jdbc:script location="classpath*:database/nm-schema.sql"/>
+        <jdbc:script location="classpath*:database/nm-test-data.sql"/>
     </jdbc:embedded-database>
     
    	<bean id="dynamicDataSource" class="cn.com.norming.common.dao.utils.DynamicDataSource"/>
