@@ -5,15 +5,15 @@
 	     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
 	     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 	
-	<bean class="cn.com.norming.framework.service.impl.UserMenuImpl">
+	<bean class="com.norming.ess.framework.service.impl.UserMenuImpl">
 		<property name="resource" value="/resources/menus/essmenu.xml"></property>
 	</bean>
 	
-	<bean class="cn.com.norming.framework.service.impl.LoginServiceImpl">
+	<bean class="com.norming.ess.framework.service.impl.LoginServiceImpl">
 		<property name="loginDao" ref="loginDao"></property>
 	</bean>
 	
-	<bean id="loginDao" class="cn.com.norming.framework.dao.impl.LoginDaoImpl">
+	<bean id="loginDao" class="com.norming.ess.framework.dao.impl.LoginDaoImpl">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 </beans>

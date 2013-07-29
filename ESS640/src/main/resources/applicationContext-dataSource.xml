@@ -27,9 +27,9 @@
 	</bean>
 
 
-   	<bean id="dynamicDataSource" class="cn.com.norming.common.dao.utils.DynamicDataSource"/>
+   	<bean id="dynamicDataSource" class="com.norming.ess.common.dao.utils.DynamicDataSource"/>
 	
-	<bean class="cn.com.norming.common.init.InitDynamicDataSource">
+	<bean class="com.norming.ess.common.init.InitDynamicDataSource">
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
 </beans>
