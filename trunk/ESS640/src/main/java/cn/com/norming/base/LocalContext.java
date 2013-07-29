@@ -11,8 +11,12 @@ public class LocalContext {
 		LocalContext.user.set(user);
 	}
 	
-	public UserInformation getUser() {
+	public static UserInformation getUser() {
 		return user.get();
 	}
-
+	
+	public static String getEntityId() {
+	    UserInformation user = getUser();
+        return user == null ? null : user.getEntityId();
+	}
 }
