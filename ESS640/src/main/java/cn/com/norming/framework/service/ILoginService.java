@@ -1,9 +1,9 @@
 package cn.com.norming.framework.service;
 
 import cn.com.norming.framework.LoginException;
-import cn.com.norming.user.domain.User;
+import cn.com.norming.framework.domain.UserInformation;
 
 public interface ILoginService {
 	
-	User doLogin(String userid, String userpwd) throws LoginException;
+	UserInformation doLogin(String userid, String userpwd) throws LoginException;
 }
