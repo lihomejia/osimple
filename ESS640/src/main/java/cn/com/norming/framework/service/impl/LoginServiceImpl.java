@@ -32,6 +32,7 @@ public class LoginServiceImpl implements ILoginService {
 		userInfo.setUserId(user.getSsuserUserid());
 		userInfo.setUserName(user.getSsuserPwd());
 		userInfo.setUserPwd(user.getSsuserPwd());
+		userInfo.setEntityId(user.getSsuserEntityid());
 		
 		return userInfo;
 	}

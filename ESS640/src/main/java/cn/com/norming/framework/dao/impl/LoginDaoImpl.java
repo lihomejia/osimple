@@ -8,7 +8,7 @@ public class LoginDaoImpl extends CommonDaoImpl implements ILoginDao {
 
 	@Override
 	public Ssuser findUserById(String id) {
-		String sql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER where SSUSER_USERID = ?";
+		String sql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD, SSUSER_ENTITYID from SSUSER where SSUSER_USERID = ?";
 		return super.queryForObject(sql, new Object[] {id}, Ssuser.class);
 	}
 
