@@ -7,23 +7,11 @@
 	
 	<bean class="cn.com.norming.framework.service.impl.UserMenuImpl"></bean>
 	
-	<bean id="mainService" class="cn.com.norming.framework.service.impl.MainServiceImpl">
-		<property name="mainDao" ref="mainDao"></property>
-	</bean>
-	
-	<bean id="mainDao" class="cn.com.norming.framework.dao.impl.MainDaoImpl">
-		<property name="dataSource" ref="dataSource"></property>
-	</bean>
-	
 	<bean class="cn.com.norming.framework.service.impl.LoginServiceImpl">
 		<property name="loginDao" ref="loginDao"></property>
-		<property name="mainService" ref="mainService"></property>
 	</bean>
 	
 	<bean id="loginDao" class="cn.com.norming.framework.dao.impl.LoginDaoImpl">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="dynamicDataSource" ref="dynamicDataSource"></property>
 	</bean>
-	
-	
 </beans>
