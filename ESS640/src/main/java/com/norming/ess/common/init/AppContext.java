@@ -8,7 +8,43 @@ public class AppContext {
 
 	private static String appPath;
 	private static String appName;
+	private static String DB_TPYE;
+	public static final String APP_ESS = "ess";
+	public static final String ESS="ess";
+    private static String licensedto;
+    private static String version;
+    private static String title;
 	
+	public static String getLicensedto()
+    {
+        return licensedto;
+    }
+
+    public static void setLicensedto(String licensedto)
+    {
+        AppContext.licensedto = licensedto;
+    }
+
+    public static String getVersion()
+    {
+        return version;
+    }
+
+    public static void setVersion(String version)
+    {
+        AppContext.version = version;
+    }
+
+    public static String getTitle()
+    {
+        return title;
+    }
+
+    public static void setTitle(String title)
+    {
+        AppContext.title = title;
+    }
+
     /**
 	 * 获得当前系统运行的基本目录 
 	 * 
@@ -42,5 +78,13 @@ public class AppContext {
 
 	public static void setAppName(String appName) {
 		AppContext.appName = appName;
+	}
+
+	public static String getDBType() {
+		return DB_TPYE;
+	}
+
+	public static void setDBType(String db_tpye) {
+		DB_TPYE = db_tpye;
 	}
 }

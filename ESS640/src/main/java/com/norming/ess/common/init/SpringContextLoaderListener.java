@@ -1,4 +1,4 @@
-package com.norming.ess.base.web.listener;
+package com.norming.ess.common.init;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

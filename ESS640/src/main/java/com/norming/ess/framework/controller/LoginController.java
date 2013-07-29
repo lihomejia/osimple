@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.norming.ess.base.Constants;
 import com.norming.ess.base.LocalContext;
+import com.norming.ess.common.Constants;
 import com.norming.ess.framework.LoginException;
 import com.norming.ess.framework.domain.UserInformation;
 import com.norming.ess.framework.service.ILoginService;

@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.norming.ess.base.Constants;
+import com.norming.ess.common.Constants;
 
 
 
