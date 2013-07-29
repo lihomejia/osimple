@@ -21,6 +21,7 @@
 	    <script type="text/javascript" src="<%=basePath%>scripts/framework/AdminApp.js"></script>
 	    
 	    <script type="text/javascript" src="<%=basePath%>scripts/framework/homepage.js"></script>
+	    <script type="text/javascript" src="<%=basePath%>core/js/LoaderPath.js"></script>
 	</head>
   
 	<body>
