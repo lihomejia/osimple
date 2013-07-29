@@ -5,18 +5,18 @@ import java.util.Date;
 
 public class JavaBean {
 
-	private String name;
+	private String name1;
 	
 	private Date birth;
 	
 	private Timestamp ldt;
 
-	public String getName() {
-		return name;
+	public String getName1() {
+		return name1;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName1(String name1) {
+		this.name1 = name1;
 	}
 
 	public Date getBirth() {
@@ -39,7 +39,7 @@ public class JavaBean {
 	public String toString() {
 		return new StringBuffer()
 			.append("{")
-			.append("name:").append(this.name)
+			.append("name:").append(this.name1)
 			.append(",birth:").append(this.birth)
 			.append(",ldt:").append(ldt)
 			.append("}")
