@@ -4,5 +4,5 @@ import cn.com.norming.user.domain.User;
 
 public interface ILoginDao {
 
-	User findUserById(String id, String comId);
+	User findUserById(String id);
 }
