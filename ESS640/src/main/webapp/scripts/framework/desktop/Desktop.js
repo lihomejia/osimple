@@ -374,7 +374,7 @@ Ext.define('Ext.ux.desktop.Desktop', {
         
         win.on({
         	hide: function() {
-        		me.app.updateLogoDt();
+        		
         	}
         });
         
