@@ -9,10 +9,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
 import cn.com.norming.base.util.FileHelper;
 import cn.com.norming.common.dao.impl.CommonDaoImpl;
-import cn.com.norming.common.dao.utils.DynamicLoadBean;
 
 /**
  * 初始化动态数据源.
@@ -20,9 +21,6 @@ import cn.com.norming.common.dao.utils.DynamicLoadBean;
  *
  */
 public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryPostProcessor {
-	
-	/** Spring动态加载对象 */
-	private DynamicLoadBean dynamicLoadBean;
 	
 	@Override
 	public void postProcessBeanFactory(
@@ -93,11 +91,7 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 		FileHelper.writeFile(target, ds_run, false);
 		
 		/** 将动态的数据源加载到当前环境 */
-		this.dynamicLoadBean.loadBean(configLocationString);
-	}
-	
-	
-	public void setDynamicLoadBean(DynamicLoadBean dynamicLoadBean) {
-		this.dynamicLoadBean = dynamicLoadBean;
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader((BeanDefinitionRegistry) beanFactory);
+		reader.loadBeanDefinitions(configLocationString);
 	}
 }
