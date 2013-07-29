@@ -58,7 +58,7 @@
 
 	<!-- 加载Spring容器配置 -->
 	<listener>
-		<listener-class>com.norming.ess.base.web.listener.SpringContextLoaderListener</listener-class>
+		<listener-class>com.norming.ess.common.init.SpringContextLoaderListener</listener-class>
 	</listener>
 
 	<filter>
