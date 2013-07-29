@@ -7,22 +7,22 @@
 @cls 功能块入口类 
 -->
 <essmenu>
-	<item id="calendar"  deskicon="shortcut-calendar"  text="Calendar"     cls="ddd"/>
-	<item id="reminder"  deskicon="shortcut-reminder"  text="Reminder"     cls=""/>
-	<item id="contacts"  deskicon="shortcut-contact"   text="Constacts"    cls=""/>
-	<item id="todolist"  deskicon="shortcut-todolist"  text="Todolist"     cls=""/>
+	<item id="calendar"  deskicon="shortcut-calendar"  text="Calendar"     cls="ESS.calendar.TestCalendar"/>
+	<item id="reminder"  deskicon="shortcut-reminder"  text="Reminder"     cls="ESS.calendar.TestCalendar"/>
+	<item id="contacts"  deskicon="shortcut-contact"   text="Constacts"    cls="ESS.calendar.TestCalendar"/>
+	<item id="todolist"  deskicon="shortcut-todolist"  text="Todolist"     cls="ESS.calendar.TestCalendar"/>
 	<item id="requests"  deskicon="shortcut-blue"/>
 	<item id="line106"   deskicon="shortcut-green"/>
 	
-	<item id="expense"   deskicon="shortcut-expense"   text="Expense"      cls=""/>
-	<item id="cash"      deskicon="shortcut-cash"      text="Cashadvance"  cls=""/>
-	<item id="leave"     deskicon="shortcut-leave"     text="Leave"        cls=""/>
-	<item id="overtime"  deskicon="shortcut-overtime"  text="Overtime"     cls=""/>
-	<item id="timesheet" deskicon="shortcut-timesheet" text="Timesheet"    cls=""/>
+	<item id="expense"   deskicon="shortcut-expense"   text="Expense"      cls="ESS.calendar.TestCalendar"/>
+	<item id="cash"      deskicon="shortcut-cash"      text="Cashadvance"  cls="ESS.calendar.TestCalendar"/>
+	<item id="leave"     deskicon="shortcut-leave"     text="Leave"        cls="ESS.calendar.TestCalendar"/>
+	<item id="overtime"  deskicon="shortcut-overtime"  text="Overtime"     cls="ESS.calendar.TestCalendar"/>
+	<item id="timesheet" deskicon="shortcut-timesheet" text="Timesheet"    cls="ESS.calendar.TestCalendar"/>
 	<item id="line206"   deskicon="shortcut-blue"/>
 	
-	<item id="resource"  deskicon="shortcut-resource"  text="Resplan"      cls=""/>
-	<item id="schedule"  deskicon="shortcut-schedule"  text="Pmsche"       cls=""/>
+	<item id="resource"  deskicon="shortcut-resource"  text="Resplan"      cls="ESS.calendar.TestCalendar"/>
+	<item id="schedule"  deskicon="shortcut-schedule"  text="Pmsche"       cls="ESS.calendar.TestCalendar"/>
 	<item id="line303"   deskicon="shortcut-yellow"/>
 	<item id="line304"   deskicon="shortcut-blue"/>
 	

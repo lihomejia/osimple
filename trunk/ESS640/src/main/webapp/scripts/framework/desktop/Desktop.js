@@ -230,7 +230,7 @@ Ext.define('Ext.ux.desktop.Desktop', {
     	if (!record.get('accessable')) return;
 		var me = this;
 		var wbody = Ext.getBody();
-			wbody.mask(rs.loading, 'x-mask-loading');
+			wbody.mask('加载中', 'x-mask-loading');
 		Ext.Function.defer(function(){
 		    me.app.showWindow(record.data)
 		}, 10);
