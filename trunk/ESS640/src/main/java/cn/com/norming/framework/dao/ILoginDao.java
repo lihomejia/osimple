@@ -1,8 +1,8 @@
 package cn.com.norming.framework.dao;
 
-import cn.com.norming.user.domain.User;
+import cn.com.norming.user.domain.Ssuser;
 
 public interface ILoginDao {
 
-	User findUserById(String id);
+	Ssuser findUserById(String id);
 }
