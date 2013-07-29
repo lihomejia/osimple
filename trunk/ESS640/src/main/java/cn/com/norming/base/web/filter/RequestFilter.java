@@ -20,7 +20,7 @@ import org.apache.commons.lang3.StringUtils;
 import cn.com.norming.base.Constants;
 import cn.com.norming.base.LocalContext;
 import cn.com.norming.base.util.LocalHelper;
-import cn.com.norming.user.domain.User;
+import cn.com.norming.framework.domain.UserInformation;
 
 /**
  * 请求过滤器.
@@ -68,13 +68,13 @@ public class RequestFilter implements Filter {
 		Thread.currentThread().setName(nextThreadId());
 		
 		HttpSession session = request.getSession(true);
-		User user = (User) session.getAttribute(Constants.USER_BEAN);
-		if (user != null) {
+		UserInformation userInfo = (UserInformation) session.getAttribute(Constants.USER_BEAN);
+		if (userInfo != null) {
 			if (uri.equals(request.getContextPath() + "/")) {
 				response.sendRedirect(request.getContextPath() + "/framework/homepage");
 				return;
 			}
-			LocalContext.setUser(user);
+			LocalContext.setUser(userInfo);
 		}
 		else {
 			response.sendRedirect(request.getContextPath() + "/framework/login");

@@ -1,17 +1,17 @@
 package cn.com.norming.base;
 
 import cn.com.norming.base.util.LocalHelper;
-import cn.com.norming.user.domain.User;
+import cn.com.norming.framework.domain.UserInformation;
 
 public class LocalContext {
 	
-	private static final ThreadLocal<User> user = LocalHelper.registStatic(new ThreadLocal<User>());
+	private static final ThreadLocal<UserInformation> user = LocalHelper.registStatic(new ThreadLocal<UserInformation>());
 	
-	public static void setUser(User user) {
+	public static void setUser(UserInformation user) {
 		LocalContext.user.set(user);
 	}
 	
-	public User getUser() {
+	public UserInformation getUser() {
 		return user.get();
 	}
 
