@@ -4,6 +4,7 @@ public class Ssuser {
 	private String ssuserUserid;
 	private String ssuserUsername;
 	private String ssuserPwd;
+	private String ssuserEntityid;
 	
 	public String getSsuserUserid() {
 		return ssuserUserid;
@@ -22,5 +23,11 @@ public class Ssuser {
 	}
 	public void setSsuserPwd(String ssuserPwd) {
 		this.ssuserPwd = ssuserPwd;
+	}
+	public String getSsuserEntityid() {
+		return ssuserEntityid;
+	}
+	public void setSsuserEntityid(String ssuserEntityid) {
+		this.ssuserEntityid = ssuserEntityid;
 	}
 }
