@@ -1,6 +1,7 @@
 package cn.com.norming.common.init;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,8 @@ import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import cn.com.norming.base.util.FileHelper;
 import cn.com.norming.common.dao.impl.CommonDaoImpl;
@@ -36,11 +39,14 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 		
 		
 		/** 得到配置文件的路径. */
-		String path = AppContext.getAppPath() + "\\WEB-INF\\classes\\";
+		Resource dsResource = new ClassPathResource("dynamic-dataSource.xml");
 		
-		String ds = FileHelper.readFile(new File(path + "dynamic-dataSource.xml"));
+		File dsFile = this.getFileByResource(dsResource);
+		
+		String ds = FileHelper.readFile(dsFile);
+		
 		/** DataSource Bean模板 */
-		String ds_tpl = "";
+		String dsTpl = "";
 		
 		StringBuffer dsList = new StringBuffer();
 		for (Map<String, Object> mCom : comList) {
@@ -53,25 +59,27 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 			String DBUSER 	= ObjectUtils.toString(mCom.get("NMCOMS_DBUSER"));
 			String DBPWD 	= ObjectUtils.toString(mCom.get("NMCOMS_DBPWD"));
 			
-			if (StringUtils.isEmpty(ds_tpl)) {
-				String tplPath = path;
+			if (StringUtils.isEmpty(dsTpl)) {
+				String tplName = "";
 				if ("0".equals(DBTYPE)) {
-					tplPath += "dynamic-dataSource-tpl(mysql).xml";
+					tplName += "dynamic-dataSource-tpl(mysql).xml";
 				}
 				else if ("1".equals(DBTYPE)) {
-					tplPath += "dynamic-dataSource-tpl(mssql).xml";
+					tplName += "dynamic-dataSource-tpl(mssql).xml";
 				}
 				else {
-					tplPath += "dynamic-dataSource-tpl(oracle).xml";
+					tplName += "dynamic-dataSource-tpl(oracle).xml";
 				}
-				ds_tpl = FileHelper.readFile(new File(tplPath));
+				Resource tplResource = new ClassPathResource(tplName);
+				
+				dsTpl = FileHelper.readFile(this.getFileByResource(tplResource));
 			}
 			
-			ds_tpl.replace("$$", ENTID).replace("$$", DBSERVER);
+			dsTpl.replace("$$", ENTID).replace("$$", DBSERVER);
 			
 			/** 将数据源的模板替换为真实的DataSource配置 */
 			dsList.append("\n").append(
-				ds_tpl.replace("$dataSourceID$", 	ENTID)
+				dsTpl.replace("$dataSourceID$", 	ENTID)
 					.replace("$server$", 			DBSERVER)
 					.replace("$dbname$", 			DBNAME)
 					.replace("$port$", 				DBPORT)
@@ -85,7 +93,8 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 		/** 此文件为动态数据源的Bean定义 */
 		String configLocationString = "dynamic-dataSource-run.xml";
 		
-		File target = new File(path + configLocationString);
+		File target = new File(dsFile.getParentFile(), configLocationString);
+		
 		
 		/** 生成或覆盖 一个动态数据源的Spring配置文件 */
 		FileHelper.writeFile(target, ds_run, false);
@@ -93,5 +102,13 @@ public class InitDynamicDataSource extends CommonDaoImpl implements BeanFactoryP
 		/** 将动态的数据源加载到当前环境 */
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader((BeanDefinitionRegistry) beanFactory);
 		reader.loadBeanDefinitions(configLocationString);
+	}
+	
+	private File getFileByResource(Resource resource) {
+		try {
+			return resource.getFile();
+		} catch (IOException e) {
+			return null;
+		}
 	}
 }

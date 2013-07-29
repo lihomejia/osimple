@@ -1,6 +1,7 @@
 package cn.com.norming.framework.service.impl;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,8 +11,8 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
+import org.springframework.core.io.Resource;
 
-import cn.com.norming.common.init.AppContext;
 import cn.com.norming.framework.service.IUserMenu;
 
 
@@ -24,9 +25,21 @@ public class UserMenuImpl implements IUserMenu {
 	private final static String ATTR_DESKICON 	= "deskicon";
 	private final static String ATTR_CLS 		= "cls";
 	
+	private Resource resource;
 	
+	public void setResource(Resource resource) {
+		this.resource = resource;
+	}
+
 	public Element getRmMenu() {
-		Document menu = getUserMenuDoc(new File(AppContext.getAppPath() + MENUPATH));
+		File menuFile = null;
+		
+		try {
+			menuFile = this.resource.getFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Document menu = getUserMenuDoc(menuFile);
 		return menu.getRootElement();
 	}
 	
