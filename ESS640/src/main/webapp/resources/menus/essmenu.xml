@@ -7,22 +7,22 @@
 @cls 功能块入口类 
 -->
 <essmenu>
-	<item id="calendar"  deskicon="shortcut-calendar"  text="Calendar"     cls="ESS.calendar.TestCalendar"/>
-	<item id="reminder"  deskicon="shortcut-reminder"  text="Reminder"     cls="ESS.calendar.TestCalendar"/>
-	<item id="contacts"  deskicon="shortcut-contact"   text="Constacts"    cls="ESS.calendar.TestCalendar"/>
-	<item id="todolist"  deskicon="shortcut-todolist"  text="Todolist"     cls="ESS.calendar.TestCalendar"/>
+	<item id="calendar"  deskicon="shortcut-calendar"  text="Calendar"     cls="Ess.demo.list.DemoWindow"/>
+	<item id="reminder"  deskicon="shortcut-reminder"  text="Reminder"     cls="Ess.demo.list.DemoWindow"/>
+	<item id="contacts"  deskicon="shortcut-contact"   text="Constacts"    cls="Ess.demo.list.DemoWindow"/>
+	<item id="todolist"  deskicon="shortcut-todolist"  text="Todolist"     cls="Ess.demo.list.DemoWindow"/>
 	<item id="requests"  deskicon="shortcut-blue"/>
 	<item id="line106"   deskicon="shortcut-green"/>
 	
-	<item id="expense"   deskicon="shortcut-expense"   text="Expense"      cls="ESS.calendar.TestCalendar"/>
-	<item id="cash"      deskicon="shortcut-cash"      text="Cashadvance"  cls="ESS.calendar.TestCalendar"/>
-	<item id="leave"     deskicon="shortcut-leave"     text="Leave"        cls="ESS.calendar.TestCalendar"/>
-	<item id="overtime"  deskicon="shortcut-overtime"  text="Overtime"     cls="ESS.calendar.TestCalendar"/>
-	<item id="timesheet" deskicon="shortcut-timesheet" text="Timesheet"    cls="ESS.calendar.TestCalendar"/>
+	<item id="expense"   deskicon="shortcut-expense"   text="Expense"      cls="Ess.demo.list.DemoWindow"/>
+	<item id="cash"      deskicon="shortcut-cash"      text="Cashadvance"  cls="Ess.demo.list.DemoWindow"/>
+	<item id="leave"     deskicon="shortcut-leave"     text="Leave"        cls="Ess.demo.list.DemoWindow"/>
+	<item id="overtime"  deskicon="shortcut-overtime"  text="Overtime"     cls="Ess.demo.list.DemoWindow"/>
+	<item id="timesheet" deskicon="shortcut-timesheet" text="Timesheet"    cls="Ess.demo.list.DemoWindow"/>
 	<item id="line206"   deskicon="shortcut-blue"/>
 	
-	<item id="resource"  deskicon="shortcut-resource"  text="Resplan"      cls="ESS.calendar.TestCalendar"/>
-	<item id="schedule"  deskicon="shortcut-schedule"  text="Pmsche"       cls="ESS.calendar.TestCalendar"/>
+	<item id="resource"  deskicon="shortcut-resource"  text="Resplan"      cls="Ess.demo.list.DemoWindow"/>
+	<item id="schedule"  deskicon="shortcut-schedule"  text="Pmsche"       cls="Ess.demo.list.DemoWindow"/>
 	<item id="line303"   deskicon="shortcut-yellow"/>
 	<item id="line304"   deskicon="shortcut-blue"/>
 	
