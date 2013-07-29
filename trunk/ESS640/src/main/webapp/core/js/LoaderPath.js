@@ -1,5 +1,5 @@
 Ext.Loader.setPath({
-    'ESS': 'scripts',
+    'Ess': 'scripts',
     'Norming.ux': 'scripts/common/components/ux',
 	'Norming.components': 'scripts/common/components'
 });

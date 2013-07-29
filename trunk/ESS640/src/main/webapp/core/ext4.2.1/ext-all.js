@@ -25114,7 +25114,7 @@ Ext.define('Ext.fx.Animator', {
     
 
      
-    constructor: function(config) {
+    kk: function(config) {
         var me = this;
         config = Ext.apply(me, config || {});
         me.config = config;
