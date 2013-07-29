@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 
 import org.apache.commons.lang3.StringUtils;
 
+import cn.com.norming.base.LocalContext;
 import cn.com.norming.base.SpringContextHolder;
 
 /**
@@ -34,8 +35,9 @@ public class DynamicDataSource implements DataSource {
 		/**
 		 * 注意:这里以dataSoruce 加上当前登录用户所在的Entity ID当作数据源的ID,所以ID的命名必须规范.
 		 */
-		if (StringUtils.isNotEmpty("")){
-			return this.getDataSource("dataSoruce" + "");
+		String entityId = LocalContext.getEntityId();
+		if (StringUtils.isNotEmpty(entityId)){
+			return this.getDataSource("dataSoruce" + entityId);
 		} else {
 			return this.getDataSource("dataSource");
 		}
