@@ -5,7 +5,7 @@ import cn.com.norming.framework.LoginException;
 import cn.com.norming.framework.dao.ILoginDao;
 import cn.com.norming.framework.domain.UserInformation;
 import cn.com.norming.framework.service.ILoginService;
-import cn.com.norming.user.domain.User;
+import cn.com.norming.user.domain.Ssuser;
 
 public class LoginServiceImpl implements ILoginService {
 
@@ -18,7 +18,7 @@ public class LoginServiceImpl implements ILoginService {
 	@Override
 	public UserInformation doLogin(String userid, String userpwd) throws LoginException {
 		userid = userid.toUpperCase();
-		User user = loginDao.findUserById(userid);
+		Ssuser user = loginDao.findUserById(userid);
 		
 		if (user == null) {
 			throw LoginConstants.USERID_NOT_EXISTS;

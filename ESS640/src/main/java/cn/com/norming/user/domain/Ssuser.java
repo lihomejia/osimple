@@ -1,6 +1,6 @@
 package cn.com.norming.user.domain;
 
-public class User {
+public class Ssuser {
 	private String ssuserUserid;
 	private String ssuserUsername;
 	private String ssuserPwd;

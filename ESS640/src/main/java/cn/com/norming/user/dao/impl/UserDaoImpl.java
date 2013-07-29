@@ -4,26 +4,26 @@ import java.util.List;
 
 import cn.com.norming.common.dao.impl.CommonDaoImpl;
 import cn.com.norming.user.dao.IUserDao;
-import cn.com.norming.user.domain.User;
+import cn.com.norming.user.domain.Ssuser;
 
 public class UserDaoImpl extends CommonDaoImpl implements IUserDao {
 	
-	public List<User> selectAll() {
+	public List<Ssuser> selectAll() {
 		String querySql = "select SSUSER_USERID, SSUSER_USERNAME, SSUSER_PWD from SSUSER";
-		return super.query(querySql, User.class);
+		return super.query(querySql, Ssuser.class);
 	}
 	
-	public User selectById(String id) {
+	public Ssuser selectById(String id) {
 		String querySql = "select SSUSER_USERID,SSUSER_USERNAME,SSUSER_PWD from SSUSER where SSUSER_USERID = ?";
-		return super.queryForObject(querySql, new Object[] {id}, User.class);
+		return super.queryForObject(querySql, new Object[] {id}, Ssuser.class);
 	}
 	
-	public int insert(User user) {
+	public int insert(Ssuser user) {
 		String insertSql = "INSERT INTO SSUSER (SSUSER_USERID,SSUSER_PWD) VALUES(?,?)";
 		return super.getJdbcTemplate().update(insertSql, user.getSsuserUserid(), user.getSsuserPwd());
 	}
 	
-	public int update(User user) {
+	public int update(Ssuser user) {
 		String updateSql = "update SSUSER set SSUSER_PWD=? where SSUSER_USERID=?";
 		return super.getJdbcTemplate().update(updateSql, user.getSsuserPwd(), user.getSsuserUserid());
 	}
