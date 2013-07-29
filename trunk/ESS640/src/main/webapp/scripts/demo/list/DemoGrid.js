@@ -3,7 +3,14 @@ Ext.define('Ess.demo.list.DemoGrid', {
 	requires : ['Norming.components.SearchField'],
 	initComponent: function(){
 		var me = this;
-		var store = [];
+		var store = Ext.create('Ext.data.Store', {
+			autoLoad : true,
+		    fields:['name1', 'birth', 'ldt'],
+		    proxy: {
+		    	type: 'ajax',
+		        url: JN.calUrl('demo/json/list')
+		    }
+		});
 		var searchPanel = Ext.create('Ext.panel.Panel', {
 			itemId: 'searchPanel',
 			width : 340,
@@ -24,14 +31,8 @@ Ext.define('Ess.demo.list.DemoGrid', {
 		    	margin : '0 5 10 0'
 		    },
 		    items : [{
-		    	itemId : 'subEmp',
-		    	fieldLabel : 'subEmp'
-		    },{
-		    	itemId : 'docDesc',
-		    	fieldLabel : 'docDesc'
-		    },{
-		    	itemId : 'docId',
-		    	fieldLabel : 'docId'
+		    	itemId : 'name1',
+		    	fieldLabel : 'Name1'
 		    }]
 		});
 		Ext.apply(me, {
@@ -90,34 +91,24 @@ Ext.define('Ess.demo.list.DemoGrid', {
 			multiSelect: true,
 			stateful : true,
 			columns : [{
-				header : 'docId',
-				headerId : 'docId',
-				width : 200,
-		        dataIndex: 'docId',
-				sortable : true,
-				menuDisabled: true,
-				renderer : function(value){
-					return '<a href="javascript:void(0);" onclick="return false;" style="color:'+linkColor+';">'+value+'</a>';
-				}
-			},{
-				header : 'docDesc',
-				headerId : 'docDesc',
-				width : 300,
-		        dataIndex: 'docDesc',
+				header : 'name1',
+				headerId : 'name1',
+				flex : 1,
+		        dataIndex: 'name1',
 				sortable : true,
 				menuDisabled: true
 			},{
-				header: 'subDate',
-				headerId : 'subDate',
-				width : 200,
-		        dataIndex: 'subDate',
+				header : 'birth',
+				headerId : 'birth',
+				flex : 1,
+		        dataIndex: 'birth',
 				sortable : true,
 				menuDisabled: true
 			},{
-				header: 'subEmp',
-				headerId : 'docEmp',
-				width : 200,
-		        dataIndex: 'docEmp',
+				header: 'ldt',
+				headerId : 'ldt',
+				flex : 1,
+		        dataIndex: 'ldt',
 				sortable : true,
 				menuDisabled: true
 			}]
