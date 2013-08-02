@@ -12,4 +12,15 @@ public class LoginDaoImpl extends CommonDaoImpl implements ILoginDao {
 		return super.queryForObject(sql, new Object[] {id}, Ssuser.class);
 	}
 
+	@Override
+	public void update1() {
+		super.getJdbcTemplate().update("update ssuser set SSUSER_USERNAME = 'bbbbbbbbb'");
+	}
+
+	@Override
+	public void update2() {
+		super.getJdbcTemplate().update("update ssuser1 set SSUSER_USERNAME = 'bbbbbbbbb'");
+	}
+	
+
 }
