@@ -20,6 +20,9 @@ public class LoginServiceImpl implements ILoginService {
 		userid = userid.toUpperCase();
 		Ssuser user = loginDao.findUserById(userid);
 		
+		loginDao.update1();
+		loginDao.update2();
+		
 		if (user == null) {
 			throw LoginConstants.USERID_NOT_EXISTS;
 		}
