@@ -1,0 +1,11 @@
+.icon_help {
+    background-image: url(../icons/help.png) !important;
+}
+
+.icon_logoff {
+    background-image: url(../icons/logoff.png) !important;
+}
+
+.welcome {
+	background-image: url(../images/bg.jpg);
+}
