@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.List;
 
 import com.hong.util.ConfigUtil;
 import com.hong.util.IpUtil;
@@ -24,8 +26,7 @@ public class Start {
 		}
 		System.out.println(host + " ip :" + ip);
 		
-		String mappingHost = ConfigUtil.get(ConfigUtil.MAPPINGHOST);
-		String mappingHostStr = ip + " " + mappingHost;
+		List<String> hosts = Arrays.asList(ConfigUtil.gets(ConfigUtil.MAPPINGHOST));
 		
 		String filePath = ConfigUtil.get(ConfigUtil.FILEPATH);
 		
@@ -35,12 +36,12 @@ public class Start {
 		String crlf = "\r\n";
 		StringBuilder buf = new StringBuilder();
 		String str;
-		boolean containMappingHost = false;
 		while ((str = reader.readLine()) != null) {
-			if (str.contains(mappingHost)) {
-				containMappingHost = true;
-				str = mappingHostStr;
+			if (!str.trim().startsWith("#") &&
+					hosts.contains(str.substring(str.lastIndexOf(" ") + 1))) {
+				continue;
 			}
+			
 			buf.append(crlf).append(str);
 		}
 		if (buf.length() > 0) {
@@ -58,9 +59,10 @@ public class Start {
 			hostsReader.close();
 		}
 		
-		if (!containMappingHost) {
-			buf.append(crlf).append(mappingHostStr);
+		for (String s : hosts) {
+			buf.append(crlf).append(ip).append(" ").append(s);
 		}
+		
 		reader.close();
 	
 		OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream(filePath));
