@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+gaeDatanucleusEnabled=false
 gaeDeployDialogSettings=
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
