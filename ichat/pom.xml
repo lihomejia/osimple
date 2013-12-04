@@ -45,9 +45,7 @@
 		<dependency>
 			<groupId>org.directwebremoting</groupId>
 			<artifactId>dwr</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/dwr.jar</systemPath>
+			<version>2.0.3</version>
 		</dependency>
 		<!-- JSTL -->
 
