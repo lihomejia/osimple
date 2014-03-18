@@ -1,0 +1,26 @@
+body { font:12px/22px Verdana, Geneva, sans-serif; background:#fff; color:#333; }
+body,p,ul,ol,li,dl,dt,dd,input,h1,h2,h3,h4,form,hr { padding:0; margin:0; }
+img { border:0; }
+table { border-collapse:collapse; }
+input { font-size:12px; }
+label { display:inline-block; padding-top:1px; }
+label input { border:0; line-height:20px; padding:0px 10px; overflow:visible; color:#fff; }
+label.ui-green { background:#98c286; border:1px solid #3b6e22; }
+label.ui-green input { background:#68a54c; }
+label.ui-blue { background:#8a9cc2; border:1px solid #29447e; }
+label.ui-blue input { background:#5e77aa; }
+ul { list-style:none; }
+a:link, a:visited { color:#3a52a8; text-decoration:none; }
+a:hover, a:active { color:#3a52a8; text-decoration:underline; }
+
+.spacer { height:8px; overflow:hidden; }
+
+#chat-room {}
+#chat-room .lefter { float:left; width:140px; height:400px; border-right:1px solid #ccc; overflow-y:scroll; }
+#chat-room .lefter h2 { background:#fafafa; border-bottom:1px solid #eee; font-size:14px; line-height:24px; text-align:center; }
+#chat-room .lefter ul li { line-height:24px; padding:10px; }
+#chat-room .lefter ul li a{ display:block; background:url(../images/bg.png) -231px -152px no-repeat; padding-left:20px; }
+#chat-room .righter { float:right; width:445px; display:inline; margin:5px; }
+#chat-room .righter #history { height:320px; border:1px solid #ccc; padding:5px; overflow-y:scroll; }
+#chat-room .righter .reply .text { border:1px solid #ccc; width:380px; margin-right:5px; padding:4px; vertical-align:middle; }
+#chat-room .righter .reply label { vertical-align:middle; }
