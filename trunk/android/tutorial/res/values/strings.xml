@@ -3,5 +3,9 @@
 
     <string name="app_name">Android Tutorial</string>
     <string name="action_settings">Settings</string>
+    <string name="read">读取已保存的文件内容</string>
+    <string name="read2">读取已保存的文件内容2</string>
+    <string name="write">将文本框中的内容保存到文件</string>
+    <string name="write2">将文本框中的内容保存到文件2</string>
 
 </resources>
