@@ -21,6 +21,11 @@ public class MainActivity extends Activity {
     }
 
     
+    public void onRwFile(View v) {
+    	Intent intent = new Intent(this, RwFileActivity.class);
+    	startActivity(intent);
+    }
+    
     public void onHttpRequest(View v) {
     	Intent intent = new Intent(this, HttpActivity.class);
     	startActivity(intent);

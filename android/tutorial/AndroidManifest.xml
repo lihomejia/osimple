@@ -23,6 +23,7 @@
         </activity>
         <activity android:name="HttpActivity" android:label="HttpActivity"></activity>
         <activity android:name="ViewSourceActivity" android:label="网页源代码查看器"></activity>
+        <activity android:label="读写文件" android:name="RwFileActivity"></activity>
     </application>
 
 </manifest>
