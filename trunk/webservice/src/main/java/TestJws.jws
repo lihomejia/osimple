@@ -1,0 +1,9 @@
+public class TestJws {
+	public int getInt(int a) {
+		return 123;
+	}
+	
+	public String getString() {
+		return "Hi, ...";
+	}
+}
