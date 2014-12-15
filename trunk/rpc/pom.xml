@@ -41,5 +41,6 @@
 	</build>
   <modules>
     <module>rpc-api</module>
+    <module>rpc-impl</module>
   </modules>
 </project>
