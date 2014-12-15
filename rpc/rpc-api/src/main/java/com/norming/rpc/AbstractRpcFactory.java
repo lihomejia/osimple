@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created on Dec 12, 2014 
  *
  */
-public abstract class AbstractRpcFactory implements IRpcHolder {
+public abstract class AbstractRpcFactory implements IRpcContext {
 
 	private static Map<Class<?>, InvocationHandler> mHandler = new ConcurrentHashMap<>();
 	

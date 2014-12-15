@@ -7,7 +7,7 @@ import com.norming.rpc.impl.RpcRmiFactory;
 public class RpcTest {
 
 	public static void main(String[] args) {
-		IRpcHolder rpcHolder = new RpcRmiFactory();
+		IRpcContext rpcHolder = new RpcRmiFactory();
 		
 		ISyncSth syncSth = rpcHolder.getRpcBean(ISyncSth.class);
 		
