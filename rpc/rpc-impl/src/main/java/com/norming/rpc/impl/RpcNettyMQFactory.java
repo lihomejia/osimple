@@ -18,7 +18,7 @@ public class RpcNettyMQFactory extends AbstractRpcFactory {
 	@Override
 	public <T> InvocationHandler getInvocationHandler(final Class<T> clazz) {
 		
-		final T target = this.findTarget(clazz);
+		final Object target = this.findTarget(clazz);
 		
 		return new InvocationHandler() {
 			
@@ -39,7 +39,7 @@ public class RpcNettyMQFactory extends AbstractRpcFactory {
 	 * @param clazz
 	 * @return
 	 */
-	private <T> T findTarget(Class<T> clazz) {
+	private Object findTarget(Class<?> clazz) {
 
 		//TODO
 		
