@@ -7,7 +7,7 @@ package com.norming.rpc;
  * Created on Dec 12, 2014 
  *
  */
-public interface IRpcHolder {
+public interface IRpcContext {
 	
 	
 	/**
