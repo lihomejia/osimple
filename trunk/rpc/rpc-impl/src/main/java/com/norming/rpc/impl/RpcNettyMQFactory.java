@@ -26,8 +26,6 @@ public class RpcNettyMQFactory extends AbstractRpcFactory {
 			public Object invoke(Object proxy, Method method, Object[] args)
 					throws Throwable {
 				
-				LOG.info("invoke method:" + method.getName() + ", args:" + Arrays.asList(args));
-				
 				return method.invoke(target, args);
 			}
 		};
