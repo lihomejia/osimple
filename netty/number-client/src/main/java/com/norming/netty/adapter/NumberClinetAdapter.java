@@ -1,4 +1,4 @@
-package cn.com.norming.netty.adapter;
+package com.norming.netty.adapter;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -11,8 +11,6 @@ public class NumberClinetAdapter extends Netty4ClientAdapter {
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		
-		System.out.println("Client Active");
 		
 		ctx.writeAndFlush(params);
 	}

@@ -1,4 +1,4 @@
-package cn.com.norming.netty.domain;
+package com.norming.netty.domain;
 
 import java.io.Serializable;
 

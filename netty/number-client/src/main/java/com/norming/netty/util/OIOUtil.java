@@ -11,20 +11,21 @@
  * or any consequential, incidental or indirect damage arising out of the use 
  * of the software.
  */
-package cn.com.norming.netty.util;
+package com.norming.netty.util;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.oio.OioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.logging.LogLevel;
-import io.netty.handler.logging.LoggingHandler;
+import io.netty.channel.socket.oio.OioSocketChannel;
 
 import java.net.InetSocketAddress;
 
-import cn.com.norming.netty.adapter.Netty4ClientAdapter;
-import cn.com.norming.netty.factorial.Netty4FactorialClientInitializer;
+import com.norming.netty.adapter.Netty4ClientAdapter;
+import com.norming.netty.factorial.Netty4FactorialClientInitializer;
 
 public class OIOUtil {
 	
@@ -37,14 +38,16 @@ public class OIOUtil {
 	public static Object doConnect(final Netty4ClientAdapter adapter) {
 		Object ret = null;
 		
-		EventLoopGroup workerGroup = new NioEventLoopGroup();
+		EventLoopGroup workerGroup = new OioEventLoopGroup();
 		Bootstrap bootstrap = new Bootstrap();
 		try {
 			bootstrap
-				.group(workerGroup).channel(NioSocketChannel.class)
+				.group(workerGroup).channel(OioSocketChannel.class)
 				.remoteAddress(new InetSocketAddress(adapter.getHost(), adapter.getPort()))
 				.handler(new Netty4FactorialClientInitializer(adapter))
+				.option(ChannelOption.TCP_NODELAY, true)
 			;
+			
 			ChannelFuture future = bootstrap.connect().sync();
 			future.channel().closeFuture().sync();
 			

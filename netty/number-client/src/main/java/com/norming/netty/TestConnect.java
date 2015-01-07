@@ -1,9 +1,9 @@
-package cn.com.norming.netty;
+package com.norming.netty;
 
-import cn.com.norming.netty.adapter.Netty4ClientAdapter;
-import cn.com.norming.netty.adapter.NumberClinetAdapter;
-import cn.com.norming.netty.domain.Feedback;
-import cn.com.norming.netty.util.OIOUtil;
+import com.norming.netty.adapter.Netty4ClientAdapter;
+import com.norming.netty.adapter.NumberClinetAdapter;
+import com.norming.netty.domain.Feedback;
+import com.norming.netty.util.OIOUtil;
 /**
  * Netty4 Client connect to Server
  * 
@@ -34,7 +34,7 @@ public class TestConnect {
 		}
 		long t2 = System.currentTimeMillis();
 		
-		System.out.println(t2-t1);
+		System.out.println(t2 - t1);
 		
 		//clear cache
 //		Netty4ClientAdapter<String> adapter = new NumberRefreshClinetAdapter();
