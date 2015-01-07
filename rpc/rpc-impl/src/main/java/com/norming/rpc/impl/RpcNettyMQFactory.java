@@ -2,7 +2,6 @@ package com.norming.rpc.impl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -12,7 +11,6 @@ import com.norming.rpc.AbstractRpcFactory;
 public class RpcNettyMQFactory extends AbstractRpcFactory {
 	
 	private static final Log LOG = LogFactory.getLog(RpcNettyMQFactory.class);
-
 
 	
 	@Override
@@ -25,6 +23,8 @@ public class RpcNettyMQFactory extends AbstractRpcFactory {
 			@Override
 			public Object invoke(Object proxy, Method method, Object[] args)
 					throws Throwable {
+				
+				LOG.info("...");
 				
 				return method.invoke(target, args);
 			}
@@ -40,7 +40,6 @@ public class RpcNettyMQFactory extends AbstractRpcFactory {
 	private Object findTarget(Class<?> clazz) {
 
 		//TODO
-		
 		return null;
 		
 	}
