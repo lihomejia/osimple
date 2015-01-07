@@ -1,4 +1,4 @@
-package cn.com.norming.netty.factorial;
+package com.norming.netty.factorial;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package cn.com.norming.netty.config;
+package com.norming.netty.config;
 
 import java.util.Properties;
 

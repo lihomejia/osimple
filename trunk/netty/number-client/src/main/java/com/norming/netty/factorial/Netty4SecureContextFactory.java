@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package cn.com.norming.netty.factorial;
+package com.norming.netty.factorial;
 
 import io.netty.handler.ssl.SslHandler;
 

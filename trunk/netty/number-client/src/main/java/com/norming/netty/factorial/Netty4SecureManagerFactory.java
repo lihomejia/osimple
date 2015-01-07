@@ -1,4 +1,4 @@
-package cn.com.norming.netty.factorial;
+package com.norming.netty.factorial;
 
 import javax.net.ssl.ManagerFactoryParameters;
 import javax.net.ssl.TrustManager;

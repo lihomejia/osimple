@@ -1,4 +1,4 @@
-package cn.com.norming.netty.adapter;
+package com.norming.netty.adapter;
 
 import io.netty.channel.ChannelHandlerContext;
 
