@@ -2,7 +2,6 @@ package com.norming.rpc.impl;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -21,20 +20,34 @@ public class RpcRmiFactory extends AbstractRpcFactory {
 		return new InvocationHandler() {
 			
 			@Override
-			public Object invoke(Object proxy, Method method, Object[] args)
+			public Object invoke(Object proxy, final Method method, final Object[] args)
 					throws Throwable {
 				
-				LOG.info("invoke method:" + method.getName() + ", args:" + Arrays.asList(args));
-				
-				
+				if (method.getReturnType() == Void.class) {
+					new Thread() {
+						public void run() {
+							try {
+								doWork(method, args);
+							} catch (Throwable e) {
+								LOG.error(e.getLocalizedMessage());
+								e.printStackTrace();
+							}
+						}
+					}.start();
+					
+					return null;
+				}
+				return doWork(method, args);
+			}
+			
+			
+			private Object doWork(final Method method, final Object[] args) throws Throwable {
 				List<T> list = RmiClientUtil.getRemoteObjects(clazz.getSimpleName());
 				
 				Object ret = null;
-				for (T target : list) {
-					
+				for (final T target : list) {
 					ret = method.invoke(target, args);
 				}
-				
 				return ret;
 			}
 		};
