@@ -10,7 +10,7 @@ public class NettyConfig {
 	// 系统内部变量
 	private static Properties ps = new Properties();
 
-	private static final String CONFIG_FILE_NAME 	= "netty.properties";
+	private static final String CONFIG_FILE_NAME 	= "netty-client.properties";
 	
 	public static final String NETTY_HOST 			= "netty.host";
 	public static final String NETTY_REFRESH_PORT 	= "netty.refresh.port";
