@@ -7,4 +7,18 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>number-client</artifactId>
+
+	<dependencies>
+		<dependency>
+            <groupId>com.norming</groupId>
+            <artifactId>number-server</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+		</dependency>
+	</dependencies>
 </project>
