@@ -4,8 +4,6 @@ import com.norming.as.bo.option.NumConstant;
 
 /**
  * 费用单据编号
- * 
- * @author znlin.zhao
  *
  */
 public class ExpenseNumber extends AbstractNumberSingle {

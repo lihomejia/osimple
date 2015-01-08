@@ -4,14 +4,12 @@ import com.norming.as.bo.option.NumConstant;
 
 /**
  * 客户代码
- * 
- * @author znlin.zhao
  *
  */
 public class CustomerNumber extends AbstractMainNumberCustom {
 
 	public CustomerNumber() {
-		super(NumConstant.CM_BP);
+		super(NumConstant.BUSINESSPARTNER);
 	}
 
 	@Override

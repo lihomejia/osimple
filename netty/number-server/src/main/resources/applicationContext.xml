@@ -12,7 +12,7 @@
 		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
-				<value>classpath:netty.properties</value>
+				<value>classpath:netty-server.properties</value>
 			</list>
 		</property>
 	</bean>
