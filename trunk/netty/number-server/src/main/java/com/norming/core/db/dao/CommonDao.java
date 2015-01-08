@@ -33,8 +33,6 @@ public interface CommonDao {
 	 * 	通过SQL返回查询的总数据条数 
 	 * 
 	 * @param String 型SQL.如：finalSql = "SELECT COUNT(*) FROM user";
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return int型整数。总数据条数。	 */
 	public int findDataCount(String finalSql);
 	
@@ -43,8 +41,6 @@ public interface CommonDao {
 	 * 
 	 * @param String 型SQL.如：finalSql = "SELECT COUNT(*) FROM user WHERE user_id=?";
 	 * *@param object[]对象数组 如：new Object[] {'01'}
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return int型整数。总数据条数。
 	 */
 	public int findDataCount(String finalSql, Object[] object);
@@ -54,8 +50,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "SELECT user_name,user_pwd FROM user";
 	 * @param object型对象.如：USER.class
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return List<E> 对象数组。	 */
 	public Map<String, Object> findDataMap(String finalSql);
 	
@@ -63,8 +57,6 @@ public interface CommonDao {
 	 * 	通过SQL返回查询对象的集合。Map
 	 * 
 	 * @param String型SQL.如：finalSql = "SELECT user_name,user_pwd FROM user WHERE user_id='01'";
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return Map HashMap。
 	 */
 	public Map<String, Object> findDataMap(String finalSql, Object[] object);
@@ -74,8 +66,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "SELECT user_name,user_pwd FROM user";
 	 * @param object型对象.如：USER.class
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return List<E> 对象数组。
 	 */
 	public List<Map<String, Object>> findDataList(String finalSql);
@@ -85,8 +75,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "SELECT user_name,user_pwd FROM user";
 	 * @param object[]对象数组 如：new Object[] {'01'}
-	 * @author LiRui
-	 * @date Aug 24, 2012
 	 * @return List<E> 对象数组。	 */
 	public List<Map<String, Object>> findDataList(String finalSql, Object[] object);
 	
@@ -96,8 +84,6 @@ public interface CommonDao {
 	 * 	通过SQL删除数据信息。(接口1)
 	 * 
 	 * @param String型SQL.如：finalSql = "DELETE FROM user WHERE user_id = '01'";
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int delDataInfoById(String finalSql);
@@ -107,8 +93,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "DELETE FROM user WHERE user_id = '?'";
 	 * @param object[]对象数组 如：new Object[] {'01'}
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int delDataInfoById(String finalSql ,Object[] object);
@@ -117,8 +101,6 @@ public interface CommonDao {
 	 *  通过SQL添加数据信息（接口1）
 	 * 
 	 * @param String型SQL.如：finalSql = "INSERT INTO user VALUES('','','')";
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int insertDataInfo(String finalSql);
@@ -128,8 +110,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "INSERT INTO user VALUES(?,?,?)";
 	 * @param object[]对象数组 如：new Object[] {'1','2','3'}
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int insertDataInfo(String finalSql, Object[] object);
@@ -137,8 +117,6 @@ public interface CommonDao {
 	/**
 	 * 通过SQL修改数据信息（接口1）	 * 
 	 * @param String型SQL.如：finalSql = "UPDATE user SET name='1' WHERE user_id='01'";
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int updateDataInfo(String finalSql);
@@ -148,8 +126,6 @@ public interface CommonDao {
 	 * 
 	 * @param String型SQL.如：finalSql = "UPDATE user SET user_name=?,user_age=? WHERE user_id=?";
 	 * @param object[]对象数组 如：new Object[] {'jack','20','0001'}
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数.
 	 */
 	public int updateDataInfo(String finalSql, Object[] object);
@@ -157,8 +133,6 @@ public interface CommonDao {
 	/**
 	 * 	通过SQL[] 批量处理数据。	 * 
 	 * @param String[]型SQL.如：finalSql.toArray(new String[finalSql.size()])
-	 * @author LiRui
-	 * @date Jul 12, 2012
 	 * @return 影响的数据行数[].
 	 */
 	public int[] batchDataInfo(String[] finalSql);

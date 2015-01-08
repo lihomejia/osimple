@@ -4,10 +4,8 @@ import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
-import io.netty.channel.oio.OioEventLoopGroup;
-import io.netty.channel.socket.oio.OioServerSocketChannel;
-import io.netty.handler.logging.LogLevel;
-import io.netty.handler.logging.LoggingHandler;
+import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.net.InetSocketAddress;
 import java.util.Map;
@@ -18,7 +16,6 @@ import java.util.logging.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.norming.core.web.SpringContextHelper;
-import com.norming.netty.StartUp;
 import com.norming.netty.adapter.Netty4ServerAdapter;
 import com.norming.netty.factorial.Netty4FactorialServerInitializer;
 
@@ -57,14 +54,14 @@ public class ServerStartup {
 					String host = adapter.getHost();
 					int port = adapter.getPort();
 					
-					EventLoopGroup bossGroup = new OioEventLoopGroup();
-			        EventLoopGroup workerGroup = new OioEventLoopGroup();
+					EventLoopGroup bossGroup = new NioEventLoopGroup();
+			        EventLoopGroup workerGroup = new NioEventLoopGroup();
 					
 					ServerBootstrap bootstrap = new ServerBootstrap();
 			        try {
 			        	bootstrap
 			        		.group(bossGroup, workerGroup)
-			        		.channel(OioServerSocketChannel.class)
+			        		.channel(NioServerSocketChannel.class)
 			        		.localAddress(new InetSocketAddress(host, port))
 			        		.childOption(ChannelOption.TCP_NODELAY, true)
 			        		.childHandler(new Netty4FactorialServerInitializer(adapter));
