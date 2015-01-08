@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
 	default-autowire="byName" default-lazy-init="true">
 
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:jdbc.properties</value>
@@ -16,50 +18,50 @@
 	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="${jdbc.driverClassName}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
-	</bean>
-	
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+
 	<!-- Common Dao -->
-	<bean id="commonDaoSupport"  class="cn.com.norming.core.db.dao.impl.CommonDaoImpl">
-		<property name="dataSource" ref="dataSource"/>
+	<bean id="commonDaoSupport" class="com.norming.core.db.dao.impl.CommonDaoImpl">
+		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	<bean class="cn.com.norming.netty.adapter.NumberRefreshServerAdapter">
-		<property name="host" value="${netty.host}"/>
-		<property name="port" value="${netty.refresh.port}"/>
-		<property name="enable" value="${netty.refresh.enable}"/>
+
+	<bean class="com.norming.netty.adapter.NumberRefreshServerAdapter">
+		<property name="host" value="${netty.host}" />
+		<property name="port" value="${netty.refresh.port}" />
+		<property name="enable" value="${netty.refresh.enable}" />
 	</bean>
-	
-	
-	
-	<bean class="cn.com.norming.netty.adapter.NumberServerAdapter">
-		<property name="host" value="${netty.host}"/>
-		<property name="port" value="${netty.timesheet.port}"/>
-		<property name="enable" value="${netty.timesheet.enable}"/>
+
+
+
+	<bean class="com.norming.netty.adapter.NumberServerAdapter">
+		<property name="host" value="${netty.host}" />
+		<property name="port" value="${netty.timesheet.port}" />
+		<property name="enable" value="${netty.timesheet.enable}" />
 		<property name="number">
-			<bean class="cn.com.norming.num.impl.TimesheetNumber"/>
+			<bean class="com.norming.num.impl.TimesheetNumber" />
 		</property>
 	</bean>
-	
-	<bean class="cn.com.norming.netty.adapter.NumberServerAdapter">
-		<property name="host" value="${netty.host}"/>
-		<property name="port" value="${netty.expense.port}"/>
-		<property name="enable" value="${netty.expense.enable}"/>
+
+	<bean class="com.norming.netty.adapter.NumberServerAdapter">
+		<property name="host" value="${netty.host}" />
+		<property name="port" value="${netty.expense.port}" />
+		<property name="enable" value="${netty.expense.enable}" />
 		<property name="number">
-			<bean class="cn.com.norming.num.impl.ExpenseNumber"/>
+			<bean class="com.norming.num.impl.ExpenseNumber" />
 		</property>
 	</bean>
-	
-	<bean class="cn.com.norming.netty.adapter.NumberServerAdapter">
-		<property name="host" value="${netty.host}"/>
-		<property name="port" value="${netty.customer.port}"/>
-		<property name="enable" value="${netty.customer.enable}"/>
+
+	<bean class="com.norming.netty.adapter.NumberServerAdapter">
+		<property name="host" value="${netty.host}" />
+		<property name="port" value="${netty.customer.port}" />
+		<property name="enable" value="${netty.customer.enable}" />
 		<property name="number">
-			<bean class="cn.com.norming.num.impl.CustomerNumber"/>
+			<bean class="com.norming.num.impl.CustomerNumber" />
 		</property>
 	</bean>
-	
+
 </beans>
