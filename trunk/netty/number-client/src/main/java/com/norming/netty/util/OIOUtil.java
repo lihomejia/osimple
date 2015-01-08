@@ -18,9 +18,7 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.oio.OioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.channel.socket.oio.OioSocketChannel;
 
 import java.net.InetSocketAddress;
 
@@ -38,11 +36,11 @@ public class OIOUtil {
 	public static Object doConnect(final Netty4ClientAdapter adapter) {
 		Object ret = null;
 		
-		EventLoopGroup workerGroup = new OioEventLoopGroup();
+		EventLoopGroup workerGroup = new NioEventLoopGroup(1);
 		Bootstrap bootstrap = new Bootstrap();
 		try {
 			bootstrap
-				.group(workerGroup).channel(OioSocketChannel.class)
+				.group(workerGroup).channel(NioSocketChannel.class)
 				.remoteAddress(new InetSocketAddress(adapter.getHost(), adapter.getPort()))
 				.handler(new Netty4FactorialClientInitializer(adapter))
 				.option(ChannelOption.TCP_NODELAY, true)

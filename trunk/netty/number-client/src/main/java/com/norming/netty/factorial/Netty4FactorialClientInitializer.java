@@ -14,8 +14,6 @@ import io.netty.handler.logging.LoggingHandler;
  * Netty4FactorialClientInitializer extends ChannelInitializer<SocketChannel>
  * Creates a newly Factorial for a client-side channel.
  * 
- * @author LiRui
- * @date May 27,2013
  */
 public class Netty4FactorialClientInitializer extends ChannelInitializer<SocketChannel> {
 
@@ -26,12 +24,12 @@ public class Netty4FactorialClientInitializer extends ChannelInitializer<SocketC
 	 * Netty4 Factorial Client Initializer
 	 * @param final ChannelInboundMessageHandlerAdapter<String> clientAdapter
 	 * @param this
-	 * @author LiRui
-	 * @date May 27,2013
 	 */
     public Netty4FactorialClientInitializer(final ChannelInboundHandlerAdapter clientAdapter) {
         this.clientAdapter = clientAdapter;
     }
+    
+    
     /**
      * Netty4 Channel & clientAdapter Builder
      * @param SocketChannel channel
@@ -39,9 +37,6 @@ public class Netty4FactorialClientInitializer extends ChannelInitializer<SocketC
      * @param LoggingHandler
      * @param ObjectEncoder
      * @param ObjectDecoder
-     * 
-     * @author LiRui
-     * @date May 28,2013
      * */
     @Override
     public void initChannel(SocketChannel ch)throws Exception {
