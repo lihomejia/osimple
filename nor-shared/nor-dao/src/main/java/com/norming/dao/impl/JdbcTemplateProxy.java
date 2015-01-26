@@ -25,8 +25,9 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 
 /**
- * {@link JdbcTemplate} proxy class. 
- * Do not cover original class behavior, also do not add any method.
+ * {@link JdbcTemplate}的代理类. 
+ * 本类没有改变原始类的行为, 同样也没有添加任何的其他方法.
+ * 如需改动，可在子类中实现.
  * 
  * @author lh.jia
  * Created on Jan 23, 2015 
@@ -87,16 +88,16 @@ public class JdbcTemplateProxy extends JdbcDaoSupport implements JdbcOperations 
 		return getJdbcTemplate().queryForMap(sql);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public long queryForLong(String sql) throws DataAccessException {
-//		return getJdbcTemplate().queryForLong(sql);
-		return getJdbcTemplate().queryForObject(sql, Long.class);
+		return getJdbcTemplate().queryForLong(sql);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public int queryForInt(String sql) throws DataAccessException {
-//		return getJdbcTemplate().queryForInt(sql);
-		return getJdbcTemplate().queryForObject(sql, Integer.class);
+		return getJdbcTemplate().queryForInt(sql);
 	}
 
 	@Override
@@ -276,18 +277,18 @@ public class JdbcTemplateProxy extends JdbcDaoSupport implements JdbcOperations 
 		return getJdbcTemplate().queryForMap(sql, args);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public long queryForLong(String sql, Object[] args, int[] argTypes)
 			throws DataAccessException {
-//		return getJdbcTemplate().queryForLong(sql, args, argTypes);
-		return getJdbcTemplate().queryForObject(sql, args, argTypes, Integer.class);
+		return getJdbcTemplate().queryForLong(sql, args, argTypes);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public long queryForLong(String sql, Object... args)
 			throws DataAccessException {
-//		return getJdbcTemplate().queryForLong(sql, args);
-		return getJdbcTemplate().queryForObject(sql, args, Long.class);
+		return getJdbcTemplate().queryForLong(sql, args);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -297,11 +298,11 @@ public class JdbcTemplateProxy extends JdbcDaoSupport implements JdbcOperations 
 		return getJdbcTemplate().queryForInt(sql, args, argTypes);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public int queryForInt(String sql, Object... args)
 			throws DataAccessException {
-//		return getJdbcTemplate().queryForInt(sql, args);
-		return getJdbcTemplate().queryForObject(sql, args, Integer.class);
+		return getJdbcTemplate().queryForInt(sql, args);
 		
 	}
 
