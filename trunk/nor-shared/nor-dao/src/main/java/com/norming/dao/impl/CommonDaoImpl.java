@@ -11,12 +11,15 @@ import org.springframework.jdbc.core.RowMapperResultSetExtractor;
 import com.norming.dao.CommonDao;
 
 /**
+ * 本类的功能:
+ * ①实现{@link CommonDao}接口中定义的方法.
+ * ②修改{@link JdbcTemplateProxy}中个别方法的行为.
  * 
  * @author lh.jia
  * Created on Jan 23, 2015 
  *
  */
-public class CommonDaoImpl extends JdbcTemplateProxy implements CommonDao {
+public final class CommonDaoImpl extends JdbcTemplateProxy implements CommonDao {
 
 	// =========================================================
 	// Implement {@link CommonDao}'s methods >>>Start>>>>>>>>>>>
