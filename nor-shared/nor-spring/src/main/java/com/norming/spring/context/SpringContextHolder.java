@@ -14,14 +14,14 @@ public class SpringContextHolder {
 
 	private static ApplicationContext applicationContext;
 
-	public static void setApplicationContext(ApplicationContext applicationContext) {
+	public static void setContext(ApplicationContext applicationContext) {
 		SpringContextHolder.applicationContext = applicationContext;
 	}
 
 	/**
 	 * 取得存储在静态变量中的ApplicationContext.
 	 */
-	public static ApplicationContext getApplicationContext() {
+	public static ApplicationContext getContext() {
 		checkApplicationContext();
 		return applicationContext;
 	}
