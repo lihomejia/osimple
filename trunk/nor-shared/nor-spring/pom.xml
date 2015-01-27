@@ -14,5 +14,10 @@
 			<artifactId>spring-context</artifactId>
 			<version>${version.spring}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.norming</groupId>
+			<artifactId>nor-util</artifactId>
+			<version>nCloud6.4.2-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
