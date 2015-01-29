@@ -1,6 +1,5 @@
 package com.norming.util;
 
-import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -40,24 +39,66 @@ public class DataSourceManager {
 		
 		String url = urlTpl.replace("$server$", dbServer).replace("$port$", dbPort).replace("$dbname$", dbName);
 		
-		if (bd.getBeanClassName().equals(DataSource.class.getName())) {
+		if ("org.apache.tomcat.jdbc.pool.DataSource".equals(bd.getBeanClassName())) {
 			
 			//Required Parameters
-			mpv.add("url", url);
-			mpv.add("username",     pprop.getUsername());
-			mpv.add("password",     pprop.getPassword());
+			mpv.add("url",                        url);
+			mpv.add("username",                   pprop.getUsername());
+			mpv.add("password",                   pprop.getPassword());
 			
 			//
-			mpv.add("initialSize",  pprop.getInitialSize());
-			mpv.add("maxActive",    pprop.getMaxActive());
-			mpv.add("maxIdle",      pprop.getMaxIdle());
-			mpv.add("minIdle",      pprop.getMinIdle());
-			mpv.add("maxWait",      pprop.getMaxWait());
+			mpv.add("initialSize",                pprop.getInitialSize());
+			mpv.add("maxActive",                  pprop.getMaxActive());
+			mpv.add("maxIdle",                    pprop.getMaxIdle());
+			mpv.add("minIdle",                    pprop.getMinIdle());
+			mpv.add("maxWait",                    pprop.getMaxWait());
 			
 			//Other Parameters
-			mpv.add("removeAbandoned",        pprop.isRemoveAbandoned());
-			mpv.add("removeAbandonedTimeout", pprop.getRemoveAbandonedTimeout());
-			mpv.add("validationQuery",        pprop.getValidationQuery());
+			mpv.add("removeAbandoned",            pprop.isRemoveAbandoned());
+			mpv.add("removeAbandonedTimeout",     pprop.getRemoveAbandonedTimeout());
+			mpv.add("validationQuery",            pprop.getValidationQuery());
+			
+		} else if ("org.apache.commons.dbcp.BasicDataSource".equals(bd.getBeanClassName())) {
+			//Required Parameters
+			mpv.add("url",                        url);
+			mpv.add("username",                   pprop.getUsername());
+			mpv.add("password",                   pprop.getPassword());
+			
+			//
+			mpv.add("initialSize",                pprop.getInitialSize());
+			mpv.add("maxActive",                  pprop.getMaxActive());
+			mpv.add("maxIdle",                    pprop.getMaxIdle());
+			mpv.add("minIdle",                    pprop.getMinIdle());
+			mpv.add("maxWait",                    pprop.getMaxWait());
+			
+			//Other Parameters
+			mpv.add("removeAbandoned",            pprop.isRemoveAbandoned());
+			mpv.add("removeAbandonedTimeout",     pprop.getRemoveAbandonedTimeout());
+			mpv.add("validationQuery",            pprop.getValidationQuery());
+			
+		} else if ("com.mchange.v2.c3p0.ComboPooledDataSource".equals(bd.getBeanClassName())) {
+			
+			//Required Parameters
+			mpv.add("jdbcUrl",                    url);
+			mpv.add("user",                       pprop.getUsername());
+			mpv.add("password",                   pprop.getPassword());
+			
+			//
+			mpv.add("initialPoolSize",            pprop.getInitialSize());
+			mpv.add("minPoolSize", 	              1);
+			mpv.add("maxPoolSize",                pprop.getMaxActive());
+			mpv.add("acquireIncrement",           1);
+			mpv.add("maxIdleTime",                60);
+			
+			//Other Parameters
+			mpv.add("idleConnectionTestPeriod",   120);
+			mpv.add("maxStatements",              30);
+			mpv.add("maxStatementsPerConnection", 3);
+			mpv.add("acquireRetryDelay",          1000);
+			mpv.add("acquireRetryAttempts",       3);
+			mpv.add("testConnectionOnCheckout",   false);
+			mpv.add("testConnectionOnCheckin",    false);
+			mpv.add("breakAfterAcquireFailure",   false);
 		}
 		
 		bd.setPropertyValues(mpv);
