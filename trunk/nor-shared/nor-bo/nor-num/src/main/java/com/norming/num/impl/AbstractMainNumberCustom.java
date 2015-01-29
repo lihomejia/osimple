@@ -66,7 +66,7 @@ public abstract class AbstractMainNumberCustom implements INumber {
 		StringBuffer querySql = new StringBuffer();
 		querySql.append("select max(").append(getField()).append(") AS DOCID from ")
 			.append(getTable()).append(" where ").append(getField()).append(" like '").append(processChar(codeM.get(CODESTR))).append("'");
-		CommonDao commonDao = SpringContextHolder.getBean(CommonDao.BEAN_NAME);
+		CommonDao commonDao = SpringContextHolder.getBean(CommonDao.BEAN_DYNAMIC);
 		Map<String, Object> map = commonDao.queryForMap(querySql.toString());
 		Object oDocid = map.get("DOCID");
 		
