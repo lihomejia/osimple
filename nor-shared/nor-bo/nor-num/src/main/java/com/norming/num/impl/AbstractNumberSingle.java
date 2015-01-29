@@ -73,7 +73,7 @@ public abstract class AbstractNumberSingle implements INumber {
 			sql.append(" and ").append(addwhere());
 		}
 
-		CommonDao commonDao = SpringContextHolder.getBean(CommonDao.BEAN_NAME);
+		CommonDao commonDao = SpringContextHolder.getBean(CommonDao.BEAN_DYNAMIC);
 		Map<?, ?> map = commonDao.queryForMap(sql.toString());
 		Object oDocid = map.get("DOCID");
 		
